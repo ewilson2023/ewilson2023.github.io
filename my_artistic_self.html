@@ -16,10 +16,41 @@
 			background-size: cover;
 			min-height:800px;
 		}
-		</style>
 		p {
-			font-family: Bebas Neue;
+			font-family: Nabla;
+			color: var(--orangeDark);
+			text-shadow: 
+				1px 0 0 black, /*right */
+				0 1px 0 black, /*top */
+				-1px 0 0 black, /*left */
+				0 -1px 0 black; /*bottom */
 		}
+		#w1 {
+			font-size: 50px;
+			transform: rotate(30deg);
+			translate: 100px 200px 1300px;
+		}
+		#w2 {
+			font-size: 75px;
+			letter-spacing: 0.3rem;
+			translate: -100px 100px;
+		}
+		#w3 {
+			translate: 100px 20px;
+			font-size: 85px;
+			translate: 500px;
+		}
+		#w4 {
+			transform: rotate(-20deg);
+			translate: 100px -250px;
+			font-size: 100px;
+		}
+		#w5 {
+			transform: rotate(15deg);
+			translate: 300px -150px;
+			font-size: 90px;
+		}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -34,11 +65,11 @@
 		</header>
 		
 		<div class="containerBody">
-			<p style="font-style: oblique">word1</p>
-			<p style="">word2</p>
-			<p style="">word3</p>
-			<p style="">word4</p>
-			<p style="">word5</p>
+			<p id="w1">word1</p>
+			<p id="w2">word2</p>
+			<p id="w3">word3</p>
+			<p id="w4">word4</p>
+			<p id="w5">word5</p>
 			
 		</div>
 		
