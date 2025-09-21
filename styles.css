@@ -103,32 +103,3 @@ td {
 	margin: auto;
 	padding: 10px;
 }
-
-/*
-.container img {
-  float: left;
-  width: 50%;
-}
-.grid-container {
-  display: grid;
-  grid: auto / auto auto;
-  grid-gap: 10px;
-  background-color: var(--orangeDark);
-  padding: 10px;
-}
-
-.grid-container > div {
-  background-color: var(--orangeLight);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-
-.grid img {
-	display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-*/
