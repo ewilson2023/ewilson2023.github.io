@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 2: My Dream Vacation</title>
+		<title>Lab 3: My Dream Vacation</title>
 		<meta name="author" content="Liz Wilson">
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
 	</head>
 	<body>
 		<header>
 			<div class="containerTitle">
-				<h1 style="padding-bottom:0px; margin-bottom:0px">Lab 2 Dream Vacation</h1>
+				<h1 style="padding-bottom:0px; margin-bottom:0px">Lab 3 Dream Vacation</h1>
 				<h2 style="padding-top:0px; margin-top:0px; margin-left:0px">
 					<span><hr style="width:240px; display: inline-block; colour:white" ></span> 
 					Liz Wilson
@@ -34,32 +36,43 @@
 				<table>
 					<thead>
 						<tr> 					<!-- tr=table row-->
-							<th>Heading 1</th>	<!-- th=table header cell-->
-							<th>Heading 2</th>
+							<th style="text-transform: uppercase">Heading 1</th>	<!-- th=table header cell-->
+							<th style="text-transform: uppercase">Heading 2</th>
 						</tr>
 						</thead>
 					<tbody>
 						<tr>
-							<td>H1 row1</th>	<!-- td=table data cell-->
-							<td>H2 row1</th>
+							<td style="text-align: left">H1 row1</th>	<!-- td=table data cell-->
+							<td style="text-align: right">H2 row1</th>
 						</tr>
 						<tr>
-							<td>H1 row2</th>
-							<td>H2 row2</th>
+							<td style="text-align: left">H1 row2</th>
+							<td style="text-align: right">H2 row2</th>
 						</tr>
 					</tbody>
 				</table>
 				
 			<!-- DOGGIES -->	
 			<figure>
-				<img width="400" alt="Doggies" src="IMG-20250507.jpg">
+				<img style="
+					display: block; 
+					margin: auto;
+					border-style: solid;
+					border-color: var(--orangeLight);
+					border-right-color: var(--orangeDark);
+					border-bottom-color: var(--orangeDark);
+					border-width: 15px;
+					border-radius: 30px"
+					width="400"
+					alt="Doggies"
+					src="IMG-20250507.jpg" >
 				<figcaption>
-					Pippin and Newton
+					<center>Pippin and Newton</center>
 				</figcaption>
 			</figure
 			
 			<div>
-				<center> <a href="index.html">Home</a> </center>
+				<center> <a style="padding-top:30px" href="index.html">Home</a> </center>
 			</div>
 		</div>
 	</body>

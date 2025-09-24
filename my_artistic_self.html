@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 3 My Artistic Self</title>
+		<meta name="author" content="Liz Wilson">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nabla">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+		<style>
+		.containerBody {
+
+		}
+		.wordArt {
+			margin: 30px 25% 0 25%;
+			
+			background-image: url('https://64.media.tumblr.com/6f4050955e50e429e1092f8c363d3da2/72021da5c39fe547-83/s1280x1920/ec110f0191ff13aabbf94b08112f191d8ea9e300.png');
+		/*	background-image: url('PLACEHOLDER.png'); */
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			max-height:800px;
+			
+			font-family: Nabla;
+			color: var(--orangeDark);
+			text-shadow: 
+  				1px -2px 0 black, /*right */
+				0px -3px 0 black, /*top */
+				-3px -1px 0 black, /*left */
+				1px 1.5px 0 black; /*bottom */
+		}
+		
+		#w1 {
+			font-size: 50px;
+			transform: rotate(30deg);
+			translate: 100px 150px;			/* -left/+right -top/+bottom */
+		}
+		#w2 {
+			font-size: 75px;
+			letter-spacing: 0.3rem;
+			translate: -100px 130px;		/* -left/+right -top/+bottom */
+		}
+		#w3 {
+			font-size: 85px;
+			translate: 100px 20px;
+			translate: 400px -200px;		/* -left/+right -top/+bottom */
+		}
+		#w4 {
+			font-size: 100px;
+			transform: rotate(-20deg);
+			translate: 100px -200px;		/* -left/+right -top/+bottom */
+		}
+		#w5 {
+			font-size: 90px;
+			transform: rotate(15deg);
+			translate: 300px -150px;
+		}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="containerTitle">
+				<h1 style="padding-bottom:0px; margin-bottom:0px">Lab 3 My Artistic Self</h1>
+				<h2 style="padding-top:0px; margin-top:0px; margin-left:0px">
+					<span><hr style="width:150px; display: inline-block; colour:white" ></span> 
+					Liz Wilson
+					<span><hr style="width:150px; display: inline-block; colour:white"  ></span>
+				</h2>
+			</div>
+		</header>
+		
+		<div class="wordArt">
+			<p id="w1">word1</p>
+			<p id="w2">Nerdy</p>
+			<p id="w3">Artist</p>
+			<p id="w4">Curious</p>
+			<p id="w5">?????</p>
+		
+		</div>
+		<div class="containerBody" style="margin-top: 8px	">
+			<p> 
+				This is a digital painting I created in 2021.
+			</p>
+		<div>
+			<center> <a style="padding-bottom:30px" href="index.html">Home</a> </center>
+		</div>
+	</body>
+</html>
