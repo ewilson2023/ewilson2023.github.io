@@ -8,7 +8,7 @@
 	--steelBlue: #336699;	
 }
 
-/* Include padding and border in the element's total width and height:*/
+/* Include padding and border in the element's total width and height */
 * {	box-sizing: border-box;}
 
 body {
@@ -19,16 +19,81 @@ body {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 }
+/* 
 header {
 	background-color: var(--cerulean);
 	color: var(--canvas);
 }
+ */
 
+.header {
+	left: 0;
+	width: 100%;
+	top: 0;
+	width: 100%;
+	height: 320px;
+	display: flex;
+	align-items: center;		/* vert center */
+	justify-content: center;	/* horo center */
+	flex-direction: column;		/* make elements stack */
+	
+	color: var(--canvas);
+	background-color: var(--cerulean);	
+}
+
+/* remove margin padding from text in header */
+.header h1,
+.header h2 {
+  margin: 0;	
+  padding: 0;
+}
+
+.header hr {
+	display: inline-block; 
+	color: var(--canvas);
+}
+
+.footer {
+	position: fixed;	/* make sticky */
+	left: 0;			/* +right/-left translation */
+	bottom: 0;			/* +up/-down translation */
+	width: 100%;
+	height: 40px;
+	background-color: var(--cerulean);	
+	display: flex;
+	align-items: center;	/* vert center */
+	justify-content: center; /* horo center */
+	
+	text-transform: uppercase;
+	color: var(--canvas);
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+}
+/* 
 .containerTitle {
 	text-align: center;
 	padding: 50px 50px 50px 50px;
 	margin: 0px 0px 0px 0px;
 }
+
+.containerTitle h1 {
+	padding-bottom: 0px; 
+	margin-bottom:0px
+}
+
+.containerTitle h2 {
+	padding-top:0px; 
+	margin-top:0px; 
+	margin-left:0px
+}
+
+/* inline divider as decorative line for title */
+/*
+.containerTitle hr {
+	display: inline-block; 
+	colour:white;
+}
+ */
 
 .containerBody {
 	/* top right bottom left */
