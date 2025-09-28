@@ -1,8 +1,11 @@
 :root {
+	/* Custom Colours */
+	--brown: #653239;
 	--orangeDark: #EF7722;
 	--orangeLight: #FAA533;
 	--canvas: #EBEBEB;
 	--cerulean: #0BA6DF;
+	--steelBlue: #336699;	
 }
 body {
 	background-color: var(--canvas);
@@ -61,12 +64,37 @@ p {
 }
 a {
 	text-transform: uppercase;
+	color: var(--cerulean);
 	font-size: 12px;
 	letter-spacing: 0.1rem;
-	colour: var(--cerulean);
 	text-align: center;
 	margin-top: 20px;
 }
+
+a:link {
+  color: var(--cerulean);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--steelBlue);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cerulean);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--orangeDark);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 table {
 	border-collapse: collapse;
 	margin: auto;
