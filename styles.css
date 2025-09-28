@@ -8,7 +8,7 @@
 	--steelBlue: #336699;	
 }
 
-/* Include padding and border in the element's total width and height */
+/* all elements: Include padding and border in the element's total width and height */
 * {	box-sizing: border-box;}
 
 body {
@@ -19,12 +19,29 @@ body {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
 }
+
+/* .containerBody {
+	top right bottom left
+	margin: 30px 25% 100px 25%;
+}
+*/
+
+
+.body_wrapper {
+	display: flex;
+	flex-direction: column;
+	
+	min-height: 100%;
+	
+}
+html, body {
+	height: 100%;
+}
 /* 
 header {
 	background-color: var(--cerulean);
 	color: var(--canvas);
-}
- */
+} */
 
 .header {
 	left: 0;
@@ -69,35 +86,10 @@ header {
 	font-weight: bold;
 	letter-spacing: 0.05rem;
 }
-/* 
-.containerTitle {
-	text-align: center;
-	padding: 50px 50px 50px 50px;
-	margin: 0px 0px 0px 0px;
-}
 
-.containerTitle h1 {
-	padding-bottom: 0px; 
-	margin-bottom:0px
-}
-
-.containerTitle h2 {
-	padding-top:0px; 
-	margin-top:0px; 
-	margin-left:0px
-}
-
-/* inline divider as decorative line for title */
-/*
 .containerTitle hr {
 	display: inline-block; 
 	colour:white;
-}
- */
-
-.containerBody {
-	/* top right bottom left */
-	margin: 30px 25% 100px 25%;
 }
 
 hr{
@@ -201,4 +193,34 @@ td {
 	display: block;
 	width: 100%;	/* img spans cell */
 	height: auto;	/* maintain size ratio */
+}
+
+/* width */
+::-webkit-scrollbar {
+/* 	padding-top: 320px;
+    padding-bottom: 40px; */
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orangeDark);
+	box-shadow: 0 0 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orangeDark); 
+  box-shadow: 0 0 5px (--orangeLight);
+/*   box-sizing: border-box;
+  border: 3px solid black; */
+}
+
+::-webkit-scrollbar-corner {
+	background: purple;
 }
