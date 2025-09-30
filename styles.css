@@ -15,9 +15,8 @@ body {
 	background-color: var(--canvas);
 	font-family: Montserrat;
 	font-size: 14px;
-	font-weight: light;
-	padding: 0px 0px 0px 0px;
-	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 75px 0px;
+	margin: 0px 0px 75px 0px;
 }
 
 /* .containerBody {
@@ -31,17 +30,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	
-	min-height: 100%;
+	margin: 0 auto;		/* top right bottom left */
 	
+	min-height: 100%;
+	max-width: 75%;
 }
+
 html, body {
 	height: 100%;
 }
-/* 
-header {
-	background-color: var(--cerulean);
-	color: var(--canvas);
-} */
 
 .header {
 	left: 0;
@@ -65,10 +62,7 @@ header {
   padding: 0;
 }
 
-.header hr {
-	display: inline-block; 
-	color: var(--canvas);
-}
+
 
 .footer {
 	position: fixed;	/* make sticky */
@@ -88,15 +82,33 @@ header {
 }
 
 .containerTitle hr {
-	display: inline-block; 
-	colour:white;
+	/* display: inline-block;  */
+	background-color: var(--canvas);
+	colour: var(--canvas);
 }
 
-hr{
-	height: 1px;
-	background-color: #FFFFFF;
-	border: none;
+.body_wrapper hr {
+	background-color: black;
 }
+
+/* hr{
+	height: 1px;
+background-color: var(--canvas);
+	border: none;
+} */
+
+.header hr {
+	/* display: inline-block;  */
+	color: var(--canvas);
+}
+
+.line_decor {
+	height: 1px;
+	background-color: var(--canvas);
+	border: none;
+	display: inline-block; 
+}
+
 h1 {
 	font-family: Bebas Neue;
 	font-weight: bold;
@@ -107,6 +119,7 @@ h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 20px;
+	text-align: center;
 	letter-spacing: 0.15rem;
 	padding-top: 20px;
 }
