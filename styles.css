@@ -262,11 +262,18 @@ td {
 /*-------------------------------------*/
 nav {
 	flex-shrink: 0; /* keep height fixed */
+	
+	display: flex;
+	flex-wrap: wrap;        /* allow links to wrap to multiple lines */
+	justify-content: center;
+	align-items: center;    /* center items along cross axis */
+	align-content: center;  /* center the group of wrapped rows*/
+	
 }
 
 nav a {
-	float: left;
-	text-align: center;
+/* 	float: left;
+	text-align: center; */
 	padding: 0 10px;
 }
 
