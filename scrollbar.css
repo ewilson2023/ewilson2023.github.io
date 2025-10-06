@@ -1,0 +1,59 @@
+:root {
+	/* Custom Colours */
+	--brown: #653239;
+	--orangeDark: #EF7722;
+	--orangeLight: #FAA533;
+	--canvas: #EBEBEB;
+	--cerulean: #0BA6DF;
+	--steelBlue: #336699;	
+}
+
+/* Prevent body from scrolling */
+html, body {
+	height: 100%;
+	overflow: hidden; /* disable global scrolling */
+	margin: 0;
+}
+
+nav, header, footer {
+	flex-shrink: 0; /* keep their height fixed */
+}
+
+/* Main grows and gets its own scrollbar */
+.main {
+	
+	flex: 1 1 auto;
+	/* flex: 1; */
+	overflow-y: auto;	/* only main can scroll */
+	padding-bottom: 1rem;
+	/* Firefox */
+	scrollbar-width: thin;
+	scrollbar-color: var(--orangeDark) transparent;
+}
+
+/* Custom scrollbar */
+.main::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+.main::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+.main::-webkit-scrollbar-thumb {
+	background: var(--orangeDark);
+	border-radius: 6px;
+	box-shadow: 0 0 0;
+}
+
+/* Handle on hover */
+.main::-webkit-scrollbar-thumb:hover {
+  background: var(--orangeLight); 
+  box-shadow: 0 0 5px var(--orangeLight);
+}
+
+main::-webkit-scrollbar-corner {
+	background: purple;	/* debug? */
+}
