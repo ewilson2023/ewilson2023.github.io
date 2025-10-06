@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 5: Liz Wilson</title>
+		<title>Lab 5 Calculators</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,64 @@
 		<link rel="stylesheet" href="scrollbar.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        
+		<script src="javascript/2-calculator.js"> </script>
+        <script src="javascript/2-calculator_utils.js"> </script>
+        
+        <style> 
+			.calculator_div{
+                max-width: 45%;
+            }
+			.calculator_div p {
+                text-indent: 0;
+				text-align: left;
+				margin: 4px;
+            }
+            @media screen and (max-width: 800px) {
+                .calculator_div{
+                    max-width: 75%;
+                }
+            }
+            .calculator_div div, fieldset{
+                margin-top: 20px;
+            }
+			fieldset {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				
+				border: 2px solid var(--steelBlue);
+				border-radius: 20px;
+			}
+            .answer{
+                background-color: var(--orangeDark);
+				border-radius: 15px;
+				width: 100%;
+            }
+			.answer p {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			legend {
+				background-color: var(--orangeDark);
+				border: 2px solid var(--steelBlue);
+				border-radius: 15px;
+				
+				width: clamp(100px, 75%, 100%);
+			}
+			.legend_txt {
+				font-weight: bold;
+				text-align: center;
+				margin: 6px;
+				text-align: center;
+			}
+            .right{
+                position:relative;
+                left:10%;
+            }
 
+		</style>
 	</head>
 	
 	<body>
@@ -41,6 +98,72 @@
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
 			<div class="main">	
+				<div class="calculator_div">
+
+					<!-- Calcultor 1: your age in terms of days -->
+					<fieldset>
+						<legend class="legend_txt"> How old are you terms of days? </legend>
+						<div>
+							<input type="date" id="DOB">
+							<label for="DOB"> Your date of birth </label>
+						</div>
+						<div>
+							<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
+						</div>
+						<div class="answer">
+							<p> The answer is: </p>
+							<p id="p_answer_days"> (click submit first!) </p>
+						</div>
+					</fieldset>
+					
+					
+					<!-- Calcultor 2: your age in terms of days -->
+					<fieldset class="right">
+						<legend class="legend_txt"> The radius & area of the biggest circle fitting in your screen </legend>
+						<div>
+							<input type="button" id="submit_circle" value="Click here to compute" onclick="compute_circle()">
+						</div>
+						<div class="answer">
+							<p> The answer is: </p>
+							<p id="p_answer_circle"> (click submit first!) </p>
+						</div>
+					</fieldset>
+					
+					
+					<!-- Calcultor 3: Palindrome checker -->
+					<fieldset>
+						<legend class="legend_txt"> Palindrome checker </legend>
+						<div>
+							<input type="text" id="possible_palindrome" value="Enter text here">
+						</div>
+						<div> 
+							<input type="button" id="submit_palindrome" value="Click here to compute" onclick="check_palindrome()">
+						</div>
+						<div  class="answer">
+							<p> The answer is: </p>
+							<p id="p_answer_palindrome"> (click submit first!) </p>
+						</div>
+					</fieldset>
+					
+					
+					<!-- Calcultor 4: Fibonnacci -->
+					<fieldset class="right">
+						<legend class="legend_txt"> Fibonacci </legend>
+						<div>
+							<label for="fibo_length"> How long would you like me to create the Fibonacci sequence?"
+							<input type="number" id="fibo_length">
+						</div>
+						<div>
+							<input type="button" id="submit_fibo" value="Click here to compute" onclick="create_fibo()">
+						</div>
+						<div class="answer">
+							<p> The answer is: </p>
+							<p id="p_answer_fibo"> (click submit first!) </p>
+						</div>
+					</fieldset>
+						
+						
+				</div>
 			
 			</div>
 		</div>
