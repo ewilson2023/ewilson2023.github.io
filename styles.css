@@ -105,7 +105,7 @@ nav, header, footer {
 	font-size: clamp(10px, 4vw, 20px);
 }
 
-.footer {
+footer {
 	position: fixed;	/* make sticky */
 	left: 0;			/* +right/-left translation */
 	bottom: 0;	 		/* +up/-down translation */
