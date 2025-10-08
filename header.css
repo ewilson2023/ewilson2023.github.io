@@ -20,6 +20,12 @@ header {
 	position: relative; /* not sticky/fixed */						 
 }
 
+h1 {
+	font-family: Bebas Neue;
+	font-weight: bold;
+	font-size: 90px;
+}
+
 /*-------------------------------------*/
 /*/////////// TITLE WRAPPER //////////*/
 /*-------------------------------------*/
@@ -35,7 +41,7 @@ header {
 }
 
 .title_wrapper h1 {
-	font-size: clamp(40px, 19.5cqw, 90px);  /* cqw: % of query container*/
+	font-size: clamp(40px, 18cqw, 90px);  /* cqw: % of query container*/
 	margin: 0;
 	text-align: center;
 	width: 100%;

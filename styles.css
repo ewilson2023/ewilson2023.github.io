@@ -143,13 +143,8 @@ p {
 	margin-top: 8px;
 }
 
-/* h1 is only used in title, most styling is in
+/* h1 is only used in title, styling is in
 header.css */
-h1 {
-	font-family: Bebas Neue;
-	font-weight: bold;
-	font-size: 90px;
-}
 
 h2 {
 	text-transform: uppercase;
