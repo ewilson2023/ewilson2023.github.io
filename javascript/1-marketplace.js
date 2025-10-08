@@ -1,12 +1,42 @@
+// itemGroup prototype
+function ItemGroup(itemName, price, quantity) {
+	this.itemName = itemName;
+	this.price = price;
+	this.quantity = quantity;
+}
+
 
 function Cart(){
     this.itemGroups = [];
+
+	
+	this.addItemGroup = function(itemGroup) {
+		this.itemGroups.push(itemGroup);
+	}
+	this.getTotalPrice = function(){
+		let totalPrice = 0;
+		let i = 0;
+		while ( i < this.itemGroups.length ) {
+			totalPrice += (this.itemGroups[i].price * this.itemGroups[i].quantity);
+			i++;
+		}
+		return totalPrice;
+	}
     this.showTotalAmount = function(){
         if (this.itemGroups.length == 0){
-            document.write("<p> You have 0 item, for a total amount of 0$, in your cart! </p>");
-        } else  {
-           // You must code this.
-           document.write("<p>OUPS. YOU MUST CODE THIS.</p>")
+            document.write(
+				"<p> You have 0 items, for a total amount of 0$, in your cart! </p>");
+        } else {
+			let totalItems = 0;
+			let i = 0;
+			while ( i < this.itemGroups.length ) {
+				totalItems += this.itemGroups[i].quantity;
+				i++;
+			}
+			document.write("<p> You have "
+				+ totalItems + " items, for a total amount of " 
+				+ this.getTotalPrice() + "$, in your cart! </p>")
+			
         }
     }
 }

@@ -15,60 +15,6 @@
 		<script src="javascript/2-calculator.js"> </script>
         <script src="javascript/2-calculator_utils.js"> </script>
         
-        <style> 
-			.calculator_div{
-                max-width: 45%;
-            }
-			.calculator_div p {
-                text-indent: 0;
-				text-align: left;
-				margin: 4px;
-            }
-            @media screen and (max-width: 800px) {
-                .calculator_div{
-                    max-width: 75%;
-                }
-            }
-            .calculator_div div, fieldset{
-                margin-top: 20px;
-            }
-			fieldset {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-				
-				border: 2px solid var(--steelBlue);
-				border-radius: 20px;
-			}
-            .answer{
-                background-color: var(--orangeDark);
-				border-radius: 15px;
-				width: 100%;
-            }
-			.answer p {
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-			legend {
-				background-color: var(--orangeDark);
-				border: 2px solid var(--steelBlue);
-				border-radius: 15px;
-				
-				width: clamp(100px, 75%, 100%);
-			}
-			.legend_txt {
-				font-weight: bold;
-				text-align: center;
-				margin: 6px;
-				text-align: center;
-			}
-            .right{
-                position:relative;
-                left:10%;
-            }
-
-		</style>
 	</head>
 	
 	<body>
@@ -104,8 +50,8 @@
 					<fieldset>
 						<legend class="legend_txt"> How old are you terms of days? </legend>
 						<div>
-							<input type="date" id="DOB">
 							<label for="DOB"> Your date of birth </label>
+							<input type="date" id="DOB">
 						</div>
 						<div>
 							<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
@@ -150,7 +96,8 @@
 					<fieldset class="right">
 						<legend class="legend_txt"> Fibonacci </legend>
 						<div>
-							<label for="fibo_length"> How long would you like me to create the Fibonacci sequence?"
+							<label for="fibo_length"> 
+							How long would you like me to create the Fibonacci sequence?
 							<input type="number" id="fibo_length">
 						</div>
 						<div>
@@ -169,9 +116,9 @@
 		</div>
 		
 	<!-- FOOTER -->
-	<div class="footer">
+	<footer>
 		CS203 Labs
-	</div>
+	</footer>
 	
 	</body>
 </html>

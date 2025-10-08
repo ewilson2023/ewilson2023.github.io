@@ -4,7 +4,7 @@
 
 function write_answer_days(text_msg){
     let my_p = document.getElementById("p_answer_days");
-    my_p.innerHTML = text_msg
+    my_p.innerHTML = text_msg;
 }
 
 
@@ -46,4 +46,9 @@ function get_palindrome(){
 function write_answer_fibo(text_msg){
     let my_p = document.getElementById("p_answer_fibo");
     my_p.innerHTML = text_msg
+}
+
+function get_fibo(){
+    return document.getElementById("fibo_length").value;
+
 }

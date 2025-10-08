@@ -1,6 +1,5 @@
 /*
 	value: top right bottom left;
-}
 */
 
 :root {
@@ -63,11 +62,9 @@ html, body {
 
 footer {
 	flex-shrink: 0; /* keep height fixed */
-}
 
-.footer {
 	position: fixed;	/* make sticky */
-	left: 0;			/* +right/-left translation */
+	left: 0;/* +right/-left translation */
 	bottom: 0;	 		/* +up/-down translation */
 
 	width: 100%;
@@ -75,8 +72,8 @@ footer {
 	background-color: var(--cerulean);	
 	text-align: center;
 	display: flex;
-	align-items: center;	/* vert center */
-	justify-content: center; /* horo center */
+	align-items: center;		/* vert center */
+	justify-content: center; 	/* horo center */
 	
 	/* text styling */
 	text-transform: uppercase;
@@ -241,7 +238,7 @@ td {
 .img_grid_container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
+	gap: 1.5%;
 	width: 100%;
 	margin: 20px auto;	/* margin: top/bottom left/right */
 }
@@ -265,9 +262,9 @@ nav {
 	flex-shrink: 0; /* keep height fixed */
 	
 	display: flex;
-	flex-wrap: wrap;        /* allow links to wrap to multiple lines */
+	flex-wrap: wrap;/* allow links to wrap to multiple lines */
 	justify-content: center;
-	align-items: center;    /* center items along cross axis */
+	align-items: center;/* center items along cross axis */
 	align-content: center;  /* center the group of wrapped rows*/
 	
 }
@@ -295,4 +292,64 @@ nav a:active {
 
 nav a.current_page {
 	text-shadow: 0 0 5px var(--canvas);
+}
+
+/*-------------------------------------*/
+/*////////// CALCULATORS //////////////*/
+/*-------------------------------------*/
+
+.calculator_div{
+	max-width: 45%;
+}
+.calculator_div p {
+	text-indent: 0;
+	text-align: left;
+	margin: 4px;
+}
+@media screen and (max-width: 800px) {
+	.calculator_div{
+		max-width: 75%;
+	}
+}
+.calculator_div div, fieldset{
+	margin-top: 20px;
+}
+fieldset {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	border: 2px solid var(--steelBlue);
+	border-radius: 20px;
+}
+legend {
+	background-color: var(--orangeDark);
+	border: 2px solid var(--steelBlue);
+	border-radius: 15px;
+	
+	width: clamp(100px, 75%, 100%);
+}
+.legend_txt {
+	font-weight: bold;
+	text-align: center;
+	margin: 6px;
+	text-align: center;
+}
+.calculator_div input {
+	align-items: center;
+}
+.answer{
+	background-color: var(--orangeDark);
+	border-radius: 15px;
+	width: 100%;
+}
+.answer p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.right{
+	position:relative;
+	left:10%;
 }
