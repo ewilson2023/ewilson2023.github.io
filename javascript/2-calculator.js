@@ -91,18 +91,13 @@ function check_palindrome(){
 
 // ------------- FIBONACCI
 function create_fibo(){    
-    // Add code here to get the wanted length. 
-    // Hint: check my other codes in javascript_utils.js
     let n = get_fibo();
 	
-	console.log("typeof n: "+typeof n);
 	// error handling
-	if (n < 0 || n == null) {
+	if (n < 0 || n == null || n === "") {
 		write_answer_fibo("No!");
-	}	
-	if (!(n > 47 && n < 58)) {
-		write_answer_fibo("Something has gone horribly wrong!");
-	}
+		return;
+	} 
 	const fib = calculate_fibo(n);
 	switch (n) {
 		case "1": n = "1st"; break;
@@ -110,7 +105,9 @@ function create_fibo(){
 		case "3": n = "3rd"; break;
 		default: n += "th";
 	}
-	write_answer_fibo("The " + n + " fibonacci number is " + fib + ".");
+	write_answer_fibo(
+		"The " + n + " fibonacci number is "
+		+ fib + ".");
 }
 // helper function, recursive
 function calculate_fibo(n){
