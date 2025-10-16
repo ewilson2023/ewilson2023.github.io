@@ -1,0 +1,118 @@
+
+header {
+	flex-shrink: 0; /* keep height fixed */
+}
+
+.header {
+	left: 0;
+	top: 0;
+	
+	width: 100%;
+	height: 250px;
+	min-height: 250px;
+	display: flex;
+	align-items: center;		/* vert center */
+	justify-content: center;	/* horo center */
+	flex-direction: column;	/* make elements stack */
+	
+	color: var(--canvas);
+	background-color: var(--cerulean);	
+	position: relative; /* not sticky/fixed */						 
+}
+
+h1 {
+	font-family: Bebas Neue;
+	font-weight: bold;
+	font-size: 90px;
+}
+
+/*-------------------------------------*/
+/*/////////// TITLE WRAPPER //////////*/
+/*-------------------------------------*/
+	  
+.title_wrapper {
+ 	width: clamp(220px, 75vw, 460px); /* dynamic width */
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 auto; 
+	align-items: stretch;	/* child elemts stretch to fill */
+	
+	container-type: inline-size; /* query container? */
+}
+
+.title_wrapper h1 {
+	font-size: clamp(40px, 18cqw, 90px);  /* cqw: % of query container*/
+	margin: 0;
+	text-align: center;
+	width: 100%;
+	margin-bottom: clamp(-0.5rem, 2.5vw, -1.25rem);
+	
+}
+
+/* hr - h2 - hr on one line, hrs should expand to fill space */
+.title_wrapper .subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.title_wrapper .subtitle hr {
+	flex: 1;	/* fill remaining width */
+	margin: 0;		
+	border: none; 
+	
+	background-color: var(--canvas);
+	height: 1px;
+}
+
+.title_wrapper .subtitle h2 {
+ 	font-size: clamp(10px, 2.5vw, 20px);
+	white-space: nowrap; /* keep on same line */
+	margin: 0;
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	padding: 0;
+}
+
+
+/* 0: no top/bottom margin, 
+auto: split equally on both sides
+	  whatever horizontal space
+	  is left over. */
+
+
+/* flex tutorial
+flex: <flex-grow> <flex-shrink> <flex-basis>;
+    flex-grow: how much the item expands 
+			   when there’s extra space.
+    flex-shrink: how much the item shrinks 
+				 when space is tight.
+    flex-basis: the item’s initial size 
+		before growing or shrinking 
+		(auto = use width/height/content).
+		
+flex: 1 0 auto; -> 
+    1 = can grow to take extra space.
+    0 = will not shrink smaller than its basis.
+    auto = start at its natural/content size.
+    Result: fills leftover space if available, 
+	but won’t shrink below its content size.
+	
+flex: 1 1 auto; ->
+    1 = can grow.
+    1 = can shrink.
+    auto = start at natural/content size.
+    Result: fills leftover space, but can
+	also shrink if space is too tight.
+*/
+
+/* clamp tutorial
+final value = preferred, but never below min and never above max
+
+clamp(min, preferred, max)
+    min:	 	the minimum value allowed
+    preferred:	the ideal value (often relative, like vw)
+    max:		the maximum value allowed
+
+*/
