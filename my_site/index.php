@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 		
-		
+		<script src="javascript/nav.js"> </script>
 	</head>
 	
 	<body>
@@ -36,6 +36,7 @@
 <a href="my_artistic_self.html"> My Artistic Self </a>
 <a href="marketplace.html"> Marketplace </a>
 <a href="calculators.html"> Calculators </a>
+<a href="to-do.html"> To-Do </a>
 			</nav>
 		</div>
 		
