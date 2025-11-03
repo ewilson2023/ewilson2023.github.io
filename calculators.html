@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 5 Calculators</title>
+		<title>Lab 7 Calculators</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
         
 		<script src="javascript/2-calculator.js"> </script>
         <script src="javascript/2-calculator_utils.js"> </script>
-        
+        <script src="javascript/nav.js"> </script>
 	</head>
 	
 	<body>
@@ -23,7 +23,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 15.5cqw, 90px)">
-					Lab 5 Calculators
+					Lab 7 Calculators
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -32,13 +32,8 @@
 				</div>
 			</div>
 			<!-- nav bar -->
-			<nav>
-				<a href="index.html"> Home </a>
-				<a href="my_vacation.html"> Dream Vacation </a>
-				<a href="my_artistic_self.html"> My Artistic Self </a>
-				<a href="marketplace.html"> Marketplace </a>
-				<a href="calculators.html" class="current_page"> Calculators </a>					
-			</nav>
+			<nav id="main-nav"></nav>
+			<script> setNav() </script>
 		</div>
 		
 	<!-- MAIN SECTION -->
