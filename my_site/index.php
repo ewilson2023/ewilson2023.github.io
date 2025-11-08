@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 7: Liz Wilson</title>
+		<title>Lab 8: Liz Wilson</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 		<div class="header">
 			<!-- Title -->
 			<div class="title_wrapper">
-				<h1>Lab 7 Main Page</h1>
+				<h1>Lab 8 Main Page</h1>
 				<div class="subtitle">
 					<hr>
 						<h2> Liz Wilson	</h2>
@@ -30,14 +30,6 @@
 			<!-- nav bar -->
 			<nav id="main-nav"></nav>
 			<script> setNav() </script>
-			<nav>
-			<a href="index.html"> Home </a>
-<a href="my_vacation.html"> Dream Vacation </a>
-<a href="my_artistic_self.html"> My Artistic Self </a>
-<a href="marketplace.html"> Marketplace </a>
-<a href="calculators.html"> Calculators </a>
-<a href="to-do.html"> To-Do </a>
-			</nav>
 		</div>
 		
 	<!-- MAIN SECTION -->

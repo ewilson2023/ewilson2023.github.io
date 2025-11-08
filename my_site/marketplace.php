@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 7 Marketplace</title>
+		<title>Lab 8 Marketplace</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 16cqw, 90px)">
-					Lab 7 Marketplace
+					Lab 8 Marketplace
 				</h1>
 				<div class="subtitle">
 					<hr>

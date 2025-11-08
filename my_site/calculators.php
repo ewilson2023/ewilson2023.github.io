@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 7 Calculators</title>
+		<title>Lab 8 Calculators</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 15.5cqw, 90px)">
-					Lab 7 Calculators
+					Lab 8 Calculators
 				</h1>
 				<div class="subtitle">
 					<hr>
