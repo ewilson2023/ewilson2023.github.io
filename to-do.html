@@ -39,11 +39,11 @@
 				items.push(newItem);
 				localStorage.setItem("items", JSON.stringify(items));
 				
-				RenderItem(item_text);
+				renderItem(item_text);
 			}
 		}
 		
-		function RenderItem(item_text, id) {
+		function renderItem(item_text, id) {
 			let ul = document.getElementById("the_list");	// Recover the ul element
 			let li = document.createElement("li"); 	// Create a new li element
 			li.dataset.id = id;    // Store id in DOM
