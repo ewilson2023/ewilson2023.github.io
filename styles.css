@@ -225,6 +225,27 @@ td {
 	padding: 5px 10px 5px 10px;
 	color: 
 }
+/*-------------------------------------*/
+/*////////// SLIDESHOW ///////////////*/
+/*-------------------------------------*/
+.slideshow {
+	display: flex;
+	justify-content: center; /* horo center */
+	flex-direction: column;	/* make elements stack */
+	margin: 20px auto;
+}
+.slideshow_img img{
+	max-width: 100%
+}
+
+.prev_next {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.prev_next a {
+	margin-top: 0;
+}
 
 /*-------------------------------------*/
 /*////////// IMAGE GRID ///////////////*/

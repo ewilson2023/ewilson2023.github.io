@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 5: Liz Wilson</title>
+		<title>Lab 7: Liz Wilson</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,8 @@
 		<link rel="stylesheet" href="scrollbar.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
+		
+		<script src="javascript/nav.js"> </script>
 	</head>
 	
 	<body>
@@ -19,7 +20,7 @@
 		<div class="header">
 			<!-- Title -->
 			<div class="title_wrapper">
-				<h1>Lab 5 Main Page</h1>
+				<h1>Lab 7 Main Page</h1>
 				<div class="subtitle">
 					<hr>
 						<h2> Liz Wilson	</h2>
@@ -27,12 +28,15 @@
 				</div>
 			</div>
 			<!-- nav bar -->
+			<nav id="main-nav"></nav>
+			<script> setNav() </script>
 			<nav>
-				<a href="index.html" class="current_page"> Home </a>
-				<a href="my_vacation.html"> Dream Vacation </a>
-				<a href="my_artistic_self.html"> My Artistic Self </a>
-				<a href="marketplace.html"> Marketplace </a>
-				<a href="calculators.html"> Calculators </a>
+			<a href="index.html"> Home </a>
+<a href="my_vacation.html"> Dream Vacation </a>
+<a href="my_artistic_self.html"> My Artistic Self </a>
+<a href="marketplace.html"> Marketplace </a>
+<a href="calculators.html"> Calculators </a>
+<a href="to-do.html"> To-Do </a>
 			</nav>
 		</div>
 		
@@ -63,19 +67,24 @@
 							</p>
 						</div>
 						
-					<!-- IMAGE GRID	-->			
-					<div class="img_grid_container">
-						<div class="grid_img">
+					<!-- IMAGE SLIDESHOW	-->			
+					<div class="slideshow">
+						<div class="slideshow_img">
 							<img src="images/art1.jpg">
 						</div>
-						<div class="grid_img">
+						<div class="slideshow_img">
 							<img src="images/art2.jpg">
 						</div>
-						<div class="grid_img">
+						<div class="slideshow_img">
 							<img src="images/art3.jpg">
 						</div>  
-						<div class="grid_img">
+						<div class="slideshow_img">
 							<img src="images/art4.jpg">
+						</div>
+						
+						<div class="prev_next">
+							<a onclick="previous()">⪻Previous</a>
+							<a onclick="next()">Next⪼</a>
 						</div>
 					</div>
 					
@@ -127,6 +136,12 @@
 	<footer>
 		CS203 Labs
 	</footer>
-		
+	
 	</body>
+	
+	<!-- JAVASCRIPT -->
+	<script 
+		src="javascript/slideshow.js"> 
+	</script>
+	
 </html>

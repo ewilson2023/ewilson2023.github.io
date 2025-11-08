@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 5 My Artistic Self</title>
+		<title>Lab 7 My Artistic Self</title>
 		<meta name="author" content="Liz Wilson">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 		
+		<script src="javascript/nav.js"> </script>
 		<style>
 		/* -left/+right -top/+bottom */
 			.wordArt {
@@ -67,7 +68,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 13.75cqw, 90px)">
-					Lab 5 My Artistic Self
+					Lab 7 My Artistic Self
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -75,14 +76,10 @@
 					<hr>
 				</div>
 			</div>
+			
 			<!-- nav bar -->
-			<nav>
-				<a href="index.html"> Home </a>
-				<a href="my_vacation.html"> Dream Vacation </a>
-				<a href="my_artistic_self.html" class="current_page"> My Artistic Self </a>
-				<a href="marketplace.html"> Marketplace </a>
-				<a href="Calculators.html"> Calculators </a>					
-			</nav>
+			<nav id="main-nav"></nav>
+			<script> setNav() </script>
 		</div>
 		
 		<!-- MAIN SECTION -->
