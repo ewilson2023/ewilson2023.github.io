@@ -1,8 +1,15 @@
 <!DOCTYPE html>
+
+<?php
+	$current_page = 'artisticSelf';		// set name variable
+	$page_title = "My Artistic Self";
+	$title_size = "font-size: clamp(30px, 13cqw, 90px)";
+?>
 <html>
 	<head>
-		<title>Lab <?php include 'common/labnum.php';?>My Artistic Self</title>
 		<?php require 'common/head.php';?>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nabla">
+		
 		<style>
 		/* -left/+right -top/+bottom */
 			.wordArt {
@@ -53,28 +60,7 @@
 	
 	<body>
 		<!-- HEADER -->
-		<div class="header">
-			<!-- Title -->
-			<div class="title_wrapper">
-				<h1 style="font-size: clamp(30px, 13cqw, 90px)">
-					Lab <?php include 'common/labnum.php';?> My Artistic Self
-				</h1>
-				<div class="subtitle">
-					<hr>
-						<h2> Liz Wilson	</h2>
-					<hr>
-				</div>
-			</div>
-			
-			<!-- NAV BAR -->
-			<nav>
-				<?php
-					$current_page = 'artisticSelf';		// set name variable
-					require 'common/nav.php';
-				?>
-			</nav>
-			
-		</div>
+		<?php require 'common/header-nav.php';	?>
 		
 		<!-- MAIN SECTION -->
 		<div class="main">

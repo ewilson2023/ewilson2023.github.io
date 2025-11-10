@@ -1,31 +1,20 @@
 <!DOCTYPE html>
+
+<?php
+	$current_page = 'quiz';		// set name variable
+	$page_title = "Quiz";
+	$title_size = "";
+?>
+
 <html>
 	<head>
-		<title>Lab <?php include 'common/labnum.php';?>: Quiz</title>
 		<?php require 'common/head.php';?>
 		
 	</head>
 	
 	<body>
 	<!-- HEADER -->
-		<div class="header">
-			<!-- Title -->
-			<div class="title_wrapper">
-				<h1>Lab <?php include 'common/labnum.php';?> Quiz</h1>
-				<div class="subtitle">
-					<hr>
-						<h2> Liz Wilson	</h2>
-					<hr>
-				</div>
-			</div>
-			<nav> 
-				<?php
-					$current_page = 'quiz';
-					require 'common/nav.php';
-				?>
-			</nav> 
-			
-		</div>
+		<?php require 'common/header-nav.php';	?>
 		
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
@@ -60,7 +49,7 @@
 						<input  id="dateinput" type="date">
 		  			</div>
 					<div>
-		  				<input id="submit_quiz" type="button" value="Click here" onclick="<!-- SOMETHING -->">
+		  				<input id="submit_quiz" type="submit" value="Click here">
 		  				<label for="submit_quiz"> submit answers </label><br>
 		  			</div>
 		  			

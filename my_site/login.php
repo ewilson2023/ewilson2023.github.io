@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+<?php
+	$current_page = 'login';		// set name variable
+	$page_title = "To-Do List";
+	$title_size = "";
+?>
+
 <html>
 	<head>
-		<title>Lab <?php include 'common/labnum.php';?>: Login</title>
 		<?php require 'common/head.php';?>
 		
 		<style>
@@ -15,24 +20,7 @@
 	
 	<body>
 	<!-- HEADER -->
-		<div class="header">
-			<!-- Title -->
-			<div class="title_wrapper">
-				<h1>Lab <?php include 'common/labnum.php';?> To-Do List</h1>
-				<div class="subtitle">
-					<hr>
-						<h2> Liz Wilson	</h2>
-					<hr>
-				</div>
-			</div>
-			<nav> 
-				<?php
-					$current_page = 'login';
-					require 'common/nav.php';
-				?>
-			</nav> 
-			
-		</div>
+		<?php require 'common/header-nav.php';	?>
 		
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
@@ -62,8 +50,8 @@
 						// identify server host
 						if ($_SERVER['SERVER_NAME'] === 'localhost') {
 							$BASE_URL= $_SERVER['HTTP_HOST'] . '/my_site/';
-						} elseif ($_SERVER['SERVER_NAME'] === ' osiris.ubishops.ca'){
-							$BASE_URL= $_SERVER['HTTP_HOST'] . 'ewilson';
+						} elseif ($_SERVER['SERVER_NAME'] === 'osiris.ubishops.ca'){
+							$BASE_URL= $_SERVER['HTTP_HOST'] . '/home/ewilson/';
 						} else {
 							$BASE_URL= $_SERVER['HTTP_HOST'];
 						}

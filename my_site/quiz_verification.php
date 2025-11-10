@@ -4,7 +4,7 @@
 	
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		$finalResult;
-		$result;
+		$result = 80;
 		
 		/* define $result */
 		
@@ -29,3 +29,5 @@
 
 					
 ?>
+
+<p> ... My answer is: <?php echo "$finalResult"  ?></p>
