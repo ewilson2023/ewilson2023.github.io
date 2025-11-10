@@ -1,32 +1,16 @@
 <!DOCTYPE html>
+<?php
+	$current_page = 'vacation';		// set name variable
+	$page_title = "My Dream Vacation";
+	$title_size = "font-size: clamp(30px, 13.25cqw, 90px);";
+?>
 <html>
 	<head>
-		<title>Lab <?php include 'common/labnum.php';?>My Dream Vacation</title>
 		<?php require 'common/head.php';?>
 	</head>
 	<body>		
-		<!-- HEADER -->
-		<div class="header">
-			<!-- Title -->
-			<div class="title_wrapper">
-				<h1 style="font-size: clamp(30px, 13.25cqw, 90px);">
-					Lab <?php include 'common/labnum.php';?> Dream Vacation
-				</h1>
-				<div class="subtitle">
-					<hr>
-					<h2> Liz Wilson	</h2>
-					<hr>
-				</div>
-			</div>
-			<!-- NAV BAR -->
-			<nav>
-				<?php
-					$current_page = 'vacation';		// set name variable
-					require 'common/nav.php';
-				?>
-			</nav>
-			
-		</div>
+	<!-- HEADER -->
+		<?php require 'common/header-nav.php';	?>
 		
 		<!-- MAIN SECTION -->
 		<div class="body_wrapper">
