@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 7 My Dream Vacation</title>
-		<meta name="author" content="Liz Wilson">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="scrollbar.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
-		<script src="javascript/nav.js"> </script>
+		<title>Lab <?php include 'common/labnum.php';?>My Dream Vacation</title>
+		<?php require 'common/head.php';?>
 	</head>
 	<body>		
 		<!-- HEADER -->
@@ -20,7 +10,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 13.25cqw, 90px);">
-					Lab 7 Dream Vacation
+					Lab <?php include 'common/labnum.php';?> Dream Vacation
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -28,9 +18,14 @@
 					<hr>
 				</div>
 			</div>
-			<!-- nav bar -->
-			<nav id="main-nav"></nav>
-			<script> setNav() </script>
+			<!-- NAV BAR -->
+			<nav>
+				<?php
+					$current_page = 'vacation';		// set name variable
+					require 'common/nav.php';
+				?>
+			</nav>
+			
 		</div>
 		
 		<!-- MAIN SECTION -->
@@ -88,9 +83,7 @@
 				</figure>
 				
 				<!-- FOOTER -->
-				<footer>
-					CS203 Labs
-				</footer>	
+				<?php include 'common/footer.php';	?>	
 			</div>
 		</div>
 	</body>

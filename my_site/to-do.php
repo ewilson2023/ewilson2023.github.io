@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 7: Liz Wilson</title>
-		<meta name="author" content="Liz Wilson">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
- 		<link rel="stylesheet" href="styles.css"> 
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="scrollbar.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-		
-		<script src="javascript/nav.js"> </script>
+		<title>Lab <?php include 'common/labnum.php';?>To-Do List</title>
+		<?php require 'common/head.php';?>
 
 		<script>
 		// Load saved items from localStorage
@@ -79,16 +68,21 @@
 		<div class="header">
 			<!-- Title -->
 			<div class="title_wrapper">
-				<h1>Lab 7 Main Page</h1>
+				<h1>Lab <?php include 'common/labnum.php';?> To-Do List</h1>
 				<div class="subtitle">
 					<hr>
 						<h2> Liz Wilson	</h2>
 					<hr>
 				</div>
 			</div>
-			<!-- nav bar -->
-			<nav id="main-nav"></nav>
-			<script> setNav() </script>
+			<!-- NAV BAR -->
+			<nav>
+				<?php
+					$current_page = 'todo';		// set name variable
+					require 'common/nav.php';
+				?>
+			</nav>			
+			
 		</div>
 		
 	<!-- MAIN SECTION -->
@@ -103,7 +97,7 @@
 				
 				<!-- TO-DO list -->
 				<fieldset>
-					<legend class="legend_txt"> List </legend>
+					<legend> List </legend>
 					<!-- list input -->
 					<div>
 						<label for="item_text"> Enter list items: </label>
@@ -124,9 +118,7 @@
 		</div>
 		
 	<!-- FOOTER -->
-	<footer>
-		CS203 Labs
-	</footer>
+	<?php include 'common/footer.php';	?>
 	
 	</body>
 </html>
