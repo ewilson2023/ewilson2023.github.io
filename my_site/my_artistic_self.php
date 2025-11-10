@@ -1,19 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 8 My Artistic Self</title>
-		<meta name="author" content="Liz Wilson">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link rel="stylesheet" href="styles.css">
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="scrollbar.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nabla">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-		
-		<script src="javascript/nav.js"> </script>
+		<title>Lab <?php include 'common/labnum.php';?>My Artistic Self</title>
+		<?php require 'common/head.php';?>
 		<style>
 		/* -left/+right -top/+bottom */
 			.wordArt {
@@ -67,8 +56,8 @@
 		<div class="header">
 			<!-- Title -->
 			<div class="title_wrapper">
-				<h1 style="font-size: clamp(30px, 13.75cqw, 90px)">
-					Lab 8 My Artistic Self
+				<h1 style="font-size: clamp(30px, 13cqw, 90px)">
+					Lab <?php include 'common/labnum.php';?> My Artistic Self
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -77,9 +66,14 @@
 				</div>
 			</div>
 			
-			<!-- nav bar -->
-			<nav id="main-nav"></nav>
-			<script> setNav() </script>
+			<!-- NAV BAR -->
+			<nav>
+				<?php
+					$current_page = 'artisticSelf';		// set name variable
+					require 'common/nav.php';
+				?>
+			</nav>
+			
 		</div>
 		
 		<!-- MAIN SECTION -->
@@ -100,8 +94,6 @@
 				</div>
 		</div>
 	<!-- FOOTER -->
-		<footer>
-			CS203 Labs
-		</footer>
+		<?php include 'common/footer.php';	?>
 	</body>
 </html>

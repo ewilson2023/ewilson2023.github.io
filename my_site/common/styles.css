@@ -136,6 +136,7 @@ p {
 	text-align-last: left;	/* different last line */
 	
 	margin-bottom: 2px;
+	
 }
 
 /* blocks of text should be contained in these  */
@@ -282,13 +283,12 @@ nav {
 	justify-content: center;
 	align-items: center;/* center items along cross axis */
 	align-content: center;  /* center the group of wrapped rows*/
-	
+	margin: 20px;
 }
 
 nav a {
-/* 	float: left;
-	text-align: center; */
 	padding: 0 10px;
+	margin: 0;
 }
 
 nav a:link,
@@ -345,8 +345,6 @@ legend {
 	border-radius: 15px;
 	
 	width: clamp(100px, 75%, 100%);
-}
-.legend_txt {
 	font-weight: bold;
 	text-align: center;
 	margin: 6px;

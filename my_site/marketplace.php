@@ -1,17 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 8 Marketplace</title>
-		<meta name="author" content="Liz Wilson">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 		<link rel="stylesheet" href="styles.css"> 
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="scrollbar.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
-		<script src="javascript/nav.js"> </script>
+		<title>Lab <?php include 'common/labnum.php';?> Marketplace</title>
+		<?php require 'common/head.php';?>
 	</head>
 	
 	<body>
@@ -19,8 +10,8 @@
 		<div class="header">
 			<!-- Title -->
 			<div class="title_wrapper">
-				<h1 style="font-size: clamp(30px, 16cqw, 90px)">
-					Lab 8 Marketplace
+				<h1 style="font-size: clamp(30px, 15cqw, 90px)">
+					Lab <?php include 'common/labnum.php';?> Marketplace
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -28,9 +19,14 @@
 					<hr>
 				</div>
 			</div>
-			<!-- nav bar -->
-			<nav id="main-nav"></nav>
-			<script> setNav() </script>
+			<!-- NAV BAR -->
+			<nav>
+				<?php
+					$current_page = 'marketplace';		// set name variable
+					require 'common/nav.php';
+				?>
+			</nav>
+			
 		</div>
 		
 	<!-- MAIN SECTION -->
@@ -42,9 +38,7 @@
 			</div>
 		</div>
 	<!-- FOOTER -->
-	<footer>
-		CS203 Labs
-	</footer>
+	<?php include 'common/footer.php';	?>
 	
 	</body>
 </html>

@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Lab 8 Calculators</title>
-		<meta name="author" content="Liz Wilson">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
- 		<link rel="stylesheet" href="styles.css"> 
-		<link rel="stylesheet" href="header.css">
-		<link rel="stylesheet" href="scrollbar.css">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-        
-		<script src="javascript/2-calculator.js"> </script>
-        <script src="javascript/2-calculator_utils.js"> </script>
-        <script src="javascript/nav.js"> </script>
+		<title>Lab <?php include 'common/labnum.php';?> Calculators</title>
+		<?php require 'common/head.php';?>
 	</head>
 	
 	<body>
@@ -23,7 +11,7 @@
 			<!-- Title -->
 			<div class="title_wrapper">
 				<h1 style="font-size: clamp(30px, 15.5cqw, 90px)">
-					Lab 8 Calculators
+					Lab <?php include 'common/labnum.php';?> Calculators
 				</h1>
 				<div class="subtitle">
 					<hr>
@@ -31,89 +19,93 @@
 					<hr>
 				</div>
 			</div>
-			<!-- nav bar -->
-			<nav id="main-nav"></nav>
-			<script> setNav() </script>
+			
+			<!-- NAV BAR -->
+			<nav>
+				<?php
+					$current_page = 'calculators';		// set name variable
+					require 'common/nav.php';
+				?>
+			</nav>
+			
 		</div>
 		
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
-			<div class="main">	
-				<div class="calculator_div">
+		  <div class="main">	
+		  	<div class="calculator_div">
 
-					<!-- Calcultor 1: your age in terms of days -->
-					<fieldset>
-						<legend class="legend_txt"> How old are you terms of days? </legend>
-						<div>
-							<label for="DOB"> Your date of birth </label>
-							<input type="date" id="DOB">
-						</div>
-						<div>
-							<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
-						</div>
-						<div class="answer">
-							<p> The answer is: </p>
-							<p id="p_answer_days"> (click submit first!) </p>
-						</div>
-					</fieldset>
-					
-					
-					<!-- Calcultor 2: your age in terms of days -->
-					<fieldset class="right">
-						<legend class="legend_txt"> The radius & area of the biggest circle fitting in your screen </legend>
-						<div>
-							<input type="button" id="submit_circle" value="Click here to compute" onclick="compute_circle()">
-						</div>
-						<div class="answer">
-							<p> The answer is: </p>
-							<p id="p_answer_circle"> (click submit first!) </p>
-						</div>
-					</fieldset>
-					
-					
-					<!-- Calcultor 3: Palindrome checker -->
-					<fieldset>
-						<legend class="legend_txt"> Palindrome checker </legend>
-						<div>
-							<input type="text" id="possible_palindrome" value="Enter text here">
-						</div>
-						<div> 
-							<input type="button" id="submit_palindrome" value="Click here to compute" onclick="check_palindrome()">
-						</div>
-						<div  class="answer">
-							<p> The answer is: </p>
-							<p id="p_answer_palindrome"> (click submit first!) </p>
-						</div>
-					</fieldset>
-					
-					
-					<!-- Calcultor 4: Fibonnacci -->
-					<fieldset class="right">
-						<legend class="legend_txt"> Fibonacci </legend>
-						<div>
-							<label for="fibo_length"> 
-							How long would you like me to create the Fibonacci sequence?
-							<input type="number" id="fibo_length">
-						</div>
-						<div>
-							<input type="button" id="submit_fibo" value="Click here to compute" onclick="create_fibo()">
-						</div>
-						<div class="answer">
-							<p> The answer is: </p>
-							<p id="p_answer_fibo"> (click submit first!) </p>
-						</div>
-					</fieldset>
-						
-						
-				</div>
-			
-			</div>
+		  		<!-- Calcultor 1: your age in terms of days -->
+		  		<fieldset>
+		  			<legend> How old are you terms of days? </legend>
+		  			<div>
+		  				<label for="DOB"> Your date of birth </label>
+		  				<input type="date" id="DOB">
+		  			</div>
+		  			<div>
+		  				<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
+		  			</div>
+		  			<div class="answer">
+		  				<p> The answer is: </p>
+		  				<p id="p_answer_days"> (click submit first!) </p>
+		  			</div>
+		  		</fieldset>
+		  		
+		  		
+		  		<!-- Calcultor 2: your age in terms of days -->
+		  		<fieldset class="right">
+		  			<legend> The radius & area of the biggest circle fitting in your screen </legend>
+		  			<div>
+		  				<input type="button" id="submit_circle" value="Click here to compute" onclick="compute_circle()">
+		  			</div>
+		  			<div class="answer">
+		  				<p> The answer is: </p>
+		  				<p id="p_answer_circle"> (click submit first!) </p>
+		  			</div>
+		  		</fieldset>
+		  		
+		  		
+		  		<!-- Calcultor 3: Palindrome checker -->
+		  		<fieldset>
+		  			<legend> Palindrome checker </legend>
+		  			<div>
+		  				<input type="text" id="possible_palindrome" value="Enter text here">
+		  			</div>
+		  			<div> 
+		  				<input type="button" id="submit_palindrome" value="Click here to compute" onclick="check_palindrome()">
+		  			</div>
+		  			<div  class="answer">
+		  				<p> The answer is: </p>
+		  				<p id="p_answer_palindrome"> (click submit first!) </p>
+		  			</div>
+		  		</fieldset>
+		  		
+		  		
+		  		<!-- Calcultor 4: Fibonnacci -->
+		  		<fieldset class="right">
+		  			<legend> Fibonacci </legend>
+		  			<div>
+		  				<label for="fibo_length"> 
+		  				How long would you like me to create the Fibonacci sequence?
+		  				<input type="number" id="fibo_length">
+		  			</div>
+		  			<div>
+		  				<input type="button" id="submit_fibo" value="Click here to compute" onclick="create_fibo()">
+		  			</div>
+		  			<div class="answer">
+		  				<p> The answer is: </p>
+		  				<p id="p_answer_fibo"> (click submit first!) </p>
+		  			</div>
+		  		</fieldset>
+		  			
+		  			
+		  	</div>
+		  
+		  </div>
 		</div>
 		
 	<!-- FOOTER -->
-	<footer>
-		CS203 Labs
-	</footer>
+	<?php include 'common/footer.php';	?>
 	
 	</body>
 </html>
