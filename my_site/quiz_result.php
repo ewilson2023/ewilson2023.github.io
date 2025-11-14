@@ -1,3 +1,24 @@
+<!DOCTYPE html>
+
+<?php
+	$current_page = 'quiz';		// set name variable
+	$page_title = "Quiz";
+	$title_size = "";
+?>
+
+<html>
+	<head>
+		<?php require 'common/head.php';?>
+	</head>
+	
+	<body>
+	<!-- HEADER -->
+		<?php require 'common/header-nav.php';	?>
+		
+	<!-- MAIN SECTION -->
+		<div class="body_wrapper">
+		  <div class="main">
+
 <!-- quiz stuff -->
 <?php
 
@@ -31,3 +52,11 @@
 ?>
 
 <p> ... My answer is: <?php echo "$finalResult"  ?></p>
+
+		  </div>
+		</div>
+	<!-- FOOTER -->
+	<?php include 'common/footer.php';	?>
+	
+	</body>
+</html>

@@ -347,7 +347,7 @@ legend {
 	width: clamp(100px, 75%, 100%);
 	font-weight: bold;
 	text-align: center;
-	margin: 6px;
+	margin: 0 auto;
 	text-align: center;
 }
 .calculator_div input {

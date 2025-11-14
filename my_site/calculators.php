@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <?php
 	$current_page = 'calculators';		// set name variable
 	$page_title = "Calculators";
@@ -24,10 +24,14 @@
 		  			<legend> How old are you terms of days? </legend>
 		  			<div>
 		  				<label for="DOB"> Your date of birth </label>
-		  				<input type="date" id="DOB">
+		  				<input  id="DOB" type="date">
 		  			</div>
 		  			<div>
-		  				<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
+		  				<input 
+							type="button" 
+							id="submit_days" 
+							value="Click here to compute" 
+							onclick="compute_days()">
 		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
@@ -53,10 +57,17 @@
 		  		<fieldset>
 		  			<legend> Palindrome checker </legend>
 		  			<div>
-		  				<input type="text" id="possible_palindrome" value="Enter text here">
+		  				<input 
+							type="text"
+							id="possible_palindrome"
+							value="Enter text here">
 		  			</div>
 		  			<div> 
-		  				<input type="button" id="submit_palindrome" value="Click here to compute" onclick="check_palindrome()">
+		  				<input 
+							type="button"
+							id="submit_palindrome"
+							value="Click here to compute"
+							onclick="check_palindrome()">
 		  			</div>
 		  			<div  class="answer">
 		  				<p> The answer is: </p>

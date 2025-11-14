@@ -1,3 +1,10 @@
+<?php 
+//$labnum = 9; 
+ob_start();
+include 'common/labnum.php';	// save lab number as a variable
+$labnum = ob_get_clean();
+?>
+
 <title>Lab <?= $labnum . ": " . $page_title?></title>
 
 <meta name="author" content="Liz Wilson">

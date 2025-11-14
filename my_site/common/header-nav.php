@@ -1,14 +1,14 @@
 <?php 
 //$labnum = 9; 
 ob_start();
-include 'common/labnum.php';
+include 'common/labnum.php';	// save lab number as a variable
 $labnum = ob_get_clean();
 ?>
 
-
+<!----HEADER ----->
 <div class="header">
 	
-	<!-- TITLE -->
+	<!-- title/subtitle -->
 		<div class="title_wrapper">
 			<h1 style="<?php echo $title_size ?>">
 				Lab <?= $labnum . " " . $page_title?>
@@ -17,11 +17,11 @@ $labnum = ob_get_clean();
 				<hr>
 					<h2> Liz Wilson	</h2>
 				<hr>
-		<!--	<HEADER -->
 			</div>
 		</div>
 		
-<nav>
+<!---- NAV MENU ----->		
+  <nav>
 	<!--------Home Icon -------->
 	<a href="index.php" class="<?= ($current_page === 'home') ? 'active' : '' ?>">
 		<img src="images/home.png" alt="Home" style="width:16px; height:16px; margin:0;">
@@ -46,9 +46,9 @@ $labnum = ob_get_clean();
 	<a href="marketplace.php" class="<?= ($current_page === 'marketplace') ? 'active' : '' ?>">Marketplace </a>
 	<a href="calculators.php" class="<?= ($current_page === 'calculators') ? 'active' : '' ?>">Calculators </a>
 	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
-	<a href="my_form.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
+	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
 
-</nav>
+  </nav>
 
 </div>
 
