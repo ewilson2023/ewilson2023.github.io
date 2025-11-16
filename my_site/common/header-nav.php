@@ -10,7 +10,7 @@ $labnum = ob_get_clean();
 	
 	<!-- title/subtitle -->
 		<div class="title_wrapper">
-			<h1 style="<?php echo $title_size ?>">
+			<h1 style="<?= $title_size ?>">
 				Lab <?= $labnum . " " . $page_title?>
 			</h1>
 			<div class="subtitle">

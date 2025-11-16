@@ -17,7 +17,7 @@ the element's total width and height */
 * {	box-sizing: border-box;}
 
 body {
-	background-color: var(--canvas);
+	background-Color: var(--canvas);
 
 	/* reserve footer height */
 	margin: 0;
@@ -69,15 +69,14 @@ footer {
 
 	width: 100%;
 	height: 30px;
-	background-color: var(--cerulean);	
-	text-align: center;
+	background-Color: var(--cerulean);	
 	display: flex;
 	align-items: center;		/* vert center */
 	justify-content: center; 	/* horo center */
 	
 	/* text styling */
 	text-transform: uppercase;
-	color: var(--canvas);
+	Color: var(--canvas);
 	font-weight: bold;
 	letter-spacing: 0.05rem;
 }
@@ -109,14 +108,14 @@ footer {
 }
 
 .h2_decorated hr {
-	color: black;
+	Color: black;
 }
 
 hr {
 	flex: 1;	/* fill remaining width */
 	margin: 0;
 	
-	background-color: black;
+	background-Color: black;
 	height: 1px;
 	border: none;
 }
@@ -173,7 +172,7 @@ h3 {
 /*-------------------------------------*/
 a {
 	text-transform: uppercase;
-	color: var(--cerulean);
+	Color: var(--cerulean);
 	font-size: 12px;
 	letter-spacing: 0.1rem;
 	text-align: center;
@@ -181,26 +180,26 @@ a {
 }
 
 a:link {
-	color: var(--cerulean);
-	background-color: transparent;
+	Color: var(--cerulean);
+	background-Color: transparent;
 	text-decoration: none;
 }
 
 a:visited {
-	color: var(--steelBlue);
-	background-color: transparent;
+	Color: var(--steelBlue);
+	background-Color: transparent;
 	text-decoration: none;
 }
 	
 a:hover {
-	color: var(--cerulean);
-	background-color: transparent;
+	Color: var(--cerulean);
+	background-Color: transparent;
 	text-decoration: underline;
 }
 
 a:active {
-	color: var(--orangeDark);
-	background-color: transparent;
+	Color: var(--orangeDark);
+	background-Color: transparent;
 	text-decoration: underline;
 }
 
@@ -215,8 +214,8 @@ table {
 }
 
 th {
-	background-color: var(--orangeLight);
-	color: var(--cerulean);
+	background-Color: var(--orangeLight);
+	Color: var(--cerulean);
 	border: 0px;
 	padding: 10px;
 }
@@ -224,7 +223,7 @@ th {
 td {
 	border: 1px solid var(--orangeLight);
 	padding: 5px 10px 5px 10px;
-	color: 
+	Color: 
 }
 /*-------------------------------------*/
 /*////////// SLIDESHOW ///////////////*/
@@ -294,7 +293,7 @@ nav a {
 nav a:link,
 nav a:visited,
 nav a:hover {
-	color: var(--canvas);
+	Color: var(--canvas);
 }
 
 nav a:hover {
@@ -303,7 +302,7 @@ nav a:hover {
 }
 
 nav a:active {
-	color: var(--orangeDark);
+	Color: var(--orangeDark);
 }
 
 nav a.current_page {
@@ -311,23 +310,32 @@ nav a.current_page {
 }
 
 /*-------------------------------------*/
-/*////////// CALCULATORS //////////////*/
+/*//////////// FIELDSET ///////////////*/
 /*-------------------------------------*/
+legend {
+	background-Color: var(--orangeDark);
+	border: 2px solid var(--steelBlue);
+	border-radius: 15px;
+	
+	width: clamp(100px, 75%, 100%);
+	font-weight: bold;
+	text-align: center;
+	margin: 0 auto;
+	text-align: center;
+}
 
-.calculator_div{
-	max-width: 45%;
+.answer{
+	background-Color: var(--orangeDark);
+	border-radius: 15px;
+	width: 100%;
 }
-.calculator_div p {
-	text-indent: 0;
-	text-align: left;
-	margin: 4px;
+.answer p {
+	margin-left: 10px;
+	margin-right: 10px;
 }
-@media screen and (max-width: 800px) {
-	.calculator_div{
-		max-width: 75%;
-	}
-}
-.calculator_div div, fieldset{
+
+
+fieldset{
 	margin-top: 20px;
 }
 fieldset {
@@ -339,31 +347,65 @@ fieldset {
 	border: 2px solid var(--steelBlue);
 	border-radius: 20px;
 }
-legend {
-	background-color: var(--orangeDark);
-	border: 2px solid var(--steelBlue);
-	border-radius: 15px;
+
+.checkbox_container {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	
 	width: clamp(100px, 75%, 100%);
-	font-weight: bold;
-	text-align: center;
-	margin: 0 auto;
-	text-align: center;
-}
-.calculator_div input {
-	align-items: center;
-}
-.answer{
-	background-color: var(--orangeDark);
-	border-radius: 15px;
-	width: 100%;
-}
-.answer p {
-	margin-left: 10px;
-	margin-right: 10px;
+	
+	margin-top: 10px;
+	
+	/*border: 3px solid red;	debug*/
 }
 
-.right{
-	position:relative;
-	left:10%;
+.checkbox_subcat {
+	/*background-color: rgba(255, 219, 182, 0.6);/* debug*/
+	/*border: 2px solid black;	/*debug*/
+	
+	display: flex;
+	flex-direction: column;	/* make elements stack */
+	/*	justify-content: left;  left center */
+	margin-left: 3%;
+	
+	align-items: flex-start;
+	margin: 0 0 0.25rem 0.25rem;
+	
 }
+
+div.checkbox_subcat > label {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+	
+	margin-left: 0;	/* reset margin */
+}
+
+.checkbox_and_label {
+	margin: 0.1rem 0;
+	/*border: 1px solid orange;	debug*/
+	word-break: break-word;
+	
+	display: flex;
+	align-items: center;
+	
+}
+
+@media (max-width: 300px) {
+	.checkbox_container {
+		grid-template-columns: 1fr;
+	}
+}
+
+/**************************/
+			.gradient_moodring {
+				max-width: 300px;
+				max-height: 300px;
+				width: 70vw; 
+				height: 70vw; 
+				margin-top: 20px;
+				border-radius: 50%;		/* make it a circle */
+				
+				background-color: green; /* default */
+			}

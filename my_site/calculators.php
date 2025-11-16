@@ -8,6 +8,32 @@
 <html>
 	<head>
 		<?php require 'common/head.php';?>
+		
+		<style>
+			.calculator_div{
+				max-width: 45%;
+			}
+			.calculator_div p {
+				text-indent: 0;
+				text-align: left;
+				margin: 4px;
+			}
+			@media screen and (max-width: 800px) {
+				.calculator_div{
+					max-width: 75%;
+				}
+			}
+			.calculator_div input {
+				align-items: center;
+			}
+			.right{
+				position:relative;
+				left:10%;
+			}
+			.calculator_div{
+				margin-top: 20px;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -58,14 +84,15 @@
 		  			<legend> Palindrome checker </legend>
 		  			<div>
 		  				<input 
-							type="text"
 							id="possible_palindrome"
-							value="Enter text here">
+							type="text"
+							value="Enter text here"
+							stlye="cursor: text">
 		  			</div>
 		  			<div> 
 		  				<input 
-							type="button"
 							id="submit_palindrome"
+							type="button"
 							value="Click here to compute"
 							onclick="check_palindrome()">
 		  			</div>
