@@ -10,10 +10,7 @@
 		<?php require 'common/head.php';?>
 		
 		<style>
-		.error { 
-			color:#FF5722;
-			font-weight: bold;
-		}
+		.error { color:#FF5722;	font-weight: bold;	}
 		</style>
 		
 	</head>

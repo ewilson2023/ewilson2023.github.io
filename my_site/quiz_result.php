@@ -21,6 +21,17 @@
 				
 				background-color: green; /* default */
 			}
+			.result_text {
+				text-align: center;
+				text-transform: none;
+				font-variant: small-caps;
+				padding-top: 0;
+				font-weight: bold;
+				font-size: clamp(15px, 10vw, 20px);
+				letter-spacing: 0.15rem;
+				margin-top: 20px;
+			}
+			
 		</style>
 	</head>
 	
@@ -117,8 +128,8 @@ echo "<br><br>";
 			<?= $emotion_hexs ?> )">
 		</div>
 
-		<h2 style="text-transform: none; font-variant: small-caps; padding-top: 0;"> 
-		<?= $emotion_keys ?> </h2>
+		<div class="result_text">
+		<?= $emotion_keys ?> </div>
 		
 		
 		<a href="my_quiz.php">

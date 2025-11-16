@@ -21,6 +21,34 @@
 		<div class="body_wrapper">
 		  <div class="main">	
 		  
+		  <!-------------------------------------->
+		<label class="my_checkmark">
+			<input type="checkbox" id="emotion_Happy" name="emotions[]" value="Happy">
+				Happy
+		</label>
+		  <label class="my_checkmark">
+			  <input type="checkbox"/>
+			  Checkbox
+		  </label>
+		  <label class="my_checkmark">
+			  <input type="checkbox" checked />
+			  Checkbox - checked
+		  </label>
+		  <label class="my_checkmark">
+			  <input type="checkbox"/>
+			  Checkbox
+		  </label>
+		  <label class="my_checkmark">
+			  <input type="checkbox"/>
+			  Checkbox
+		  </label>
+
+
+		  		  <label class="my_checkmark">
+			  <input type="checkbox" name="checkbox-checked" checked />
+			  Checkbox - checked
+		  </label>
+		  <!-------------------------------------->
 		  
 		  	<div class="h2_decorated">
 		  		<hr><h2>Mood Ring</h2><hr>
@@ -145,8 +173,16 @@
 
 					
 					<div>
-		  				<input id="submit_quiz" type="submit" value="Submit">
-						<input type="reset" value="Reset">
+					<!------- SUBMIT BUTTONS -------->	
+		  				<input 
+							class="button"
+							id="submit_quiz" 
+							type="submit" 
+							value="Submit">
+						<input 
+							class="button"
+							type="reset" 
+							value="Reset">
 		  			</div>
 		  			
 				</fieldset>
@@ -197,6 +233,7 @@ GENERAL:
 - checkbox formatting
 - button formatting
 - drop down formatting
+- make button not resize on hover
 
 QUIZ:
 - circle result overflow on right side of container

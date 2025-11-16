@@ -271,43 +271,6 @@ td {
 	height: auto;	/* maintain size ratio */
 }
 
-/*-------------------------------------*/
-/*//////////// NAV BAR ////////////////*/
-/*-------------------------------------*/
-nav {
-	flex-shrink: 0; /* keep height fixed */
-	
-	display: flex;
-	flex-wrap: wrap;/* allow links to wrap to multiple lines */
-	justify-content: center;
-	align-items: center;/* center items along cross axis */
-	align-content: center;  /* center the group of wrapped rows*/
-	margin: 20px;
-}
-
-nav a {
-	padding: 0 10px;
-	margin: 0;
-}
-
-nav a:link,
-nav a:visited,
-nav a:hover {
-	Color: var(--canvas);
-}
-
-nav a:hover {
-	text-shadow: 0 0 5px var(--canvas);
-	text-decoration: initial;
-}
-
-nav a:active {
-	Color: var(--orangeDark);
-}
-
-nav a.current_page {
-	text-shadow: 0 0 5px var(--canvas);
-}
 
 /*-------------------------------------*/
 /*//////////// FIELDSET ///////////////*/
@@ -402,3 +365,117 @@ div.checkbox_subcat > label {
 
 
 /**************************/
+.button {
+	border: none;
+	background-color: var(--orangeDark);
+	padding: 10px 20px;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	border-radius: 6px;
+
+ 	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 400;      /* bold on hover */
+}
+.button:hover {
+	background-color: var(--orangeLight);
+}
+.button:active {
+	background-color: var(--orangeLight);
+	box-shadow: inset 0px 1px 10px brown;
+}
+/*
+// arrow on hover
+ .button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} */
+/*****************************/
+
+/* checkmark contains checkbox + label, 
+is a small 2-column grid.
+	grid-template-columns: 1em auto;
+	col1 - 1em - checkbox - size of one char any font-size
+	col2 - auto - lable - fill remaining space
+ */
+.my_checkmark {
+	font-size: 2rem;
+	font-weight: bold;
+	display: grid;
+
+	grid-template-columns: 1em auto;
+	gap: 0.5em;		/* half of size of one char */
+}
+
+/* if two .my_checkmark follow each other, gap is ledd */
+.my_checkmark + .my_checkmark {
+	margin-top: 0.2em;	/* 1/5 of size of one char */
+}
+
+
+.my_checkmark input[type="checkbox"] {
+	appearance: none; 	/* hide default checkbox */
+
+	font-size: inherit;
+	width:	1.14em;		/* % of size of one char */
+	height:	1.14em;
+	border:	0.125em solid /*colour*/;
+	border-radius: 0.15em;
+
+	display: grid;
+	place-content: center;
+	
+	position: relative;		/* anchor ::before and ::after stuff */
+}
+
+
+.my_checkmark input[type="checkbox"]::before {
+	content: "";	/* makes the pseudo element exist */
+	
+	width: 1.15em;
+	height: 1.15em;
+	border-radius: 0.15em;
+	background-color: var(--cerulean);
+
+	transform: scale(0);
+	box-shadow: inset 1em 1em var(--checkmark-color);
+}
+.my_checkmark input[type="checkbox"]::after {
+	content: "✔";
+	font-size: 1.1em;
+	width: 1.15em;
+	color: var(--canvas);
+
+	/*background-color: rgba(255, 0, 0, 0);	debug*/
+	
+	position: absolute;
+	top: -0.3em;
+	transform: scale(0);     /* start hidden */
+}
+
+/* appear when clicked */
+.my_checkmark input[type="checkbox"]:checked::before {
+	transform: scale(1);
+}
+.my_checkmark input[type="checkbox"]:checked::after {
+	transform: scale(1);
+}
+
+

@@ -75,4 +75,43 @@ h1 {
 	padding: 0;
 }
 
+/*-------------------------------------*/
+/*//////////// NAV BAR ////////////////*/
+/*-------------------------------------*/
+nav {
+	flex-shrink: 0; /* keep height fixed */
+	
+	display: flex;
+	flex-wrap: wrap;/* allow links to wrap to multiple lines */
+	justify-content: center;
+	align-items: center;/* center items along cross axis */
+	align-content: center;  /* center the group of wrapped rows*/
+	margin: 20px;
+}
+
+nav a {
+	padding: 0 10px;
+	margin: 0;
+	
+	transition-duration: 0.4s;
+}
+
+nav a:link,
+nav a:visited,
+nav a:hover {
+	Color: var(--canvas);
+}
+
+nav a:hover {
+	text-shadow: 0 0 5px var(--canvas);
+	text-decoration: initial;
+}
+
+nav a:active {
+	Color: var(--orangeDark);
+}
+
+nav a.current_page {
+	text-shadow: 0 0 5px var(--canvas);
+}
 
