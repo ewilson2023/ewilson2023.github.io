@@ -11,7 +11,16 @@
 		<?php require 'common/head.php';?>
 		
 		<style>
-
+			.gradient_moodring {
+				max-width: 300px;
+				max-height: 300px;
+				width: 70vw; 
+				height: 70vw; 
+				margin-top: 20px;
+				border-radius: 50%;		/* make it a circle */
+				
+				background-color: green; /* default */
+			}
 		</style>
 	</head>
 	
