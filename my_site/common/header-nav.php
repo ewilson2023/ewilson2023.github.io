@@ -29,9 +29,9 @@ $labnum = ob_get_clean();
 	
 	<!-------- Drop down -------->
 	<form name="discoverme_form">
-	<select id="discoverme" name="discoverme_list" >
+	<select id="discoverme" name="discoverme_list" style="width: 11em" >
 		<option>
-			Discover me!
+			Discover me
 		</option>
 		<option value="my_vacation.php" class="<?= ($current_page === 'vacation') ? 'active' : '' ?>">
 			Dream Vacation

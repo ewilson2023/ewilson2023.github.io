@@ -10,6 +10,15 @@
 		<?php require 'common/head.php';?>
 		
 		<style>
+			.answer{
+				background-Color: var(--orangeDark);
+				border-radius: 15px;
+				width: 100%;
+			}
+			.answer p {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
 			.calculator_div{
 				max-width: 45%;
 			}
@@ -53,11 +62,13 @@
 		  				<input  id="DOB" type="date">
 		  			</div>
 		  			<div>
-		  				<input 
+						<input 
+							class="button"
 							type="button" 
 							id="submit_days" 
 							value="Click here to compute" 
 							onclick="compute_days()">
+
 		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
@@ -70,12 +81,17 @@
 		  		<fieldset class="right">
 		  			<legend> The radius & area of the biggest circle fitting in your screen </legend>
 		  			<div>
-		  				<input type="button" id="submit_circle" value="Click here to compute" onclick="compute_circle()">
-		  			</div>
+						<input 
+							class="button"
+							type="button" 
+							id="submit_circle" 
+							value="Click here to compute" 
+							onclick="compute_circle()">		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
 		  				<p id="p_answer_circle"> (click submit first!) </p>
-		  			</div>
+
+					</div>
 		  		</fieldset>
 		  		
 		  		
@@ -90,11 +106,12 @@
 							stlye="cursor: text">
 		  			</div>
 		  			<div> 
-		  				<input 
-							id="submit_palindrome"
-							type="button"
-							value="Click here to compute"
-							onclick="check_palindrome()">
+						<input 
+							class="button"
+							type="button" 
+							id="submit_palindrome" 
+							value="Click here to compute" 
+							onclick="check_palindrome()">	
 		  			</div>
 		  			<div  class="answer">
 		  				<p> The answer is: </p>
@@ -112,7 +129,11 @@
 		  				<input type="number" id="fibo_length">
 		  			</div>
 		  			<div>
-		  				<input type="button" id="submit_fibo" value="Click here to compute" onclick="create_fibo()">
+		  				<input class="button"
+							type="button" 
+							id="submit_fibo" 
+							value="Click here to compute" 
+							onclick="create_fibo()">
 		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>

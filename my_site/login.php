@@ -25,7 +25,10 @@
 			
 				<form action="login.php" method="POST">
 					Enter Password: <input type="text" name="pword">
-					<input type="submit" value="Submit">
+					<input 
+						class="button"
+						type="submit" 
+						value="Submit">
 				</form>
 				
 				<?php

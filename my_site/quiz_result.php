@@ -11,15 +11,26 @@
 		<?php require 'common/head.php';?>
 		
 		<style>
-			.gradient_moodring {
+			.circle_base {
+				position: relative;
 				max-width: 300px;
 				max-height: 300px;
-				width: 70vw; 
-				height: 70vw; 
 				margin-top: 20px;
-				border-radius: 50%;		/* make it a circle */
+				width: 70vw;
+				height: 70vw;
+				border-radius: 50%;
+				overflow: hidden; /* ensures overlay clips to circle */
 				
-				background-color: green; /* default */
+				background-image: repeating-radial-gradient(red, grey 10%, red 15%); /* default */
+			}
+			.circle_base img{
+				position: absolute;
+				max-width: 300px;
+				max-height: 300px;
+				width: 70vw;
+				height: 70vw;
+				border-radius: 50%;
+				mix-blend-mode: overlay;
 			}
 			.result_text {
 				text-align: center;
@@ -31,6 +42,7 @@
 				letter-spacing: 0.15rem;
 				margin-top: 20px;
 			}
+
 			
 		</style>
 	</head>
@@ -59,7 +71,6 @@ require 'common/emotion_colours.php';
 $emotion_keys = "";
 $emotion_hexs = "";
 $emotions = array();
-$str = "[result string]";
 
 /* var_dump($emotionColours);	//debug
 echo "<br><br>";
@@ -69,8 +80,7 @@ echo "<br><br>";
 		$emotions = array();
 		
 		if (!isset($_GET['emotions']) || count($_GET['emotions']) == 0){
-			$str = "no emotions";
-			$emotions['Indifferent'] = '#e9e9e9';
+			$emotion_keys = "Uh-Oh";
 		} else {
 			$emotions_input = ($_GET['emotions']);
 			
@@ -95,7 +105,10 @@ echo "<br><br>";
 			}
 			
 			// append first key for smooth gradient
-			$emotion_hexs = $emotion_hexs . ", " . $emotions[array_key_first($emotions)];
+			$emotion_hexs = 
+				$emotion_hexs .
+				", " . 
+				$emotions[array_key_first($emotions)];
 
 
 /* 			echo $emotion_keys . "<br>";
@@ -123,18 +136,26 @@ echo "<br><br>";
 	">
 
 		<!-- place an html element with a gradient of the chosen colours -->
-		<div class="gradient_moodring" 
+		<div class="circle_base" 
 			style="background-image: conic-gradient(
 			<?= $emotion_hexs ?> )">
+			<img src="images/moodring_overlay1.png">
+			<img src="images/moodring_overlay2.png">
 		</div>
 
+		<!-- print result string -->
 		<div class="result_text">
 		<?= $emotion_keys ?> </div>
 		
-		
+		<!-- return button -->
 		<a href="my_quiz.php">
-			<input id="return_to_quiz" type="button" value="Return">
+			<input 
+			class="button" 
+			id="return_to_quiz" 
+			type="button" 
+			value="Return">
 		</a>
+		
 		
 	</div>
 	

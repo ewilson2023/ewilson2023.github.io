@@ -9,12 +9,15 @@ $emotionColours = [
 	'Lonely'		=> '#342caa',
 	/* ANGER */
     'Angry'			=> '#c3192b',
+    'Annoyed'		=> '#bd664d',
 	/* DISGUST */
-	'Disgusted'		=> '#df841c',
+	'Disgusted'		=> '#9c950d',
 	/* FEAR */
-	'Afraid'		=> '#7e1260',
+	'Scared'		=> '#7e1260',
+	'Tense'			=> '#df841c',
 	/* SURPRISE */
 	'Surprised'		=> '#816dcc',
+	'Confused'		=> '#5869ff',
 	/* NEUTRAL */
 	'Bored'			=> '#818785',
 	'Indifferent'	=> '#cfcfcf',

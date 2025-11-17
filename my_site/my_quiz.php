@@ -21,9 +21,9 @@
 		<div class="body_wrapper">
 		  <div class="main">	
 		  
-		  <!-------------------------------------->
+		  <!-------------- test ------------------------
 		<label class="my_checkmark">
-			<input type="checkbox" id="emotion_Happy" name="emotions[]" value="Happy">
+			<input type="checkbox" name="emotions[]" value="Happy">
 				Happy
 		</label>
 		  <label class="my_checkmark">
@@ -48,7 +48,7 @@
 			  <input type="checkbox" name="checkbox-checked" checked />
 			  Checkbox - checked
 		  </label>
-		  <!-------------------------------------->
+		  -------------------------------------->
 		  
 		  	<div class="h2_decorated">
 		  		<hr><h2>Mood Ring</h2><hr>
@@ -63,116 +63,105 @@
 						<div class="checkbox_container">
 						
 					<!-------- HAPPINESS -------->	
-						  <div class="checkbox_subcat"> <label> Happiness  </label> 
+						  <div class="checkbox_subcat"> <label> Happiness </label>
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Happy" name="emotions[]" value="Happy">
-								<label for="emotion_Happy"> 
-									Happy
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Happy">
+								Happy
+							</label>
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Confident" name="emotions[]" value="Confident">
-								<label for="emotion_Confident"> 
-									Confident
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Confident">
+								Confident
+							</label>
 							
 						  </div>
-							
 
-							
 					<!-------- SADNESS --------->		
 						  <div class="checkbox_subcat"> <label> Sadness </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Sad" name="emotions[]" value="Sad">
-								<label for="emotion_Sad">
-									Sad
-								</label>
-							</div>
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Lonely" name="emotions[]" value="Lonely">
-								<label for="emotion_Lonely">
-									Lonely
-								</label>
-							</div>
+							<label class="my_checkmark"> 
+								<input type="checkbox" name="emotions[]" value="Sad">
+								Sad
+							</label>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Lonely">
+								Lonely
+							</label>
 							
 						  </div>
-						  
+
 					<!--------- ANGER -------->		
 						  <div class="checkbox_subcat"> <label> Anger </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_angry" name="emotions[]" value="Angry">
-								<label for="emotion_angry">
-									Angry
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Angry">
+								Angry
+							</label>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Annoyed">
+								Annoyed
+							</label>
 							
-						  </div>	
-						  
+						  </div>
+
 					<!------- DISGUST -------->		
 						  <div class="checkbox_subcat"> <label> Disgust </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Disgusted" name="emotions[]" value="Disgusted">
-								<label for="emotion_Disgusted">
-									Disgusted
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Disgusted">
+								Disgusted
+							</label>
 							
 						  </div>
-						  
+
 					<!---------- FEAR --------->
 						  <div class="checkbox_subcat"> <label> Fear </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Afraid" name="emotions[]" value="Afraid">
-								<label for="emotion_Afraid">
-									Afraid
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Scared">
+								Scared
+							</label>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Tense">
+								Tense
+							</label>
 							
 							
 						  </div>
-						  
+
 					<!------- SURPRISED -------->		
 						  <div class="checkbox_subcat"> <label> Surprise </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_Surprised" name="emotions[]" value="Surprised">
-								<label for="emotion_Surprised">
-									Surprised
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Surprised">
+								Surprised
+							</label>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Confused">
+								Confused
+							</label>
 							
 						  </div>
-						  
+
 					<!------- NEUTRAL -------->		
 						  <div class="checkbox_subcat"> <label> Neutral </label> 
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_indifferent" name="emotions[]" value="Indifferent">
-								<label for="emotion_indifferent">
-									Indifferent
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Indifferent">
+								Indifferent
+							</label>
 							
-							<div class="checkbox_and_label">
-								<input class="single-checkbox" type="checkbox" id="emotion_bored" name="emotions[]" value="Bored">
-								<label for="emotion_bored">
-									Bored
-								</label>
-							</div>
+							<label class="my_checkmark">
+								<input type="checkbox" name="emotions[]" value="Bored">
+								Bored
+							</label>
 							
 						  </div>
-						  
+
 						</div>
 
 					
-					<div>
 					<!------- SUBMIT BUTTONS -------->	
 		  				<input 
 							class="button"
@@ -197,7 +186,7 @@
 	<script> /* limit number of choices */
 		document.addEventListener('DOMContentLoaded', function () {
 			const max = 4;
-			const checkboxes = document.querySelectorAll('input.single-checkbox');
+			const checkboxes = document.querySelectorAll('input.my_checkmark);
 			
 			// for every checkbox...
 			checkboxes.forEach(
@@ -230,18 +219,11 @@
 Add/fix later:
 
 GENERAL:
-- checkbox formatting
-- button formatting
-- drop down formatting
-- make button not resize on hover
 
 QUIZ:
-- circle result overflow on right side of container
-- add subtle shading esp. for single emotions
 - fix spacing of checkbox subcategories
 - add more emotions
 - make result text keys have associated colour 
-- make resaults a random type od gradient
 
 OTHER:
 - fix my_artistic self
