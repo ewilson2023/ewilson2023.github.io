@@ -75,44 +75,43 @@ h1 {
 	padding: 0;
 }
 
-
-/* 0: no top/bottom margin, 
-auto: split equally on both sides
-	  whatever horizontal space
-	  is left over. */
-
-
-/* flex tutorial
-flex: <flex-grow> <flex-shrink> <flex-basis>;
-    flex-grow: how much the item expands 
-			   when there’s extra space.
-    flex-shrink: how much the item shrinks 
-				 when space is tight.
-    flex-basis: the item’s initial size 
-		before growing or shrinking 
-		(auto = use width/height/content).
-		
-flex: 1 0 auto; -> 
-    1 = can grow to take extra space.
-    0 = will not shrink smaller than its basis.
-    auto = start at its natural/content size.
-    Result: fills leftover space if available, 
-	but won’t shrink below its content size.
+/*-------------------------------------*/
+/*//////////// NAV BAR ////////////////*/
+/*-------------------------------------*/
+nav {
+	flex-shrink: 0; /* keep height fixed */
 	
-flex: 1 1 auto; ->
-    1 = can grow.
-    1 = can shrink.
-    auto = start at natural/content size.
-    Result: fills leftover space, but can
-	also shrink if space is too tight.
-*/
+	display: flex;
+	flex-wrap: wrap;/* allow links to wrap to multiple lines */
+	justify-content: center;
+	align-items: center;/* center items along cross axis */
+	align-content: center;  /* center the group of wrapped rows*/
+	margin: 20px;
+}
 
-/* clamp tutorial
-final value = preferred, but never below min and never above max
+nav a {
+	padding: 0 10px;
+	margin: 0;
+	
+	transition-duration: 0.4s;
+}
 
-clamp(min, preferred, max)
-    min:	 	the minimum value allowed
-    preferred:	the ideal value (often relative, like vw)
-    max:		the maximum value allowed
+nav a:link,
+nav a:visited,
+nav a:hover {
+	Color: var(--canvas);
+}
 
-*/
+nav a:hover {
+	text-shadow: 0 0 5px var(--canvas);
+	text-decoration: initial;
+}
+
+nav a:active {
+	Color: var(--orangeDark);
+}
+
+nav a.current_page {
+	text-shadow: 0 0 5px var(--canvas);
+}
+

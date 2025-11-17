@@ -1,0 +1,17 @@
+Add/fix later:
+
+GENERAL:
+- checkbox formatting
+- button formatting
+- drop down formatting
+
+QUIZ:
+- circle result overflow on right side of container
+- add subtle shading esp. for single emotions
+- fix spacing of checkbox subcategories
+- add more emotions
+- make result text keys have associated colour 
+- make resaults a random type od gradient
+
+OTHER:
+- fix my_artistic self

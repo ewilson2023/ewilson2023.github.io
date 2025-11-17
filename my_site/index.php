@@ -8,7 +8,6 @@
 
 <html>
 	<head>
-		<title>Lab <?php include 'common/labnum.php';?>: Liz Wilson</title>
 		<?php require 'common/head.php';?>
 		
 	</head>
