@@ -12,6 +12,7 @@ $emotionColours = [
     'Annoyed'		=> '#bd664d',
 	/* DISGUST */
 	'Disgusted'		=> '#9c950d',
+	'Embarrassed'	=> '',
 	/* FEAR */
 	'Scared'		=> '#7e1260',
 	'Tense'			=> '#df841c',
