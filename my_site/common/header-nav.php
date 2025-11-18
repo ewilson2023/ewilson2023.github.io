@@ -43,8 +43,10 @@ $labnum = ob_get_clean();
 	</form>
 	
 	<!-------- Other pages -------->
+	<!--
 	<a href="marketplace.php" class="<?= ($current_page === 'marketplace') ? 'active' : '' ?>">Marketplace </a>
 	<a href="calculators.php" class="<?= ($current_page === 'calculators') ? 'active' : '' ?>">Calculators </a>
+	-->
 	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
 	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
 

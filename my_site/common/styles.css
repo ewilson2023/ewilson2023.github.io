@@ -359,7 +359,7 @@ https://moderncss.dev/pure-css-custom-checkbox-style/  */
 	grid-auto-flow: row;
 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 	
-	width: clamp(100px, 75%, 100%);
+	width: clamp(100px, 90%, 100%);
 	
 	margin-top: 10px;
 }
@@ -367,7 +367,8 @@ https://moderncss.dev/pure-css-custom-checkbox-style/  */
 .checkbox_subcat {
 	display: flex;
 	flex-direction: column;	/* make elements stack */
-	
+	margin: auto;
+	min-width: 140px;
 	align-items: flex-start;
 	/*justify-content: left;  left center
 	margin-left: 3%;
@@ -460,8 +461,9 @@ input[type="checkbox"]:focus:checked::before {
 	background-color: var(--cerulean);	
 }
 
-
-
+/*-------------------------------------*/
+/*//////////// DROP-DOWN //////////////*/
+/*-------------------------------------*/
 
 select {
 	font-size: 12px;
