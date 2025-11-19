@@ -1,6 +1,6 @@
 <?php
 // use an Associative Array to store emotions as keys to colours
-$emotionColours = [
+$emotions_map_data = [
 	/* HAPPINESS */
 	'Happy'			=>	'#28b552',
 	'Confident'		=>	'#448cc8',
@@ -13,7 +13,7 @@ $emotionColours = [
 	'Sad'			=>	'#2c44aa',
 	'Lonely'		=>	'#12485E',
 	'Hurt'			=>	'#80340D',
-	'Distress'		=>	'#B91B48',	
+	'Distressed'	=>	'#B91B48',	
 	'Disappointed'	=>	'#2A52C4',
 	'Defeated'		=>	'#122B5E',
 	'Neglected'		=>	'#87B3AC',
@@ -22,7 +22,7 @@ $emotionColours = [
 	'Love'			=>	'#C440B1',
 	'Passion'		=>	'#C440B1',
 	'Desire'		=>	'#9C3CEC',
-	'Empathy'		=>	'#000000',
+	'Empathy'		=>	'#BF9DC3',
 	
 	/* ANGER */
    	'Angry'			=>	'#c3192b',
@@ -46,18 +46,17 @@ $emotionColours = [
 	'Confused'		=>	'#B4A1B7',	
 	
 	/* DISCOMFORT */
-	'Discomfort'	=>	'#BF4E14',
+	'Uncomfortable'	=>	'#BF4E14',
 	'Tense'			=>	'#DF841C',
 	
 	/* NEUTRAL */
 	'Neutral'		=>	'#cfcfcf',
 	'Bored'			=>	'#818785',
 	'Nostalgic'		=>	'#9A844C',
-	'Relaxed'		=>	'#919BD7',
+	'Peaceful'		=>	'#919BD7',
 	'Content'		=>	'#7CA486',
-
-	/* 'Surprised'		=>	'#816dcc',
-	'Confused'		=>	'#5869ff', */
+	
 ]
+
 ?>
 

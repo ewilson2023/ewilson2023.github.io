@@ -20,35 +20,7 @@
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
 		  <div class="main">	
-		  
-		  <!-------------- test ------------------------
-		<label class="my_checkmark">
-			<input type="checkbox" name="emotions[]" value="Happy">
-				Happy
-		</label>
-		  <label class="my_checkmark">
-			  <input type="checkbox"/>
-			  Checkbox
-		  </label>
-		  <label class="my_checkmark">
-			  <input type="checkbox" checked />
-			  Checkbox - checked
-		  </label>
-		  <label class="my_checkmark">
-			  <input type="checkbox"/>
-			  Checkbox
-		  </label>
-		  <label class="my_checkmark">
-			  <input type="checkbox"/>
-			  Checkbox
-		  </label>
 
-
-		  		  <label class="my_checkmark">
-			  <input type="checkbox" name="checkbox-checked" checked />
-			  Checkbox - checked
-		  </label>
-		  -------------------------------------->
 		  
 		  	<div class="h2_decorated">
 		  		<hr><h2>Mood Ring</h2><hr>
@@ -100,8 +72,8 @@
 								<input value="Hurt" type="checkbox" name="emotions[]">
 								Hurt	</label>	
 							<label class="my_checkmark">
-								<input value="Distress" type="checkbox" name="emotions[]">
-								Distress	</label>	
+								<input value="Distressed" type="checkbox" name="emotions[]">
+								Distressed	</label>	
 							<label class="my_checkmark">
 								<input value="Disappointed" type="checkbox" name="emotions[]">
 								Disappointed	</label>	
@@ -221,8 +193,8 @@
 								<input value="Nostalgic" type="checkbox" name="emotions[]">
 								Nostalgic	</label>
 							<label class="my_checkmark">
-								<input value="Relaxed" type="checkbox" name="emotions[]">
-								Relaxed	</label>
+								<input value="Peaceful" type="checkbox" name="emotions[]">
+								Peaceful	</label>
 							<label class="my_checkmark">
 								<input value="Content" type="checkbox" name="emotions[]">
 								Content	</label>
