@@ -2,7 +2,7 @@
  * Main CSS styles shared between most pages 
  */
 
-root {
+:root {
 	/* Custom Colours */
 	--brown: #653239;
 	--orangeDark: #EF7722;
