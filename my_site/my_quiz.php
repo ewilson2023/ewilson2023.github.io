@@ -227,7 +227,7 @@
 	<?php include 'common/footer.php';	?>
 	
 	<!-- JAVASCRIPT -->	
-	<script src="javascript\checkbox_limit.js"></script> 
+	<script src="javascript/checkbox_limit.js"></script> 
 	
 	</body>
 </html>

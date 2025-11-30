@@ -1,6 +1,9 @@
+/**
+ * Supposed to limit the number of options checked
+ */
 document.addEventListener('DOMContentLoaded', function () {
 	const max = 4;
-	const checkboxes = document.querySelectorAll('input.my_checkmark');
+	const checkboxes = document.querySelectorAll('input[name="emotions[]"]');
 	
 	// for every checkbox...
 	checkboxes.forEach(
@@ -9,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			checkbox.addEventListener('change', 
 				function () {
 					// tally the currently checked boxes
-					const checked = document.querySelectorAll('input.single-checkbox:checked');
+					const checked = document.querySelectorAll('input[name="emotions[]"]:checked');
 						
 					// if too many are checked, keep the one just clicked unchecked
 					if (checked.length > max) {
