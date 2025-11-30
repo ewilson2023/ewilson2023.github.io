@@ -1,17 +1,16 @@
 Add/fix later:
 
 GENERAL:
-- checkbox formatting
-- button formatting
-- drop down formatting
 
 QUIZ:
-- circle result overflow on right side of container
-- add subtle shading esp. for single emotions
 - fix spacing of checkbox subcategories
-- add more emotions
-- make result text keys have associated colour 
-- make resaults a random type od gradient
+- make result text keys have associated colour
+- make synonym string add to a list of unique strings and then print w the "and" before the last. rn it's sometimes  printing ", " instead of the "and" when a synonym would have appared twice
 
 OTHER:
 - fix my_artistic self
+
+
+
+
+--->

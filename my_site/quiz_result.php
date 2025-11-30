@@ -1,3 +1,8 @@
+<!-- 
+This page shows the results of the "my_quiz" page. A coloured 
+gradient circle should appear with the results as a string below.
+-->
+
 <!DOCTYPE html>
 
 <?php
@@ -9,10 +14,7 @@
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-		
-		<style>
-	
-		</style>
+
 	</head>
 	
 	<body>
@@ -36,10 +38,7 @@ $colour_vals = "";
 $moods_map = array();
 $gradient_style = "";
 
-/* var_dump($emotions_map_data);	//debug
-echo "<br><br>";
- */	
-$DEBUG_ON = false;
+$DEBUG_ON = False;		// toggle to see which chosen emotions are matched to a synonym
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		
@@ -57,7 +56,7 @@ $DEBUG_ON = false;
 			$moods_index = ($_GET['emotions']);
 
 			$FINAL_RESULT_STR = $moods_index[0];
-			$col = $emotions_map_data[$FINAL_RESULT_STR];
+			$col = $EMOTIONS_MAP_DATA[$FINAL_RESULT_STR];
 			$gradient_style = "style=\"background-image: conic-gradient(" . $col . ");\"";
 		
 		// if more than 1 option chosen
@@ -67,7 +66,7 @@ $DEBUG_ON = false;
 			// make $moods_map store the selected "emotion" => "hexcode" 	
 			foreach ($moods_index as $x => $y) {
 				// $moods_map[] = add "Lonely" => "#342caa" 
-				$moods_map[$y] = $emotions_map_data[$y];	// add to the emotions array
+				$moods_map[$y] = $EMOTIONS_MAP_DATA[$y];	// add to the emotions array
 			}
 
 			// $x => $y
@@ -149,7 +148,6 @@ $DEBUG_ON = false;
 
 					$cur_combo = $key1 . ', ' . $key2 . ', ' . $key3;
 					
-
 					// if the 'key1, key2' pair has a synonym
 					if (isset($EMOTION_RECIPES_DATA[$cur_combo])) {
 						/*debug*/	if($DEBUG_ON) echo "<i>recipe [<b>$cur_combo</b>] is set! => \"<b>$EMOTION_RECIPES_DATA[$cur_combo]</b>\"</i><br>";
@@ -196,18 +194,17 @@ $DEBUG_ON = false;
 				} else $FINAL_RESULT_STR .=  ", " . $nomatch_moods[$i];
 			}
 		
-/* 	/*debug	echo "<b>var_dump(\$matched_syns): </b><br>&Tab;"; var_dump($matched_syns);
-	/*debug	echo "<b><br>var_dump(\$nomatch_moods): </b><br>&Tab;"; var_dump($nomatch_moods);
-	/*debug	echo "<b><br>var_dump(\$matched_moods): </b><br>&Tab;"; var_dump($matched_moods);		
-				 */
-		// hide byline if it's the same as the final result	
+			
+			// hide byline if it's the same as the final result	
 			if (empty($matched_syns)) {
 				$byline_str = "";
 			}
-
-/* 			echo $byline_str . "<br>";
-			echo $colour_vals . "<br>"; */
 			
+			if($DEBUG_ON){	
+				echo "<b>var_dump(\$matched_syns): </b><br>&Tab;"; var_dump($matched_syns);
+				echo "<b><br>var_dump(\$nomatch_moods): </b><br>&Tab;"; var_dump($nomatch_moods);
+				echo "<b><br>var_dump(\$matched_moods): </b><br>&Tab;"; var_dump($matched_moods);	
+			}	
 		}  
 	}
 				

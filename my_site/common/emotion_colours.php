@@ -1,6 +1,8 @@
 <?php
-// use an Associative Array to store emotions as keys to colours
-$emotions_map_data = [
+/* Used in quiz_result. Associative Array to store 
+ * emotions as keys to colours  
+ */
+$EMOTIONS_MAP_DATA = [
 	/* HAPPINESS */
 	'Happy'			=>	'#28b552',
 	'Confident'		=>	'#448cc8',
@@ -19,7 +21,7 @@ $emotions_map_data = [
 	'Neglected'		=>	'#87B3AC',
 	
 	/* LOVE */
-	'Love'			=>	'#C440B1',
+	'Love'			=>	'#E292CF',
 	'Passion'		=>	'#C440B1',
 	'Desire'		=>	'#9C3CEC',
 	'Empathy'		=>	'#BF9DC3',
@@ -43,16 +45,17 @@ $emotions_map_data = [
 	/* SURPRISE */
 	'Surprised'		=>	'#DECF0E',
 	'Curious'		=>	'#5869FF',
-	'Confused'		=>	'#B4A1B7',	
+	'Confused'		=>	'#9d90ffff',	
 	
 	/* DISCOMFORT */
 	'Uncomfortable'	=>	'#BF4E14',
 	'Tense'			=>	'#DF841C',
+	'Tired'			=>	'#7c77ffff',
 	
 	/* NEUTRAL */
 	'Neutral'		=>	'#cfcfcf',
 	'Bored'			=>	'#818785',
-	'Nostalgic'		=>	'#9A844C',
+	'Nostalgic'		=>	'#9a614cff',
 	'Peaceful'		=>	'#919BD7',
 	'Content'		=>	'#7CA486',
 	

@@ -9,8 +9,6 @@
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-		
-	
 	</head>
 	
 	<body>
@@ -177,6 +175,9 @@
 							<label class="my_checkmark">
 								<input value="Tense" type="checkbox" name="emotions[]">
 								Tense	</label>
+							<label class="my_checkmark">
+								<input value="Tired" type="checkbox" name="emotions[]">
+								Tired	</label>
 							
 						  </div>
 
@@ -204,15 +205,17 @@
 						</div>
 					
 					<!------- SUBMIT BUTTONS -------->	
-		  				<input 
-							class="button"
-							id="submit_quiz" 
-							type="submit" 
-							value="Submit">
-						<input 
-							class="button"
-							type="reset" 
-							value="Reset">
+						<div class="submit_buttons">
+							<input 
+								class="button"
+								id="submit_quiz" 
+								type="submit" 
+								value="Submit">
+							<input 
+								class="button"
+								type="reset" 
+								value="Reset">
+						</div>
 		  			</div>
 		  			
 				</fieldset>
@@ -224,50 +227,8 @@
 	<?php include 'common/footer.php';	?>
 	
 	<!-- JAVASCRIPT -->	
-	<script> /* limit number of choices */
-		document.addEventListener('DOMContentLoaded', function () {
-			const max = 4;
-			const checkboxes = document.querySelectorAll('input.my_checkmark);
-			
-			// for every checkbox...
-			checkboxes.forEach(
-				function (checkbox) {
-					// if its status is changed...
-					checkbox.addEventListener('change', 
-						function () {
-							// tally the currently checked boxes
-							const checked = document.querySelectorAll('input.single-checkbox:checked');
-							
-							// if too many are checked, keep the one just clicked unchecked
-							if (checked.length > max) {
-								this.checked = false;
-							}
-						}
-					);
-				}
-			);
-		});
-	</script>
-	
-	
-	
+	<script src="javascript\checkbox_limit.js"></script> 
 	
 	</body>
 </html>
 
-
-<!--
-Add/fix later:
-
-GENERAL:
-
-QUIZ:
-- fix spacing of checkbox subcategories
-- add more emotions
-- make result text keys have associated colour 
-
-OTHER:
-- fix my_artistic self
-
-
---->

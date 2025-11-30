@@ -1,4 +1,8 @@
-:root {
+/**
+ * Main CSS styles shared between most pages 
+ */
+
+root {
 	/* Custom Colours */
 	--brown: #653239;
 	--orangeDark: #EF7722;
@@ -221,8 +225,8 @@ th {
 td {
 	border: 1px solid var(--orangeLight);
 	padding: 5px 10px 5px 10px;
-	Color: 
 }
+
 /*-------------------------------------*/
 /*////////// SLIDESHOW ///////////////*/
 /*-------------------------------------*/
@@ -293,6 +297,10 @@ legend {
 	text-align: center;
 	margin: 0 auto;
 	padding: 0.25em clamp(20px, 10%, 50px);
+}
+
+submit_buttons {
+	flex-direction: row;
 }
 
 /*-------------------------------------*/
@@ -494,37 +502,37 @@ select:hover {
 
 /*-------------------------------------*/
 /*//////////// MOODRING  //////////////*/
+/* Only appears on the "quiz_results" page*/
 /*-------------------------------------*/
-
-			.circle_base {
-				position: relative;
-				max-width: 300px;
-				max-height: 300px;
-				margin-top: 20px;
-				width: 70vw;
-				height: 70vw;
-				border-radius: 50%;
-				overflow: hidden; /* ensures overlay clips to circle */
-				
-				background-image: repeating-radial-gradient(red, grey 10%, red 15%); /* default */
-			}
-			.circle_base img{
-				position: absolute;
-				max-width: 300px;
-				max-height: 300px;
-				width: 70vw;
-				height: 70vw;
-				border-radius: 50%;
-				mix-blend-mode: overlay;
-			}
-			.result_text {
-				text-align: center;
-				text-transform: none;
-				font-variant: small-caps;
-				padding-top: 0;
-				font-weight: bold;
-				font-size: clamp(15px, 10vw, 20px);
-				letter-spacing: 0.15rem;
-				margin-top: 20px;
-			}
+.circle_base {
+	position: relative;
+	max-width: 300px;
+	max-height: 300px;
+	margin-top: 20px;
+	width: 70vw;
+	height: 70vw;
+	border-radius: 50%;
+	overflow: hidden; /* ensures overlay clips to circle */
+	
+	background-image: repeating-radial-gradient(red, grey 10%, red 15%); /* default */
+}
+.circle_base img{
+	position: absolute;
+	max-width: 300px;
+	max-height: 300px;
+	width: 70vw;
+	height: 70vw;
+	border-radius: 50%;
+	mix-blend-mode: overlay;
+}
+.result_text {
+	text-align: center;
+	text-transform: none;
+	font-variant: small-caps;
+	padding-top: 0;
+	font-weight: bold;
+	font-size: clamp(15px, 10vw, 20px);
+	letter-spacing: 0.15rem;
+	margin-top: 20px;
+}
 	
