@@ -220,9 +220,10 @@
 								type="reset" 
 								value="Reset">
 							<input 
-								class="button"
-								type="reset" 
-								value="Random">
+								value="Random"
+								type="button"
+								onclick="random_choices()" 
+								class="button">
 						</div>
 		  			</div>
 		  			
