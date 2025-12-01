@@ -95,13 +95,13 @@
 								<input value="Love" type="checkbox" name="emotions[]">
 								Love	</label>	
 							<label class="my_checkmark">
-								<input value="Passion" type="checkbox" name="emotions[]">
+								<input value="Passionate" type="checkbox" name="emotions[]">
 								Passion	</label>	
 							<label class="my_checkmark">
 								<input value="Desire" type="checkbox" name="emotions[]">
 								Desire	</label>	
 							<label class="my_checkmark">
-								<input value="Empathy" type="checkbox" name="emotions[]">
+								<input value="Empathetic" type="checkbox" name="emotions[]">
 								Empathy	</label>	
 							
 						  </div>
@@ -219,6 +219,10 @@
 								class="button"
 								type="reset" 
 								value="Reset">
+							<input 
+								class="button"
+								type="reset" 
+								value="Random">
 						</div>
 		  			</div>
 		  			
@@ -231,7 +235,7 @@
 	<?php include 'common/footer.php';	?>
 	
 	<!-- JAVASCRIPT -->	
-	<script src="javascript/checkbox_limit.js"></script> 
+	<script src="javascript/my_quiz.js"></script> 
 	
 	</body>
 </html>

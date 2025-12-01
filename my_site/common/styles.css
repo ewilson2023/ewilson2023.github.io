@@ -524,7 +524,10 @@ select:hover {
 	height: 70vw;
 	border-radius: 50%;
 	mix-blend-mode: overlay;
+	pointer-events: none; 	/* make the iverlay not selectable*/
+	user-select: none;
 }
+
 .result_text {
 	text-align: center;
 	text-transform: none;

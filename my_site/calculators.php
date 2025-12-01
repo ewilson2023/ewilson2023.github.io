@@ -11,7 +11,8 @@
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-		
+		<script src = 'javascript\2-calculator.js'> </script>
+		<script src = 'javascript\2-calculator_utils.js'> </script>
 		<style>
 			.answer{
 				background-Color: var(--orangeDark);

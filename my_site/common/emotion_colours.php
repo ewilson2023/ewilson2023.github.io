@@ -22,9 +22,9 @@ $EMOTIONS_MAP_DATA = [
 	
 	/* LOVE */
 	'Love'			=>	'#E292CF',
-	'Passion'		=>	'#C440B1',
+	'Passionate'		=>	'#C440B1',
 	'Desire'		=>	'#9C3CEC',
-	'Empathy'		=>	'#BF9DC3',
+	'Empathetic'		=>	'#BF9DC3',
 	
 	/* ANGER */
    	'Angry'			=>	'#c3192b',

@@ -20,8 +20,8 @@ $EMOTION_RECIPES_DATA = [
 	'Happy, Hurt'			=>	'Relief',
 	'Happy, Jealous'		=>	'Relief',
 
-	'Excited, Love'			=>	'Passion',
-	'Excited, Optimistic'	=>	'Passion',
+	'Excited, Love'			=>	'Passionate',
+	'Excited, Optimistic'	=>	'Passionate',
 
 	'Desire, Lonely'		=>	'Longing',
 	'Desire, Sad'			=>	'Longing',
@@ -29,10 +29,12 @@ $EMOTION_RECIPES_DATA = [
 	'Love, Neglected'		=>	'Longing',
 	'Lonely, Love'			=>	'Longing',
 
-	'Empathy, Sad'			=>	'Pity',
-	'Empathy, Tense'		=>	'Pity',
+	'Disappointed, Empathetic'		=>	'Understanding',
 
-	'Love, Passion'			=>	'Infatuated',
+	'Empathetic, Sad'		=>	'Pity',
+	'Empathetic, Tense'		=>	'Pity',
+
+	'Love, Passionate'			=>	'Infatuated',
 	'Desire, Love'			=>	'Attraction',
 
 	'Nostalgic, Regret'		=>	'Wistful',
@@ -40,13 +42,13 @@ $EMOTION_RECIPES_DATA = [
 	'Nostalgic, Sad'		=>	'Wistful',
 	'Love, Nostalgic'		=>	'Wistful',
 
-	'Curious, Passion'		=>	'Enthralled',
+	'Curious, Passionate'		=>	'Enthralled',
 	'Curious, Love'			=>	'Enthralled',
 
 	'Optimistic, Suspense'	=>	'Excited',
 
-	'Optimistic, Passion'	=>	'Joy',
-	'Happy, Passion'		=>	'Joy',
+	'Optimistic, Passionate'	=>	'Joy',
+	'Happy, Passionate'		=>	'Joy',
 	'Excited, Happy'		=>	'Joy',
 
 	'Excited, Surprised'	=>	'Delight',
@@ -57,15 +59,15 @@ $EMOTION_RECIPES_DATA = [
 	'Happy, Proud'			=>	'Confident',
 	'Optimistic, Proud'		=>	'Confident',
 
-	'Confident, Empathy'	=>	'Proud',
-	'Empathy, Happy'		=>	'Proud',
+	'Confident, Empathetic'	=>	'Proud',
+	'Empathetic, Happy'		=>	'Proud',
 
 	'Happy, Suspense'		=>	'Optimistic',
 
 	'Confident, Optimistic'	=>	'Eager',
 
 	'Confidence, Suspense'	=>	'Hope',
-/* 	'Optimistic, Suspense'	=>	'Hope', */
+ 	'Desire, Suspense'		=>	'Hope', 
 
 	'Proud, Surprised'		=>	'Impressed',
 
@@ -100,14 +102,14 @@ $EMOTION_RECIPES_DATA = [
 	'Annoyed, Excited'		=>	'Agitated',
 
 	'Angry, Happy'			=>	'Hysterical',
-	'Amused, Passion'		=>	'Hysterical',
+	'Amused, Passionate'		=>	'Hysterical',
 	'Distressed, Happy'		=>	'Hysterical',
 
 	'Embarrassed, Regret'	=>	'Guilty',
-	'Empathy, Regret'		=>	'Guilty',
+	'Empathetic, Regret'	=>	'Guilty',
 
-	'Empathy, Guilty'		=>	'Regret',
-	'Empathy, Guilty, Nostalgic'		=>	'Regret',
+	'Empathetic, Guilty'	=>	'Regret',
+	'Empathetic, Guilty, Nostalgic'		=>	'Regret',
 	'Guilty, Nostalgic'		=>	'Regret',
 
 	'Embarrassed, Rage'		=>	'Humiliated',
@@ -115,16 +117,16 @@ $EMOTION_RECIPES_DATA = [
 
 	'Embarrased, Scared'	=>	'Mortified',
 	'Embarrased, Shock'		=>	'Mortified',
-	'Embarrassed, Empathy'	=>	'Mortified',
+	'Embarrassed, Empathetic'	=>	'Mortified',
 
 	'Disgusted, Surprised'	=>	'Revulsion',
 	'Disgusted, Scared'		=>	'Revulsion',
 	'Disgusted, Distressed'	=>	'Revulsion',
 
 	'Angry, Disgusted'		=>	'Loathing',
-	'Disgusted, Passion'	=>	'Loathing',
-	'Angry, Passion'		=>	'Loathing',
-	'Passion, Rage'			=>	'Loathing',
+	'Disgusted, Passionate'	=>	'Loathing',
+	'Angry, Passionate'		=>	'Loathing',
+	'Passionate, Rage'			=>	'Loathing',
 	'Love, Rage'			=>	'Loathing',
 
 	'Amused, Disgusted'		=>	'Macabre Fascination',
@@ -149,7 +151,7 @@ $EMOTION_RECIPES_DATA = [
 
 	'Sad, Surprised'		=>	'Disappointed',
 
-	'Disappointed, Passion'		=>	'Defeated',
+	'Disappointed, Passionate'		=>	'Defeated',
 	'Confident, Disappointed'	=>	'Defeated',
 	'Confident, Sad'			=>	'Defeated',
 	'Disappointed, Optimistic'	=>	'Defeated',
@@ -223,7 +225,7 @@ $EMOTION_RECIPES_DATA = [
 	'Desire, Neutral, Sad'	=>	'Something Missing',
 	
 	'Distressed, Proud'		=>	'Torn',		/*  Torn/Ambivalent/Conflicted */
-	'Defeated, Empathy'		=>	'Torn',		/* 	Torn? Disappointed? Let Down? */
+	'Defeated, Empathetic'		=>	'Torn',		/* 	Torn? Disappointed? Let Down? */
 	
 	'Angry, Bored'			=>	'Restless',
 	'Annoyed, Bored'		=>	'Restless',
@@ -232,16 +234,17 @@ $EMOTION_RECIPES_DATA = [
 	'Confused, Love'	=>	'Curious',		 /* Curious/Fascinated? */
 	/* 'Love, Scared'		=>	???? */
 	
-	'Annoyed, Passion'	=>	'Angry',
+	'Annoyed, Passionate'	=>	'Angry',
 	
 	'Disgusted, Love'	=>	'Macabre Fascination',
 	'Angry, Surprised'	=>	'Dismayed',
 	
 	'Angry, Sad'		=>	'Resentment',	/* Bitter/Grief/Resentment */
-	'Angry, Love'		=>	'Passionate',
+	'Angry, Love'		=>	'Passionateate',
 	'Happy, Sad'		=>	'Bittersweet',
 	
 	'Confident, Scared'		=>	'Brave',
+	'Optimistic, Scared'	=>	'Brave',
 	'Anxious, Confident'	=>	'Brave',
 	
 	'Happy, Scared'			=>	'Optimistic',
@@ -267,9 +270,9 @@ $EMOTION_RECIPES_DATA = [
 	'Distressed, Love'	=>	'Heartache',
 	
 	'Distressed, Hurt'		=>	'Torment',			/* Agony/Anguish/Torment */
-	'Distressed, Passion'	=>	'Torment',			/* Agony/Anguish/Torment */
+	'Distressed, Passionate'	=>	'Torment',			/* Agony/Anguish/Torment */
 	
-	'Passion, Uncomfortable'	=>	'Distress',
+	'Passionate, Uncomfortable'	=>	'Distress',
 	
 
 	'Regret, Suspense'			=>	'Dread',
@@ -291,12 +294,12 @@ $EMOTION_RECIPES_DATA = [
 	'Disgust, Distress, Guilty' 			=>	'Self-Loathing',
 	'Disgust, Distress, Embarrassed' 	=>	'Self-Loathing',
 	'Disgust, Distress, Regret' 		=>	'Self-Loathing',
-	'Anger, Guilty, Passion' 			=>	'Self-Loathing',
-	'Anger, Embarrassed, Passion' 		=>	'Self-Loathing',
-	'Anger, Passion, Regret' 			=>	'Self-Loathing',
-	'Disgust, Guilty, Passion' 			=>	'Self-Loathing',
-	'Disgust, Embarrassed, Passion' 	=>	'Self-Loathing',
-	'Disgust, Passion, Regret' 			=>	'Self-Loathing',
+	'Anger, Guilty, Passionate' 			=>	'Self-Loathing',
+	'Anger, Embarrassed, Passionate' 		=>	'Self-Loathing',
+	'Anger, Passionate, Regret' 			=>	'Self-Loathing',
+	'Disgust, Guilty, Passionate' 			=>	'Self-Loathing',
+	'Disgust, Embarrassed, Passionate' 	=>	'Self-Loathing',
+	'Disgust, Passionate, Regret' 			=>	'Self-Loathing',
 	
 	'Angry, Disgusted, Neutral'	=>	'Done',
 	'Angry, Disgusted, Tired'	=>	'Done',
