@@ -1,5 +1,5 @@
 /**
- * Supposed to limit the number of options checked
+ * Limit the number of options checked
  */
 document.addEventListener('DOMContentLoaded', function () {
 	const max = 4;

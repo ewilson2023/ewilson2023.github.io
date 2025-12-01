@@ -1,7 +1,10 @@
+<!-- 
+ The header and navigation bar that appears at the top of
+ every page   
+ -->
 <?php 
-//$labnum = 9; 
 ob_start();
-include 'common/labnum.php';	// save lab number as a variable
+include 'common/labnum.php';	// lab number is saved as a variable
 $labnum = ob_get_clean();
 ?>
 
@@ -42,8 +45,8 @@ $labnum = ob_get_clean();
 	</select>
 	</form>
 	
-	<!-------- Other pages -------->
-	<!--
+	<!-------- these pages are hidden from nav -------->
+	<!--	
 	<a href="marketplace.php" class="<?= ($current_page === 'marketplace') ? 'active' : '' ?>">Marketplace </a>
 	<a href="calculators.php" class="<?= ($current_page === 'calculators') ? 'active' : '' ?>">Calculators </a>
 	-->
@@ -55,6 +58,8 @@ $labnum = ob_get_clean();
 </div>
 
 <!-------- SCRIPTS -------->
+
+<!--  Drop-down menu -->
 <script type="text/javascript">
 	var nav_selector = document.getElementById( 'discoverme' );
 	nav_selector.onchange = function() {

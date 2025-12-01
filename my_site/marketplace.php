@@ -1,3 +1,6 @@
+<!-- 
+ A javascript marketplace simulation from a previous lab
+-->
 <!DOCTYPE html>
 
 <?php

@@ -1,3 +1,7 @@
+<!-- 
+ "Dream Vacation" from a previous lab
+-->
+
 <!DOCTYPE html>
 <?php
 	$current_page = 'vacation';		// set name variable

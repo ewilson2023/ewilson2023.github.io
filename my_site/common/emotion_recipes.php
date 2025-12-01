@@ -103,12 +103,12 @@ $EMOTION_RECIPES_DATA = [
 	'Amused, Passion'		=>	'Hysterical',
 	'Distressed, Happy'		=>	'Hysterical',
 
-	'Embarrassed, Regret'	=>	'Guilt',
-	'Empathy, Regret'		=>	'Guilt',
+	'Embarrassed, Regret'	=>	'Guilty',
+	'Empathy, Regret'		=>	'Guilty',
 
-	'Empathy, Guilt'		=>	'Regret',
-	'Empathy, Guilt, Nostalgic'		=>	'Regret',
-	'Guilt, Nostalgic'		=>	'Regret',
+	'Empathy, Guilty'		=>	'Regret',
+	'Empathy, Guilty, Nostalgic'		=>	'Regret',
+	'Guilty, Nostalgic'		=>	'Regret',
 
 	'Embarrassed, Rage'		=>	'Humiliated',
 	'Angry, Embarrased'		=>	'Humiliated',
@@ -276,7 +276,7 @@ $EMOTION_RECIPES_DATA = [
 	'Distress, Suspense'		=>	'Dread',
 	'Uncomfortable, Suspense'	=>	'Dread',
 	'Tense, Suspense'			=>	'Dread',
-	'Guilt, Suspense'			=>	'Dread',
+	'Guilty, Suspense'			=>	'Dread',
 	
 	'Anxious, Curious'		=>	'Bewildered', 	/* Confounded/Bewildered, */
 	'Anxious, Confused'		=>	'Bewildered', 	/* Confounded/Bewildered, */
@@ -285,16 +285,16 @@ $EMOTION_RECIPES_DATA = [
 	
 	/* 'Curious, Tired'		=>	'Confused', */
 	
-	'Anger, Distress, Guilt' 			=>	'Self-Loathing',
+	'Anger, Distress, Guilty' 			=>	'Self-Loathing',
 	'Anger, Distress, Embarrassed'		=>	'Self-Loathing',
 	'Anger, Distress, Regret'			=>	'Self-Loathing',
-	'Disgust, Distress, Guilt' 			=>	'Self-Loathing',
+	'Disgust, Distress, Guilty' 			=>	'Self-Loathing',
 	'Disgust, Distress, Embarrassed' 	=>	'Self-Loathing',
 	'Disgust, Distress, Regret' 		=>	'Self-Loathing',
-	'Anger, Guilt, Passion' 			=>	'Self-Loathing',
+	'Anger, Guilty, Passion' 			=>	'Self-Loathing',
 	'Anger, Embarrassed, Passion' 		=>	'Self-Loathing',
 	'Anger, Passion, Regret' 			=>	'Self-Loathing',
-	'Disgust, Guilt, Passion' 			=>	'Self-Loathing',
+	'Disgust, Guilty, Passion' 			=>	'Self-Loathing',
 	'Disgust, Embarrassed, Passion' 	=>	'Self-Loathing',
 	'Disgust, Passion, Regret' 			=>	'Self-Loathing',
 	

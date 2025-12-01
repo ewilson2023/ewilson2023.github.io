@@ -1,3 +1,6 @@
+/* 
+ * Javacript for the slideshow on the main page
+ */
 
 // ------------- WHEN PAGE LOADS
 let current_slide = 0;

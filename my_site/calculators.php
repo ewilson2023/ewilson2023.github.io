@@ -1,4 +1,8 @@
- <!DOCTYPE html>
+<!-- 
+ A page of javascript calculators from a previous lab
+-->
+
+<!DOCTYPE html>
 <?php
 	$current_page = 'calculators';		// set name variable
 	$page_title = "Calculators";

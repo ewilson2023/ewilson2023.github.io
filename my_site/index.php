@@ -1,3 +1,7 @@
+<!-- 
+ The main homepage
+-->
+
 <!DOCTYPE html>
 
 <?php

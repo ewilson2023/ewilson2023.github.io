@@ -34,7 +34,7 @@ $EMOTIONS_MAP_DATA = [
 	/* DISGUST */
 	'Disgusted'		=>	'#9c950d',
 	'Embarrassed'	=>	'#D84C4C',
-	'Guilt'			=>	'#DE634A',
+	'Guilty'			=>	'#DE634A',
 	'Regret'		=>	'#982424',	
 	
 	/* FEAR */

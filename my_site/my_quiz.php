@@ -1,3 +1,8 @@
+<!-- 
+ The input for the emotions "quiz". Users select emotions
+ from a checkbox and on submit, are brought to the "quiz_result" page
+-->
+
 <!DOCTYPE html>
 
 <?php
@@ -128,7 +133,7 @@
 								<input value="Embarrassed" type="checkbox" name="emotions[]">
 								Embarrassed	</label>	
 							<label class="my_checkmark">
-								<input value="Guilt" type="checkbox" name="emotions[]">
+								<input value="Guilty" type="checkbox" name="emotions[]">
 								Guilt	</label>	
 							<label class="my_checkmark">
 								<input value="Regret" type="checkbox" name="emotions[]">
