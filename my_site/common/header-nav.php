@@ -3,9 +3,25 @@
  every page   
  -->
 <?php 
+$DEBUG_ON = false;
 ob_start();
-include 'common/labnum.php';	// lab number is saved as a variable
+include 'common/labnum.php';
 $labnum = ob_get_clean();
+$labnum = trim(strip_tags($labnum));	// strip non-text from labnum
+
+if ($DEBUG_ON) var_dump($labnum);
+
+if ($DEBUG_ON) echo "labnum: " .  mb_strlen($labnum);
+if ($DEBUG_ON) echo "page_title: " .  mb_strlen($page_title);
+
+$full_title = trim($labnum . " " . $page_title);
+$title_size = mb_strlen($full_title);
+$title_cqw = (40 - $title_size) / 1.45 ;		// calculate size of 
+
+if ($DEBUG_ON) echo "title_size: " . $title_size;
+
+
+
 ?>
 
 <!----HEADER ----->
@@ -13,7 +29,7 @@ $labnum = ob_get_clean();
 	
 	<!-- title/subtitle -->
 		<div class="title_wrapper">
-			<h1 style="<?= $title_size ?>">
+			<h1 style="font-size: clamp(30px, <?= $title_cqw ?>cqw, 90px)">
 				<?= $labnum . " " . $page_title?>
 			</h1>
 			<div class="subtitle">

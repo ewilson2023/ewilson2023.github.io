@@ -6,7 +6,6 @@
 <?php
 	$current_page = 'calculators';		// set name variable
 	$page_title = "Calculators";
-	$title_size = "font-size: clamp(30px, 15.5cqw, 90px)";
 ?>
 
 <html>

@@ -2,7 +2,6 @@
 <?php
 	$current_page = 'todo';		// set name variable
 	$page_title = "To-Do List";
-	$title_size = "";
 ?>
 
 <html>

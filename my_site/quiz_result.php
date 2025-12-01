@@ -8,7 +8,6 @@ gradient circle should appear with the results as a string below.
 <?php
 	$current_page = 'quiz';		// set name variable
 	$page_title = "Quiz";
-	$title_size = "font-size: clamp(40px, 18cqw, 90px)";
 ?>
 
 <html>

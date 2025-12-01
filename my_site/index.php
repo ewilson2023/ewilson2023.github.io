@@ -7,7 +7,6 @@
 <?php
 	$current_page = 'home';		// set name variable
 	$page_title = "Main Page";
-	$title_size = "";
 ?>
 
 <html>

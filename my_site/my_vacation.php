@@ -6,7 +6,6 @@
 <?php
 	$current_page = 'vacation';		// set name variable
 	$page_title = "My Dream Vacation";
-	$title_size = "font-size: clamp(30px, 13.25cqw, 90px);";
 ?>
 <html>
 	<head>
