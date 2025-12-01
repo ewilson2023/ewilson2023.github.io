@@ -8,7 +8,7 @@ $EMOTION_RECIPES_DATA = [
 	'Bored, Peaceful'		=>	'Neutral',
 	
 	'Uncomfortable, Neutral'	=>	'Bored',
-	'Peaceful +Uncomfortable'	=>	'Bored',
+	'Peaceful, Uncomfortable'	=>	'Bored',
 	'Content, Neglected'	=>	'Peaceful',
 	'Happy, Neutral'		=>	'Content',
 	'Content, Neutral'		=>	'Satisfied',
@@ -66,8 +66,9 @@ $EMOTION_RECIPES_DATA = [
 
 	'Confident, Optimistic'	=>	'Eager',
 
-	'Confidence, Suspense'	=>	'Hope',
- 	'Desire, Suspense'		=>	'Hope', 
+	'Defeated, Optimistic'	=>	'Hopeful',
+	'Confidence, Suspense'	=>	'Hopeful',
+ 	'Desire, Suspense'		=>	'Hopeful', 
 
 	'Proud, Surprised'		=>	'Impressed',
 
@@ -224,14 +225,21 @@ $EMOTION_RECIPES_DATA = [
 	'Desire, Neutral'		=>	'Something Missing',
 	'Desire, Neutral, Sad'	=>	'Something Missing',
 	
-	'Distressed, Proud'		=>	'Torn',		/*  Torn/Ambivalent/Conflicted */
-	'Defeated, Empathetic'		=>	'Torn',		/* 	Torn? Disappointed? Let Down? */
+	'Proud, Regret'			=>	'Conflicted',		/*  Torn/Ambivalent/Conflicted */
+	'Distressed, Proud'		=>	'Conflicted',		
+	'Annoyed, Proud'		=>	'Conflicted',		
+	'Angry, Proud'			=>	'Conflicted',		
+	'Guilty, Proud'			=>	'Conflicted',		
+	'Defeated, Empathetic'	=>	'Conflicted',		/* 	Torn? Disappointed? Let Down? */
 	
 	'Angry, Bored'			=>	'Restless',
 	'Annoyed, Bored'		=>	'Restless',
 	
 	/* Annoyed, Content/Neutral/'Peaceful'	=>	??? */
 	'Confused, Love'	=>	'Curious',		 /* Curious/Fascinated? */
+	'Confused, Peaceful'	=>	'Curious',	
+	'Confused, Happy'	=>	'Curious',	
+	'Confused, Content'	=>	'Curious',	
 	/* 'Love, Scared'		=>	???? */
 	
 	'Annoyed, Passionate'	=>	'Angry',
@@ -240,7 +248,9 @@ $EMOTION_RECIPES_DATA = [
 	'Angry, Surprised'	=>	'Dismayed',
 	
 	'Angry, Sad'		=>	'Resentment',	/* Bitter/Grief/Resentment */
-	'Angry, Love'		=>	'Passionateate',
+	'Angry, Love'		=>	'Passionate',
+
+	'Excited, Sad'		=>	'Bittersweet',
 	'Happy, Sad'		=>	'Bittersweet',
 	
 	'Confident, Scared'		=>	'Brave',
@@ -248,7 +258,7 @@ $EMOTION_RECIPES_DATA = [
 	'Anxious, Confident'	=>	'Brave',
 	
 	'Happy, Scared'			=>	'Optimistic',
-	'Happy, Anxious'	=>	'Optimistic', /* Anticipation?/Hope?/Optimistic */
+	'Happy, Anxious'	=>	'Optimistic', /* Anticipation?/Hopeful?/Optimistic */
 	
 	'Love, Surprised'	=>	'Delighted',
 	

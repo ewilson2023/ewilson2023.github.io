@@ -299,20 +299,23 @@ legend {
 	padding: 0.25em clamp(20px, 10%, 50px);
 }
 
-submit_buttons {
-	flex-direction: row;
-}
 
 /*-------------------------------------*/
 /*//////////// BUTTON /////////////////*/
 /*-------------------------------------*/
+.submit_buttons {
+	display: flex;
+	justify-content: center; 	/* horo center */
+	flex-direction: row;
+	flex-wrap: wrap;	/* buttons can wrap when screen small*/
+}
 
 .button {
 	border: none;
 	background-color: var(--orangeDark);
-	padding: 10px 20px;
+	padding: 0.5em 1em;
 	display: inline-block;
-	margin: 4px 2px;
+	margin: 0.15rem 0.15rem;
 	cursor: pointer;
 	transition-duration: 0.2s;
 	border-radius: 6px;

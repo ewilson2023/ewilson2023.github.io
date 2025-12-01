@@ -37,7 +37,7 @@ $colour_vals = "";
 $moods_map = array();
 $gradient_style = "";
 
-$DEBUG_ON = true;		// toggle to see which chosen emotions are matched to a synonym
+$DEBUG_ON = false;		// toggle to see which chosen emotions are matched to a synonym
 
 	if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		

@@ -212,11 +212,6 @@
 						<div class="submit_buttons">
 							<input 
 								class="button"
-								id="submit_quiz" 
-								type="submit" 
-								value="Submit">
-							<input 
-								class="button"
 								type="reset" 
 								value="Reset">
 							<input 
@@ -224,6 +219,14 @@
 								type="button"
 								onclick="random_choices()" 
 								class="button">
+							<input 
+								class="button"
+								id="submit_quiz" 
+								type="submit" 
+								value="Submit"
+								style="flex-basis: 65%;
+									text-align: center;"		
+								>
 						</div>
 		  			</div>
 		  			
