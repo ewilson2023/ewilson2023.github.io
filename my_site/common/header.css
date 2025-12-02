@@ -10,18 +10,18 @@ header {
 	top: 0;
 	
 	width: 100%;
-	height: 250px;
-	
-	min-height: 180px;
+
+	height: clamp(180px, 50vw, 250px);
 	
 	display: flex;
 	align-items: center;		/* vert center */
-	justify-content: center;	/* horo center */
+	justify-content: flex-end;
 	flex-direction: column;	/* make elements stack */
-	
+  
 	color: var(--canvas);
 	background-color: var(--cerulean);	
-	position: relative; /* not sticky/fixed */						 
+	/*position: relative;  not sticky/fixed */						 
+	padding-bottom: clamp(0px, calc(10cqw - 20px),34px);
 }
 /*
 h	media
@@ -99,6 +99,7 @@ h1 {
 /*-------------------------------------*/
 nav {
 	flex-shrink: 0; /* keep height fixed */
+	min-width: 175px;
 	
 	display: flex;
 	flex-wrap: wrap;/* allow links to wrap to multiple lines */

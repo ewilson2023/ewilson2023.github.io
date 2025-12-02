@@ -68,6 +68,7 @@ if ($DEBUG_ON) echo "title_size: " . $title_size;
 	-->
 	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
 	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
+	<a href="blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
 
   </nav>
 
