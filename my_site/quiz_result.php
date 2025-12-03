@@ -118,7 +118,7 @@ $DEBUG_ON = false;		// toggle to see which chosen emotions are matched to a syno
  
 				// if the 'key1, key2' pair has a synonym
 				if (isset($EMOTION_RECIPES_DATA[$cur_combo])) {
-					/*debug*/	if($DEBUG_ON) echo '<i><br><span style="margin: 0 1.5em">[<b>' . $cur_combo . '</b>] is set! => \"<b>$EMOTION_RECIPES_DATA[$cur_combo]</b>\"</span></i><br>';
+					/*debug*/	if($DEBUG_ON) echo '<i><br><span style="margin: 0 1.5em">[<b>' . $cur_combo . '</b>] is set! => ' . "<b>$EMOTION_RECIPES_DATA[$cur_combo]</b>" . '</span></i><br>';
 					// add the matched moods and synonyms to their arrays
 					$matched_moods[$key1] = "1";	// 1 is a sentinel value
 					$matched_moods[$key2] = "1";
@@ -149,7 +149,7 @@ $DEBUG_ON = false;		// toggle to see which chosen emotions are matched to a syno
 					
 					// if the 'key1, key2' pair has a synonym
 					if (isset($EMOTION_RECIPES_DATA[$cur_combo])) {
-						/*debug*/	if($DEBUG_ON) echo '<i><span style="margin: 0 1.5em;">[<b>' . $cur_combo . '</b>] is set! => \"<b>$EMOTION_RECIPES_DATA[$cur_combo]</b>\"</span></i><br>';
+						/*debug*/	if($DEBUG_ON) echo '<i><span style="margin: 0 1.5em;">[<b>' . $cur_combo . '</b>] is set! => ' . "<b>$EMOTION_RECIPES_DATA[$cur_combo]</b>" . '</span></i><br>';
 						// add the matched moods and synonyms to their arrays
 						$matched_moods[$key1] = "1";
 						$matched_moods[$key2] = "1";
