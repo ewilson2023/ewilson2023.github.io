@@ -25,7 +25,7 @@ if ($DEBUG_ON) echo "title_size: " . $title_size;
 ?>
 
 <!----HEADER ----->
-<div class="header">
+<div class="header" oncontextmenu="return false">
 	
 	<!-- title/subtitle -->
 		<div class="title_wrapper">

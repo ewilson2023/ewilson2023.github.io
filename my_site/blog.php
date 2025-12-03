@@ -22,8 +22,8 @@
                 position: relative;
                 background-attachment: fixed;
 
-                pointer-events: none; 	/* make the img not selectable*/
-	            user-select: none;
+               /*  pointer-events: none; 	
+	            user-select: none; /* make the img not selectable*/
             }
             .main {
                 width: clamp(100px, 75vw, 800px);
@@ -64,6 +64,9 @@
 
             <div class="rightcolumn">
                 <div class="card">
+
+                 <?php 
+                 if ()
                   <form action="blog.php" method="POST">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -74,6 +77,8 @@
 
                   </form>
                 </div>
+
+
                 <div class="card">
                     <h2>About Me</h2>
                     <div class="fakeimg" style="height:100px;">Image</div>
@@ -138,6 +143,5 @@
 	</body>
 	
 	<!-- JAVASCRIPT -->
-	<script src=""> </script>
 	
 </html>
