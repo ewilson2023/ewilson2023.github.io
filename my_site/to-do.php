@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
-	$current_page = 'todo';		// set name variable
+	$current_page = 'todo';		
 	$page_title = "To-Do List";
+
+	require 'common/required.php';
 ?>
 
 <html>

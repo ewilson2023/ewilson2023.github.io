@@ -1,14 +1,18 @@
 /**
  * Javacript for the slideshow on the main page
  */
+// slideshow globals
+let current_slide = 0;
+let slides = [];
+let n = 0;
 
 /**
  * WHEN PAGE LOADS
  */
 document.addEventListener('DOMContentLoaded', function () {
-	let current_slide = 0;
-	let slides = document.getElementsByClassName("slideshow_img"); 
-	let n = slides.length;
+	slides = document.getElementsByClassName("slideshow_img"); 
+	n = slides.length;
+	current_slide = 0;
 	showSlide(current_slide);
 });
 
@@ -34,20 +38,20 @@ function showSlide(j) {
 /**
  * Go to previous slide
  */
-document.addEventListener('DOMContentLoaded', function previous(){
+function previous(){
 	current_slide--;
 	if (current_slide < 0)
 		current_slide = n - 1;
 	showSlide(current_slide);
-});
+};
 
 /**
  * Go to next slide
  */
-document.addEventListener('DOMContentLoaded', function next() {
+function next() {
 	current_slide++;
 	if (current_slide >= n)
 		current_slide = 0;
 	showSlide(current_slide);
-});
+};
 

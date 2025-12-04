@@ -1,12 +1,12 @@
 <!-- 
  The main homepage
--->
-
-<!DOCTYPE html>
-
+ -->
+ 
+ <!DOCTYPE html>
 <?php
 	$current_page = 'home';		// set name variable
 	$page_title = "Main Page";
+	require 'common/required.php';
 ?>
 
 <html>

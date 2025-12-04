@@ -1,8 +1,59 @@
-<!DOCTYPE html>
 <?php
-	$current_page = 'login';		// set name variable
+	$current_page = 'login'; 
 	$page_title = "To-Do List";
+
+	require 'common/required.php';
+	
 ?>
+<?php
+/**
+ * MODAL for to-do login
+ */
+
+session_start();
+
+$uname = 'Username';
+setcookie("todo-username", );
+
+/*
+ * c.	If the user successfully logs in, add a value 
+ * $_SESSION['is_logged_in'] = true;
+ * d.	If the user was already logged in, 
+ * redirect to the to do list without even verifying the password.
+ */
+
+$result = '';	// instantiate result string
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+	// If  user was already logged in, redirect without verifying password
+	if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == true) {
+		redirect('to-do.php');
+	}
+
+	$input = htmlspecialchars($_POST['pword'] ?? '');
+	$correct_hash = "b14e9015dae06b5e206c2b37178eac45e193792c5ccf1d48974552614c61f2ff";
+	$verify_pword = verify_pword($input, $correct_hash);
+
+	if ($verify_pword === 0)	// if no input
+		$result = '<div>Please enter password</div>';
+	else if ($verify_pword === -1)	// if pword incorrect
+		$result = '<div class="error">No!</div>';
+	else {
+		
+		// password is correct
+		$_SESSION['is_logged_in'] = true;
+		redirect('to-do.php');
+	}
+
+}
+
+
+
+
+?>	
+
+<!DOCTYPE html>
 
 <html>
 	<head>
@@ -28,42 +79,16 @@
 						class="button"
 						type="submit" 
 						value="Submit">
+						<?php 
+						// known bug: "Please enter password" always appears by default. 
+						// making the below "!=" makes "No!" appear
+						if ($result !== '') echo $result;
+						?>
 				</form>
 				
-				<?php
-				$result = '';
-				
-				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					
-					$password = htmlspecialchars($_POST['pword'] ?? '');
-					if ($password == '') {
-						$result = "Please enter password";
-					}
-					$password = strtoupper($password);		// make case insensitive for my own convienience
-					$password = hash("sha256", $password);	// protect password
-					
-					
-					if ($password != "b14e9015dae06b5e206c2b37178eac45e193792c5ccf1d48974552614c61f2ff") {
-						$result = '<div class="error">No!</div>';
-					} else {
-						// identify server host
-						if ($_SERVER['SERVER_NAME'] === 'localhost') {
-							$BASE_URL= $_SERVER['HTTP_HOST'] . '/my_site/';
-						} elseif ($_SERVER['SERVER_NAME'] === 'osiris.ubishops.ca'){
-							$BASE_URL= $_SERVER['HTTP_HOST'] . '/home/ewilson/';
-						} else {
-							$BASE_URL= $_SERVER['HTTP_HOST'];
-						}
-						// redirect
-						header('Location: http://' . $BASE_URL .  'to-do.php');
-						exit();
-					}
-				}
-				// known bug: "Please enter password" always appears by default. making the below "!=" makes "No!" appear
-				if ($result !== '') { echo $result; }
-				?>		
+
 	
-				</div>
+			</div>
 		</div>
 	
 	<!-- FOOTER -->

@@ -2,7 +2,9 @@
  The header and navigation bar that appears at the top of
  every page   
  -->
-<?php 
+<?php
+
+
 $DEBUG_ON = false;
 ob_start();
 include 'common/labnum.php';

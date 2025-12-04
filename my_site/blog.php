@@ -41,6 +41,9 @@
 
             <!-- adapted from https://www.w3schools.com/howto/howto_css_login_form.asp -->
 
+    <!---------------------------------------->
+    <!------------  BLOG COLUMN -------------->
+    <!---------------------------------------->
             <div class="row">
             <div class="leftcolumn">
                 <div class="card">
@@ -61,7 +64,9 @@
                     </p>
                 </div>
             </div>
-
+    <!---------------------------------------->
+    <!-----------  RIGHT COLUMN -------------->
+    <!---------------------------------------->
             <div class="rightcolumn">
                 <div class="card">
 
@@ -84,13 +89,13 @@
                 </div>
 
 
-                <div class="card">
+<!--                 <div class="card">
                     <h2>About Me</h2>
                     <div class="fakeimg" style="height:100px;">Image</div>
                     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-                </div>
+                </div> -->
 
-                
+               <!-----  ALL POSTS SECTION ----->
                 <div class="card">
                     <h3>Popular Post</h3>
                     <div class="fakeimg">Image</div><br>
@@ -101,6 +106,7 @@
                     <h3>Follow Me</h3>
                     <p>Some text..</p>
                 </div>
+
             </div>
             </div>
 
