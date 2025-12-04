@@ -1,11 +1,23 @@
-<!DOCTYPE html>
+
 <?php
 	$current_page = 'todo';		
 	$page_title = "To-Do List";
 
 	require 'common/required.php';
 ?>
+<?php
+/**
+ * MODAL for to-do actual page
+ */
 
+session_start();
+
+if (!isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == false) {
+	redirect('login.php');
+} 
+
+?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<?php require 'common/head.php';?>
@@ -23,6 +35,14 @@
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
 			<div class="main">	
+				<div style="position: absolute">
+					<form method="POST" action="login.php">
+						<input type="submit" 
+								class="button"
+								name="logout" 
+								value="Log out">
+					</form>
+				</div>
 			
 				<div class="h2_decorated">
 					<hr>
@@ -37,12 +57,12 @@
 					<div>
 						<label for="item_text"> Enter list items: </label>
 						<input type="text" id="item_text">
-					</div>
-					<div>
+						
 						<input 
 							type="button" 
 							id="submit_todo_item" 
-							value="Click here to add" 
+							value="Add"
+							class="button"
 							onclick="addItem()">
 					</div>
 					

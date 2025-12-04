@@ -20,8 +20,7 @@ function verify_pword($input, $correct_hash)
  * redirects to the specified page
  * @param mixed $page the specified page
  */
-function redirect($page)
-{
+function redirect($page){
     // identify server host
     if ($_SERVER['SERVER_NAME'] === 'localhost') {
         $BASE_URL = $_SERVER['HTTP_HOST'] . '/my_site/';
@@ -35,5 +34,6 @@ function redirect($page)
 
     exit();
 }
+
 
 ?>
