@@ -2,7 +2,6 @@
 <?php
 	$current_page = 'todo';		
 	$page_title = "To-Do List";
-
 	require 'common/required.php';
 ?>
 <?php

@@ -9,9 +9,9 @@
 // MODAL for to-do login
 session_start();
 
-
 // Remember which page the user was trying to access, 'todo' or 'blog'
-$next_page;
+/* $next_page; */
+$next_page = $_GET['next'] ?? $_POST['next'] ?? 'index.php';
 $url = $_SERVER['REQUEST_URI'];
 $exp_url = "/next=/";	$exp_next = "/.*=/";
 
@@ -50,20 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if ($verify_pword === 0){	// if no input
 		$result = '<div>Please enter password</div>';	// fixme: never dislays
-
-			if (isset($next_page))
-				$dest = $next_page;		if ($DEBUG_ON) debug_echo($next_page);
-			else
-				$dest = 'login.php';	if ($DEBUG_ON)	debug_echo($next_page);
-		redirect($dest);
 	}else if ($verify_pword === -1){	// if pword incorrect
 		$result = '<div class="error">No!</div>';	// fixme: never dislays
-
-			if (isset($next_page))
-				$dest = $next_page;		if ($DEBUG_ON) debug_echo($next_page);
-			else
-				$dest = 'login.php';	if ($DEBUG_ON)	debug_echo($next_page);
-		redirect($dest);
 	}else {
 		// password is correct
 		$_SESSION['is_logged_in'] = true;
@@ -103,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<div class="body_wrapper">
 			<div class="main">	
 			
-				<form action="login.php" method="POST">
+				<form  method="POST">
 					<input type="hidden" name="next_page" value="<?php echo $next_page; ?>">
 					Enter Password: <input type="text" name="pword">
 					<input 
@@ -111,8 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						type="submit" 
 						value="Submit">
 						<?php 
-						// known bug: "Please enter password" always appears by default. 
-						// making the below "!=" makes "No!" appear
+						// fixme: doesn't appear
 						if ($result !== '') echo $result;
 						?>
 				</form>

@@ -374,23 +374,31 @@ https://moderncss.dev/pure-css-custom-checkbox-style/  */
 /*-------------------------------------*/
 
 .checkbox_container {
+	/* border: 3px solid #d55c00; */  /*debug*/
+		
 	display: grid;
-	grid-auto-flow: row;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	
+	gap: 0.5rem;
+	row-gap: 0;
+
+	align-items: flex-start;
+	justify-content: space-evenly;
+
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+ 	grid-template-rows: masonry; 
+
 	width: clamp(100px, 90%, 100%);
 	
 	margin-top: 10px;
 }
 
 .checkbox_subcat {
-	border: 3px solid #73AD21;	/*debug*/
-	
-	display: flex;
-	align-items: flex-start;
+/* 	border: 3px solid #73AD21; */	/*debug*/
 
-	flex-direction: column;	/* make elements stack */
-	margin: auto;
+	display: flex;
+	flex-direction: column;
+box-sizing: border-box;
+
+	width: 100%;
 	min-width: 140px;
 	
 }
@@ -406,7 +414,12 @@ https://moderncss.dev/pure-css-custom-checkbox-style/  */
 	margin-left: 0;	/* reset margin */
 }
 
-@media (max-width: 260px) {
+@media (max-width: 700px) {
+	.checkbox_container {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (max-width: 460px) {
 	.checkbox_container {
 		grid-template-columns: 1fr;
 	}
@@ -585,6 +598,7 @@ select:hover {
   background-color: white;
   padding: 20px;
   margin-top: 20px;	
+box-shadow: 2px 10px 10px rgb(0, 0, 0, 0.1);
 }
 .card input[type=text], .card input[type=password] {
   width: 100%;

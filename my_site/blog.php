@@ -10,7 +10,7 @@
 // MODAL for blod actual page
 session_start();
 
-if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] == false) {
+if (!logged_in()) {
 	redirect('login.php?next=blog.php');
 } 
 ?>
@@ -104,8 +104,8 @@ if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] == false) {
                         <button class="button" type="submit">
                             Login</button>
                     </form>
-                    </div>
-                  <?php }?>
+                    <?php }?>
+                </div>
                 
 
 
@@ -126,24 +126,19 @@ if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] == false) {
                         <li> <a>link3</a></li>
                     </ul>
                 </div>
-                    <div class="card">
+                <div class="card">
                     <h3>Follow Me</h3>
                     <p>Some text..</p>
                 </div>
 
             </div>
-            </div>
 
 
-
-          </div>
         </div>
+    </div>
 		
-	<!-- FOOTER -->
+	<!---- FOOTER ---->
 	<?php include 'common/footer.php';	?>
 
 	</body>
-	
-	<!-- JAVASCRIPT -->
-	
 </html>
