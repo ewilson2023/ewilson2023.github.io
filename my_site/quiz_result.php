@@ -13,7 +13,6 @@ gradient circle should appear with the results as a string below.
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-
 	</head>
 	
 	<body>
@@ -23,51 +22,45 @@ gradient circle should appear with the results as a string below.
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
 		  <div class="main">	
-			
+					
 
-<!-- quiz stuff -->
-<?php include'common/quiz_management.php';?>
+			<!------- RESULT CALCULATION ------->
+			<?php include'common/quiz_management.php';?>
 
-	<div class="h2_decorated">
-		  <hr><h2>Mood Ring</h2><hr>
-	</div>		    
-			
-			
-	<div style="
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	">
+			<!----------- SUBHEADER ------------>
+			<div class="h2_decorated">
+				<hr><h2>Mood Ring</h2><hr>
+			</div>		    
+					
+			<!---------- DISPLAY RESULT -------->		
+			<div style=" display: flex;	flex-direction: column;	align-items: center;">
 
-		<!-- place an html element with a gradient of the chosen colours -->
-		<div class="circle_base" <?= $gradient_style ?> >
-		
-			<img style="opacity: 15%; mix-blend-mode: initial" src="images/moodring_overlay1.png">
-			<img src="images/moodring_overlay1.png">
-			<img src="images/moodring_overlay2.png">
-		</div>
+				<!-- place an html element with a gradient of the chosen colours -->
+				<div class="circle_base" <?= $gradient_style ?> >
+				
+					<img style="opacity: 15%; mix-blend-mode: initial" src="images/moodring_overlay1.png">
+					<img src="images/moodring_overlay1.png">
+					<img src="images/moodring_overlay2.png">
+				</div>
 
-		<!-- print final result string -->
-		<div class="result_text">
-		<?= $FINAL_RESULT_STR ?> </div>
-		
-		<!-- print selected emotions string -->
-		<div stlye="text-align: center;">
-		<?= $byline_str ?> </div>
-		
-		<!-- return button -->
-		<a href="my_quiz.php">
-			<input 
-			class="button" 
-			id="return_to_quiz" 
-			type="button" 
-			value="Return">
-		</a>
-		
-		
-	</div>
-	
+				<!-- print final result string -->
+				<div class="result_text">
+				<?= $FINAL_RESULT_STR ?> </div>
+				
+				<!-- print selected emotions string -->
+				<div stlye="text-align: center;">
+				<?= $byline_str ?> </div>
+				
+				<!-- return button -->
+				<a href="my_quiz.php">
+					<input 
+					class="button" 
+					id="return_to_quiz" 
+					type="button" 
+					value="Return">
+				</a>
 
+			</div>
 
 	<!----- END OF MAIN BODY ------>
 		  </div>

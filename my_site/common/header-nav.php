@@ -25,7 +25,8 @@ if ($DEBUG_ON) echo "title_size: " . $title_size;
 ?>
 
 <!----HEADER ----->
-<div class="header" oncontextmenu="return false">
+<!-- <div class="header" oncontextmenu="return false"> -->
+<div class="header">
 	
 	<!-- title/subtitle -->
 		<div class="title_wrapper">
@@ -61,27 +62,16 @@ if ($DEBUG_ON) echo "title_size: " . $title_size;
 	</select>
 	</form>
 	
+	<!-------- Other Pages -------->
+	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
+	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
+	<a href="blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
+	
 	<!-------- these pages are hidden from nav -------->
 	<!--	
 	<a href="marketplace.php" class="<?= ($current_page === 'marketplace') ? 'active' : '' ?>">Marketplace </a>
 	<a href="calculators.php" class="<?= ($current_page === 'calculators') ? 'active' : '' ?>">Calculators </a>
 	-->
-	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
-	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
-	<a href="blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
-
   </nav>
 
 </div>
-
-<!-------- SCRIPTS -------->
-
-<!--  Drop-down menu -->
-<script type="text/javascript">
-	var nav_selector = document.getElementById( 'discoverme' );
-	nav_selector.onchange = function() {
-		window.open(  
-			this.options[ this.selectedIndex ].value ,"_self"
-		);
-	};
-</script>

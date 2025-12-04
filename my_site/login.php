@@ -73,16 +73,3 @@
 </html>
 
 
-<!--/////////////
-		/*
-		Ternary Operator: if/else shorthand
-			[store in variable] = [condition] ? [do this if TRUE] : [do this if FALSE]
-			$i = ($i == $n) ? return : $i + 1;
-		
-		?? checks if something is set and not null. if not set, returns a default value
-			$name = $name ?? 'Guest';
-		IS THE SAME AS:
-			if (isset($name))	$name = $name;
-			else $name = 'Guest';
-		*/
--->

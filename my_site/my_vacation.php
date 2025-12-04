@@ -69,9 +69,10 @@
 					</figcaption>
 				</figure>
 				
-				<!-- FOOTER -->
-				<?php include 'common/footer.php';	?>	
 			</div>
 		</div>
+		
+		<!-- FOOTER -->
+		<?php include 'common/footer.php';	?>	
 	</body>
 </html>

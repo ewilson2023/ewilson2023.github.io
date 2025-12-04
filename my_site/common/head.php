@@ -18,3 +18,5 @@ $labnum = trim(strip_tags($labnum));    // only keep text
 <link rel="stylesheet" href="common/scrollbar.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+<script src="javascript\misc_scripts.js">   </script>

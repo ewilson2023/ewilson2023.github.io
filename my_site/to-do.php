@@ -9,7 +9,6 @@
 		<?php require 'common/head.php';?>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-
 		<script src="javascript/todo.js">
 	
 		</script>
@@ -38,7 +37,11 @@
 						<input type="text" id="item_text">
 					</div>
 					<div>
-						<input type="button" id="submit_todo_item" value="Click here to add" onclick="addItem()">
+						<input 
+							type="button" 
+							id="submit_todo_item" 
+							value="Click here to add" 
+							onclick="addItem()">
 					</div>
 					
 					<!-- the actual list -->
@@ -56,11 +59,4 @@
 	
 	</body>
 
-	<!-- JAVASCRIPT -->
-	 <script>
-				// Load saved items from localStorage
-		let items = JSON.parse(localStorage.getItem("items")) || [];
-		renderList();  // We want show items in our list before adding new ones.
-		
-	 </script>
 </html>

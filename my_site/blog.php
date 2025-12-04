@@ -66,7 +66,12 @@
                 <div class="card">
 
                  <?php 
-                 if ()
+                 /* if (...)
+                 check session. if logged in, display "edd post" button instead of 
+                 login form
+                 */
+                 ?>
+                <!----  LOGIN FORM ----->
                   <form action="blog.php" method="POST">
                     <label for="uname"><b>Username</b></label>
                     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -84,6 +89,8 @@
                     <div class="fakeimg" style="height:100px;">Image</div>
                     <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
                 </div>
+
+                
                 <div class="card">
                     <h3>Popular Post</h3>
                     <div class="fakeimg">Image</div><br>

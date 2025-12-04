@@ -23,16 +23,8 @@ header {
 	/*position: relative;  not sticky/fixed */						 
 	padding-bottom: clamp(0px, calc(10cqw - 20px),34px);
 }
-/*
-h	media
-180	less
-180	260
-200	400
-225	500
-250	700
-250	more
-		
-		*/
+
+
 @media (max-width: 260px) {
 	.checkbox_container {
 		grid-template-columns: 1fr;
