@@ -1,12 +1,21 @@
 <!-- 
- The blog for lab 11
+ The blog for lab 10
 -->
+<?php
+    $current_page = 'todo';
+    $page_title = "To-Do List";
+    require 'common/required.php';
+?>
+<?php
+// MODAL for blod actual page
+session_start();
+
+if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] == false) {
+	redirect('login.php?next=blog.php');
+} 
+?>
 <!DOCTYPE html>
 
-<?php
-	$current_page = 'blog';		// set name variable
-	$page_title = "Blog";
-?>
 
 <html>
 	<head>
@@ -70,23 +79,36 @@
             <div class="rightcolumn">
                 <div class="card">
 
-                 <?php 
-                 /* if (...)
-                 check session. if logged in, display "edd post" button instead of 
-                 login form
-                 */
-                 ?>
-                <!----  LOGIN FORM ----->
-                  <form action="blog.php" method="POST">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                  <?php 
+                  /* if (...)
+                  check session. if logged in, display "add post" button instead of 
+                  login form
+                  */
+                  if (logged_in()) { ?>
+                  <!----  NEW POST ----->
+                    <button class="button" type="submit">
+                            New Post</button>
+                  <!----  LOGOUT FORM ----->
+                    <form method="POST" action="login.php?next=blog.php">
+						<input type="submit" 
+								class="button"
+								name="logout" 
+								value="Log out">
+					</form>
+                  <?php } else { ?>
+                  <!----  LOGIN FORM ----->
+                    <form action="blog.php" method="POST">
+                        <label for="psw">
+                            <b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="pword" required>
+                        <button class="button" type="submit">
+                            Login</button>
+                    </form>
+                    </div>
+                  <?php }?>
+                
 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="pword" required>
-                    <button class="button" type="submit">Login</button>
 
-                  </form>
-                </div>
 
 
 <!--                 <div class="card">
@@ -97,10 +119,12 @@
 
                <!-----  ALL POSTS SECTION ----->
                 <div class="card">
-                    <h3>Popular Post</h3>
-                    <div class="fakeimg">Image</div><br>
-                    <div class="fakeimg">Image</div><br>
-                    <div class="fakeimg">Image</div>
+                    <h3>All Posts</h3>
+                    <ul>
+                        <li> <a>link1</a></li>
+                        <li> <a>link2</a></li>
+                        <li> <a>link3</a></li>
+                    </ul>
                 </div>
                     <div class="card">
                     <h3>Follow Me</h3>
@@ -109,41 +133,6 @@
 
             </div>
             </div>
-
-                <!-- fixme: put this somewhere else. and fix it -->
-				<?php
-				$result = '';
-				
-				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					
-					$password = htmlspecialchars($_POST['pword'] ?? '');
-					if ($password == '') {
-						$result = "Please enter password";
-					}
-					$password = strtoupper($password);		// make case insensitive for my own convienience
-					$password = hash("sha256", $password);	// protect password
-					
-					
-					if ($password != "b14e9015dae06b5e206c2b37178eac45e193792c5ccf1d48974552614c61f2ff") {
-						$result = '<div class="error">No!</div>';
-					} else {
-						// identify server host
-						if ($_SERVER['SERVER_NAME'] === 'localhost') {
-							$BASE_URL= $_SERVER['HTTP_HOST'] . '/my_site/';
-						} elseif ($_SERVER['SERVER_NAME'] === 'osiris.ubishops.ca'){
-							$BASE_URL= $_SERVER['HTTP_HOST'] . '/home/ewilson/';
-						} else {
-							$BASE_URL= $_SERVER['HTTP_HOST'];
-						}
-						// redirect
-						header('Location: http://' . $BASE_URL .  'blog.php');
-						exit();
-					}
-				}
-				// known bug: "Please enter password" always appears by default. making the below "!=" makes "No!" appear
-				if ($result !== '') { echo $result; }
-				?>		
-
 
 
 

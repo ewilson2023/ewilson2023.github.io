@@ -4,6 +4,7 @@
 // use an array to store emotions as keys to colours
 require 'common/emotion_colours.php';
 require 'common/emotion_recipes.php';
+require 'common/required.php';
 
 $FINAL_RESULT_STR;
 $byline_str = "";

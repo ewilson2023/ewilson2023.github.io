@@ -4,25 +4,14 @@
  -->
 <?php
 
-
-$DEBUG_ON = false;
 ob_start();
 include 'common/labnum.php';
 $labnum = ob_get_clean();
 $labnum = trim(strip_tags($labnum));	// strip non-text from labnum
 
-if ($DEBUG_ON) var_dump($labnum);
-
-if ($DEBUG_ON) echo "labnum: " .  mb_strlen($labnum);
-if ($DEBUG_ON) echo "page_title: " .  mb_strlen($page_title);
-
 $full_title = trim($labnum . " " . $page_title);
 $title_size = mb_strlen($full_title);
 $title_cqw = (40 - $title_size) / 1.45 ;		// calculate size of 
-
-if ($DEBUG_ON) echo "title_size: " . $title_size;
-
-
 
 ?>
 
@@ -65,9 +54,11 @@ if ($DEBUG_ON) echo "title_size: " . $title_size;
 	</form>
 	
 	<!-------- Other Pages -------->
-	<a href="login.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
+	<a href="login.php?next=to-do.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
+	<a href="login.php?next=blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
+
 	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
-	<a href="blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
+	
 	
 	<!-------- these pages are hidden from nav -------->
 	<!--	

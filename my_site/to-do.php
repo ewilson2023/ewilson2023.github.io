@@ -6,16 +6,12 @@
 	require 'common/required.php';
 ?>
 <?php
-/**
- * MODAL for to-do actual page
- */
-
+// MODAL for to-do actual page
 session_start();
 
-if (!isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == false) {
-	redirect('login.php');
+if (!logged_in()) {
+	redirect('login.php?next=to-do.php');
 } 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +32,7 @@ if (!isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] == false) {
 		<div class="body_wrapper">
 			<div class="main">	
 				<div style="position: absolute">
-					<form method="POST" action="login.php">
+					<form method="POST" action="login.php?next=to-do.php">
 						<input type="submit" 
 								class="button"
 								name="logout" 

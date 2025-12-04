@@ -2,27 +2,37 @@
 <?php
 	$current_page = 'login'; 
 	$page_title = "To-Do List";
-
 	require 'common/required.php';
-	
 ?>
-
+ 
 <?php
-/**
- * MODAL for to-do login
- */
-
+// MODAL for to-do login
 session_start();
 
+
+// Remember which page the user was trying to access, 'todo' or 'blog'
+$next_page;
+$url = $_SERVER['REQUEST_URI'];
+$exp_url = "/next=/";	$exp_next = "/.*=/";
+
+if ($DEBUG_ON){
+	debug_echo($url_match = (preg_match($exp_url, $url) === 1));
+}
+
+if (preg_match($exp_url, $url)){
+	$next_page = preg_replace($exp_next, "", $url);
+}
+
+if ($DEBUG_ON)	debug_echo($url);
+if ($DEBUG_ON && isset($next_page))	debug_echo($next_page);
+
 // If  user was already logged in, skip login page without verifying password
-if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true && !isset($_POST['logout'])) {
-	redirect('to-do.php');
+if (logged_in()) {
+	redirect($next_page);
 	exit;
 }
 
-
 $result = '';	// instantiate result string
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -38,14 +48,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$correct_hash = "b14e9015dae06b5e206c2b37178eac45e193792c5ccf1d48974552614c61f2ff";
 	$verify_pword = verify_pword($input, $correct_hash);
 
-	if ($verify_pword === 0)	// if no input
-		$result = '<div>Please enter password</div>';
-	else if ($verify_pword === -1)	// if pword incorrect
-		$result = '<div class="error">No!</div>';
-	else {
+	if ($verify_pword === 0){	// if no input
+		$result = '<div>Please enter password</div>';	// fixme: never dislays
+
+			if (isset($next_page))
+				$dest = $next_page;		if ($DEBUG_ON) debug_echo($next_page);
+			else
+				$dest = 'login.php';	if ($DEBUG_ON)	debug_echo($next_page);
+		redirect($dest);
+	}else if ($verify_pword === -1){	// if pword incorrect
+		$result = '<div class="error">No!</div>';	// fixme: never dislays
+
+			if (isset($next_page))
+				$dest = $next_page;		if ($DEBUG_ON) debug_echo($next_page);
+			else
+				$dest = 'login.php';	if ($DEBUG_ON)	debug_echo($next_page);
+		redirect($dest);
+	}else {
 		// password is correct
 		$_SESSION['is_logged_in'] = true;
-		redirect('to-do.php');
+
+		// Use posted next_page if present, otherwise default to to-do.php
+		if (!empty($_POST['next_page'])) {
+			$dest = $_POST['next_page'];
+			echo '$_POST[\'next_page\'] = empty';
+		} else {
+			$dest = 'to-do.php';
+			echo '$_POST[\'next_page\'] = NOT empty';
+		}
+		
+		redirect($dest);
 	}
 	}
 }
@@ -72,6 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div class="main">	
 			
 				<form action="login.php" method="POST">
+					<input type="hidden" name="next_page" value="<?php echo $next_page; ?>">
 					Enter Password: <input type="text" name="pword">
 					<input 
 						class="button"

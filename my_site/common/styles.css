@@ -384,14 +384,14 @@ https://moderncss.dev/pure-css-custom-checkbox-style/  */
 }
 
 .checkbox_subcat {
+	border: 3px solid #73AD21;	/*debug*/
+	
 	display: flex;
+	align-items: flex-start;
+
 	flex-direction: column;	/* make elements stack */
 	margin: auto;
 	min-width: 140px;
-	align-items: flex-start;
-	/*justify-content: left;  left center
-	margin-left: 3%;
-	margin: 0 0 0.25rem 0.25rem; */
 	
 }
 .checkbox_subcat + .checkbox_subcat {
