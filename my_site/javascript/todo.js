@@ -43,6 +43,7 @@ function renderItem(item_text, id) {
 	span1.textContent = item_text;	// Set span's text
 	li.appendChild(span1);	// Append span1 as a child of <li>
 
+	/* TRASH BUTTON */
 	const trash_span = document.createElement("span");
 	trash_span.classList.add('fas', 'fa-trash');
 

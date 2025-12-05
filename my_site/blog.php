@@ -20,7 +20,8 @@ if (!logged_in()) {
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 		<style> 
           /*   The hero section  */
             .header {
@@ -86,15 +87,13 @@ if (!logged_in()) {
                   */
                   if (logged_in()) { ?>
                   <!----  NEW POST ----->
-                    <button class="button" type="submit">
-                            New Post</button>
+                  <form method="POST" action="new_post.php">
+                    <button class="button" type="submit"> New Post</button>
+                  </form>
                   <!----  LOGOUT FORM ----->
-                    <form method="POST" action="login.php?next=blog.php">
-						<input type="submit" 
-								class="button"
-								name="logout" 
-								value="Log out">
-					</form>
+                  <form method="POST" action="login.php?next=blog.php" >
+					<input value="Log out" type="submit" class="button" name="logout">
+				  </form>
                   <?php } else { ?>
                   <!----  LOGIN FORM ----->
                     <form action="blog.php" method="POST">
@@ -106,16 +105,7 @@ if (!logged_in()) {
                     </form>
                     <?php }?>
                 </div>
-                
 
-
-
-
-<!--                 <div class="card">
-                    <h2>About Me</h2>
-                    <div class="fakeimg" style="height:100px;">Image</div>
-                    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-                </div> -->
 
                <!-----  ALL POSTS SECTION ----->
                 <div class="card">

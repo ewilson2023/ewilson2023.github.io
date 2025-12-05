@@ -4,8 +4,7 @@
  * @return 0 if no input
  * @return -1 if incorrect
  */
-function verify_pword($input, $correct_hash)
-{
+function verify_pword($input, $correct_hash){
     if ($input == '')
         return 0; // return 0 if no input
 
