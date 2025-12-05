@@ -1,23 +1,17 @@
-/* let blogs = JSON.parse('JSON\blog_posts.json') */
-
 // shared array
-let blog_posts = [];
+// let blog_posts = [];
+
 
 /**
- *  saves the list in storage
+ *  Render one blog post
  */
-/* function saveItems() {
-    localStorage.setItem("items", JSON.stringify(items));
-}/**
- *  Render one 
- */
-function renderItem(my_post) {
+function renderItem(post) {
     let blog_column = document.getElementById("blog_column");	// Recover the ul element
     let card_blog = document.createElement('div');   // Create a new blog element
     card_blog.classList.add("card");
 
     // Store id, used to detele individual posts late
-    card_blog.dataset.id = my_post.id;   
+    card_blog.dataset.id = post.id;   
 
     /*---- TITLE HEADER WRAPPER ------*/
     const titleGrid = document.createElement('div');
@@ -25,7 +19,7 @@ function renderItem(my_post) {
 
     // left side: title h2
     const h2 = document.createElement('h2');
-    h2.textContent = my_post.title; // get title from json data
+    h2.textContent = post.title; // get title from json data
     titleGrid.appendChild(h2);  // append the h2 to the title_grid
 
     // right side: date and trash
@@ -59,50 +53,31 @@ function renderItem(my_post) {
         card_blog.remove();
     });
 
+    console.log('blog post created');
+
     // finally, Append card as a child of blog_column
     blog_column.appendChild(card_blog);	
+}
 /**
  * Render all posts
  */
 function renderAll() {
-    blog_posts.forEach((item, index) => {
-        renderItem(item.text, item.id);
-    })
+    console.log('blog posts recieved');
+
+    blog_posts.forEach(post => {
+        renderItem(post);
+    });
 
 }
 
 /**
- *  load saved items from 
+ *  load saved items from blog_posts js variable the json file
+ * was loaded into inside blog.php
  */
 document.addEventListener('DOMContentLoaded', function () {
-    blog_posts = JSON.parse('JSON/blog_posts.json')/*  || [] */;
-    blog_posts.forEach(function (entry) {
-        console.log(entry);
-    });
-   /*  renderAll(); */
+    console.log('blog.js activated');
+    renderAll();
 });
 
- */
-/**
- * Called whenever you click on the add item button.
- */
-function addItem() {
-    const input = document.getElementById("item_text");
-    const item_text = input.value.trim();	//  trim() removes whitespace
 
-    // if there is no item_text
-    if (item_text === "")
-        return; /* send warning */
-    else {
-        // Save in storage
-        const newItem = {
-            text: item_text,
-            id: Date.now()  // unique timestamp-based id
-        };
-        blog_posts.push(newItem);
-        saveItems();
-
-        renderItem(item_text);
-    }
-}
 

@@ -1,7 +1,7 @@
 
 <?php
 	$current_page = 'login'; 
-	$page_title = "To-Do List";
+	$page_title = "Login";
 	require 'common/required.php';
 ?>
  
@@ -80,22 +80,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	<!-- MAIN SECTION -->
 		<div class="body_wrapper">
 			<div class="main">	
-			
-				<form  method="POST">
-					<input type="hidden" name="next_page" value="<?php echo $next_page; ?>">
-					Enter Password: <input type="text" name="pword">
-					<input 
-						class="button"
-						type="submit" 
-						value="Submit">
-						<?php 
-						// fixme: doesn't appear
-						if ($result !== '') echo $result;
-						?>
-				</form>
-				
 
-	
+				<div class="card">
+					<!----------- SUBHEADER ------------>
+					<div class="h2_decorated"><hr><h2>Login</h2><hr> </div>	
+
+					<!------------- FORM -------------->
+					<form method="POST">
+						<input type="hidden" name="next_page" value="<?php echo $next_page; ?>">
+
+						<label for="sumbit"><b>Enter the password...</b></label>
+						<input type="text" placeholder="Type here" name="pword">
+
+						<!------------- SUBMIT ------------->
+						<input class="button" name="submit" type="submit" value="Submit">
+								
+						<?php if ($result !== '') echo $result; ?>
+
+					</form>
+
+				</div>
 			</div>
 		</div>
 	

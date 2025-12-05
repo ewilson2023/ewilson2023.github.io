@@ -361,8 +361,6 @@ legend {
 	box-shadow: 
 		inset -2px 2px 2px 0px brown, 
 		inset 2px -2px 2px 0px var(--orangeLight);
-/*	background-color: var(--orangeLight);
-	font-weight: bold;       bold on hover */
 }
 .button:active {
  	background-color: var(--orangeLight); 
@@ -586,10 +584,6 @@ select:hover {
 	letter-spacing: 0.15rem;
 	margin-top: 20px;
 }
-/*-------------------------------------*/
-/*////////////// INPUT  ////////////////*/
-/*-------------------------------------*/
-
 
 /*-------------------------------------*/
 /*////////////// BLOG  ////////////////*/
@@ -674,6 +668,9 @@ select:hover {
 	display: flex;
 	gap: 1em;
 	align-items: center;
+}
+.title_grid span:last-child {
+	cursor: pointer;
 }
 .title_grid h2 {
 	align-self: flex-start;

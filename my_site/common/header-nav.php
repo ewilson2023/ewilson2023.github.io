@@ -55,7 +55,7 @@ $title_cqw = (40 - $title_size) / 1.45 ;		// calculate size of
 	
 	<!-------- Other Pages -------->
 	<a href="login.php?next=to-do.php" class="<?= ($current_page === 'login') ? 'active' : '' ?>">To-Do </a>
-	<a href="login.php?next=blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
+	<a href="blog.php" class="<?= ($current_page === 'blog') ? 'active' : '' ?>">Blog </a>
 
 	<a href="my_quiz.php" class="<?= ($current_page === 'quiz') ? 'active' : '' ?>">Quiz </a>
 	

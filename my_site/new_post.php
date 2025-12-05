@@ -19,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $body_text = htmlspecialchars($_POST['body_text'] ?? '');
   $timestamp = date('M j, Y', time());
 
-    if ($DEBUG_ON)
-        debug_echo($title);debug_echo($body_text);debug_echo($timestamp);
+    if ($DEBUG_ON){
+        debug_echo($title);debug_echo($body_text);debug_echo($timestamp);}
 
   if ($title == '' || $body_text == '') {
     
@@ -89,7 +89,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="h2_decorated"><hr><h2>New Blog Post</h2><hr> </div>	
 
             <!------------- FORMS -------------->
-            <!-- fixme: forms hve to do smth -->
             <form method="POST" action="new_post.php">
 
                 <label for="title"><b>Title</b></label>
