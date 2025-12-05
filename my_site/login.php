@@ -15,10 +15,6 @@ $next_page = $_GET['next'] ?? $_POST['next'] ?? 'index.php';
 $url = $_SERVER['REQUEST_URI'];
 $exp_url = "/next=/";	$exp_next = "/.*=/";
 
-if ($DEBUG_ON){
-	debug_echo($url_match = (preg_match($exp_url, $url) === 1));
-}
-
 if (preg_match($exp_url, $url)){
 	$next_page = preg_replace($exp_next, "", $url);
 }
@@ -43,15 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	} else {
 
 
-
 	$input = htmlspecialchars($_POST['pword'] ?? '');
 	$correct_hash = "b14e9015dae06b5e206c2b37178eac45e193792c5ccf1d48974552614c61f2ff";
 	$verify_pword = verify_pword($input, $correct_hash);
 
 	if ($verify_pword === 0){	// if no input
-		$result = '<div>Please enter password</div>';	// fixme: never dislays
+		$result = '<div>Please enter password</div>';
 	}else if ($verify_pword === -1){	// if pword incorrect
-		$result = '<div class="error">No!</div>';	// fixme: never dislays
+		$result = '<div class="error">No!</div>';	
 	}else {
 		// password is correct
 		$_SESSION['is_logged_in'] = true;
@@ -76,11 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 	<head>
 		<?php require 'common/head.php';?>
-		
-		<style>
-		.error { color:#FF5722;	font-weight: bold;	}
-		</style>
-		
 	</head>
 	
 	<body>

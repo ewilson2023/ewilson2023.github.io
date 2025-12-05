@@ -10,9 +10,8 @@
 // MODAL for blod actual page
 session_start();
 
-if (!logged_in()) {
-	redirect('login.php?next=blog.php');
-} 
+if (!logged_in()) redirect('login.php?next=blog.php');
+
 ?>
 <!DOCTYPE html>
 
@@ -21,7 +20,7 @@ if (!logged_in()) {
 	<head>
 		<?php require 'common/head.php';?>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <script src="javascript\blog.js">  </script>
 		<style> 
           /*   The hero section  */
             .header {
@@ -55,20 +54,23 @@ if (!logged_in()) {
     <!------------  BLOG COLUMN -------------->
     <!---------------------------------------->
             <div class="row">
-            <div class="leftcolumn">
+            <div class="leftcolumn" id="blog_column">
                 <div class="card">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Dec 7, 2017</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <div class="title_grid">
+                        <h2>TITLE HEADING</h2>
+                        <span>
+                          <h5>Dec 7, 2017</h5>
+                          🗑️ <!-- eventually make clickable to delete post -->
+                        </span>
+                    </div>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        Lorem ipsum dolor sit amet, ...
                     </p>
                 </div>
 
                 <div class="card">
-                    <h2>TITLE HEADING</h2>
-                    <h5>Title description, Sep 2, 2017</h5>
-                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <h2 style="color: red">TITLE HEADING</h2>
+                    <h5>Sep 2, 2017</h5>
                     <p>
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
                     </p>

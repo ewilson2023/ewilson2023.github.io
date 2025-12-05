@@ -1,11 +1,11 @@
 // shared array
-let items = [];
+let blog_posts = [];
 
 /**
  *  saves the list in storage
  */
 function saveItems() {
-	localStorage.setItem("items", JSON.stringify(items));
+	localStorage.setItem("items", JSON.stringify(blog_posts));
 }
 
 /**
@@ -24,7 +24,7 @@ function addItem() {
 		text: item_text,
 		id: Date.now()  // unique timestamp-based id
 	};
-	items.push(newItem);
+	blog_posts.push(newItem);
 	saveItems();
 	
 	renderItem(item_text);
@@ -49,7 +49,7 @@ function renderItem(item_text, id) {
 
 	li.appendChild(trash_span);	// Append trash_span as a child of <li>
 	trash_span.addEventListener("click", () => {
-		items = items.filter(x => x.id !== id); // Remove based on unique id
+		blog_posts = blog_posts.filter(x => x.id !== id); // Remove based on unique id
 		saveItems(); //Update localStorage
 
 		li.remove();
@@ -60,8 +60,8 @@ function renderItem(item_text, id) {
 /**
  * Render all li in ul
  */
-function renderList(){
-	items.forEach((item, index) => {
+function renderAll(){
+	blog_posts.forEach((item, index) => {
 		renderItem(item.text, item.id);
 	})
 	
@@ -71,7 +71,7 @@ function renderList(){
  *  load saved items from localStorage on page load (AFTER html is loaded)
  */
 document.addEventListener('DOMContentLoaded', function () {
-    items = JSON.parse(localStorage.getItem("items")) || [];
+    blog_posts = JSON.parse(localStorage.getItem("items")) || [];
     // We want show items in our list before adding new ones.
-	renderList();  
+	renderAll();  
 });

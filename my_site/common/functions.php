@@ -71,5 +71,16 @@ function getVariableName($var){
     return;
 }
 
+/**
+ * from https://oregoom.com/en/php/copying-files/
+ */
+function reset_blog_posts(){
+    $source_file = "JSON\blog_posts_backup.json";
+    $destination_file = "JSON\blog_posts.json";
+
+    $content = file_get_contents($source_file);
+    file_put_contents($destination_file, $content);
+}
+
 
 ?>
