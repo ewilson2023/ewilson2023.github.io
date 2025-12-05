@@ -1,6 +1,6 @@
-/*
-	value: top right bottom left;
-*/
+/**
+ * Main CSS styles shared between most pages 
+ */
 
 :root {
 	/* Custom Colours */
@@ -17,7 +17,7 @@ the element's total width and height */
 * {	box-sizing: border-box;}
 
 body {
-	background-color: var(--canvas);
+	background-Color: var(--canvas);
 
 	/* reserve footer height */
 	margin: 0;
@@ -69,15 +69,14 @@ footer {
 
 	width: 100%;
 	height: 30px;
-	background-color: var(--cerulean);	
-	text-align: center;
+	background-Color: var(--cerulean);	
 	display: flex;
 	align-items: center;		/* vert center */
 	justify-content: center; 	/* horo center */
 	
 	/* text styling */
 	text-transform: uppercase;
-	color: var(--canvas);
+	Color: var(--canvas);
 	font-weight: bold;
 	letter-spacing: 0.05rem;
 }
@@ -109,14 +108,14 @@ footer {
 }
 
 .h2_decorated hr {
-	color: black;
+	Color: black;
 }
 
 hr {
 	flex: 1;	/* fill remaining width */
 	margin: 0;
 	
-	background-color: black;
+	background-Color: black;
 	height: 1px;
 	border: none;
 }
@@ -130,18 +129,13 @@ body {
 }
 p {
 	margin-left: 3%;
-	margin-top: 2px;
+	margin-top: 8px;
 	text-indent: 2ch;
 	text-align: justify;
 	text-align-last: left;	/* different last line */
 	
 	margin-bottom: 2px;
 	
-}
-
-/* blocks of text should be contained in these  */
-.p_container {
-	margin-top: 8px;
 }
 
 /* h1 is only used in title, styling is in
@@ -162,45 +156,80 @@ h3 {
 	letter-spacing: 0.05rem;
 }
 
-/* remove space between h2 and h3 */
-.after_h2 {
-	margin-top: 0;
+p + p {	margin-top: 2px; }
+h3 + p { margin-top: 6px; }
+p + .h2_decorated,
+h3 + .h2_decorated { margin-top: 2em; }
+
+input[type=text], 
+input[type=search],
+input[type=tel],
+input[type=url],
+input[type=email],
+input[type=password]{
+	font-family: Montserrat;
+	border-radius: 4px;
+}
+input[type=text]:active,
+input[type=search]:active,
+input[type=tel]:active,
+input[type=url]:active,
+input[type=email]:active,
+input[type=password]:active {
+	border: 1px solid var(--steelBlue);
+	border-radius: 4px;
 }
 
+textarea{
+	font-family: Montserrat;
+	height: 150px;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	min-height: 150px;
+	margin-top: 0.3rem;
+	padding: 0.3rem;
+	border-radius: 4px;
+}
+textarea:active {
+	border: 1px solid var(--steelBlue);
+}
 
 /*-------------------------------------*/
 /*//////////// LINKS //////////////////*/
 /*-------------------------------------*/
 a {
 	text-transform: uppercase;
-	color: var(--cerulean);
+	Color: var(--cerulean);
 	font-size: 12px;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.15em;
 	text-align: center;
 	margin-top: 20px;
+	
+	cursor: pointer;
 }
 
 a:link {
-	color: var(--cerulean);
-	background-color: transparent;
+	Color: var(--cerulean);
+	background-Color: transparent;
 	text-decoration: none;
 }
 
 a:visited {
-	color: var(--steelBlue);
-	background-color: transparent;
+	Color: var(--steelBlue);
+	background-Color: transparent;
 	text-decoration: none;
 }
 	
 a:hover {
-	color: var(--cerulean);
-	background-color: transparent;
+	Color: var(--cerulean);
+	background-Color: transparent;
 	text-decoration: underline;
 }
 
 a:active {
-	color: var(--orangeDark);
-	background-color: transparent;
+	Color: var(--orangeDark);
+	background-Color: transparent;
 	text-decoration: underline;
 }
 
@@ -215,8 +244,8 @@ table {
 }
 
 th {
-	background-color: var(--orangeLight);
-	color: var(--cerulean);
+	background-Color: var(--orangeLight);
+	Color: var(--cerulean);
 	border: 0px;
 	padding: 10px;
 }
@@ -224,8 +253,8 @@ th {
 td {
 	border: 1px solid var(--orangeLight);
 	padding: 5px 10px 5px 10px;
-	color: 
 }
+
 /*-------------------------------------*/
 /*////////// SLIDESHOW ///////////////*/
 /*-------------------------------------*/
@@ -273,97 +302,392 @@ td {
 }
 
 /*-------------------------------------*/
-/*//////////// NAV BAR ////////////////*/
+/*//////////// FIELDSET ///////////////*/
 /*-------------------------------------*/
-nav {
-	flex-shrink: 0; /* keep height fixed */
-	
-	display: flex;
-	flex-wrap: wrap;/* allow links to wrap to multiple lines */
-	justify-content: center;
-	align-items: center;/* center items along cross axis */
-	align-content: center;  /* center the group of wrapped rows*/
-	margin: 20px;
-}
-
-nav a {
-	padding: 0 10px;
-	margin: 0;
-}
-
-nav a:link,
-nav a:visited,
-nav a:hover {
-	color: var(--canvas);
-}
-
-nav a:hover {
-	text-shadow: 0 0 5px var(--canvas);
-	text-decoration: initial;
-}
-
-nav a:active {
-	color: var(--orangeDark);
-}
-
-nav a.current_page {
-	text-shadow: 0 0 5px var(--canvas);
-}
-
-/*-------------------------------------*/
-/*////////// CALCULATORS //////////////*/
-/*-------------------------------------*/
-
-.calculator_div{
-	max-width: 45%;
-}
-.calculator_div p {
-	text-indent: 0;
-	text-align: left;
-	margin: 4px;
-}
-@media screen and (max-width: 800px) {
-	.calculator_div{
-		max-width: 75%;
-	}
-}
-.calculator_div div, fieldset{
-	margin-top: 20px;
-}
 fieldset {
+	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	
-	border: 2px solid var(--steelBlue);
+	border: 2px solid black;
 	border-radius: 20px;
 }
+/* field: top/bottom left/right */
 legend {
-	background-color: var(--orangeDark);
-	border: 2px solid var(--steelBlue);
-	border-radius: 15px;
+	background-Color: var(--orangeDark);
+	border-radius: 6px;
 	
-	width: clamp(100px, 75%, 100%);
+/* 	width: clamp(100px, 60%, 100%); */
+	display: inline-block;
 	font-weight: bold;
 	text-align: center;
-	margin: 6px;
-	text-align: center;
-}
-.calculator_div input {
-	align-items: center;
-}
-.answer{
-	background-color: var(--orangeDark);
-	border-radius: 15px;
-	width: 100%;
-}
-.answer p {
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 0 auto;
+	padding: 0.25em clamp(20px, 10%, 50px);
 }
 
-.right{
-	position:relative;
-	left:10%;
+
+/*-------------------------------------*/
+/*//////////// BUTTON /////////////////*/
+/*-------------------------------------*/
+.submit_buttons {
+	display: flex;
+	justify-content: center; 	/* horo center */
+	flex-direction: row;
+	flex-wrap: wrap;	/* buttons can wrap when screen small*/
+}
+
+.button {
+	border: none;
+	background-color: var(--orangeDark);
+	padding: 0.5em 1em;
+	display: inline-block;
+	margin: 0.15rem auto;
+	cursor: pointer;
+	transition-duration: 0.2s;
+	border-radius: 6px;
+	font-family: inherit;
+
+ 	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;  
+
+}
+.button:hover {
+	box-shadow: 
+		inset -2px 2px 2px 0px brown, 
+		inset 2px -2px 2px 0px var(--orangeLight);
+}
+.button:active {
+ 	background-color: var(--orangeLight); 
+}
+* .button + * .button {
+	background-color: rgb(118, 255, 73);
+	margin-bottom: 0%;
+}
+
+/*
+// arrow on hover
+.button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {
+	padding-right: 25px;
+}
+
+.button:hover span:after {
+	opacity: 1;
+	right: 0;
+} */
+
+/* Adapted from
+https://moderncss.dev/pure-css-custom-checkbox-style/  */
+/*-------------------------------------*/
+/*//////////// CHECKBOX ///////////////*/
+/*-------------------------------------*/
+
+.checkbox_container {
+	/* border: 3px solid #d55c00; */  /*debug*/
+		
+	display: grid;
+	gap: 0.5rem;
+	row-gap: 0;
+
+	align-items: flex-start;
+	justify-content: space-evenly;
+
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+ 	grid-template-rows: masonry; 
+
+	width: clamp(100px, 90%, 100%);
+	
+	margin-top: 10px;
+}
+
+.checkbox_subcat {
+/* 	border: 3px solid #73AD21; */	/*debug*/
+
+	display: flex;
+	flex-direction: column;
+box-sizing: border-box;
+
+	width: 100%;
+	min-width: 140px;
+	
+}
+.checkbox_subcat + .checkbox_subcat {
+	margin-top: 0.5em;
+}
+
+.checkbox_subcat > label:not(.my_checkmark) {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+	
+	margin-left: 0;	/* reset margin */
+}
+
+@media (max-width: 700px) {
+	.checkbox_container {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+@media (max-width: 460px) {
+	.checkbox_container {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* checkmark contains checkbox + label, 
+is a small 2-column grid.
+	grid-template-columns: 1em auto;
+	col1 - 1em - checkbox - size of one char any font-size
+	col2 - auto - lable - fill remaining space
+ */
+.my_checkmark {
+/* 	font-size: 2rem;*/
+	cursor: pointer;
+	display: grid;
+	margin-top: 0.2em;
+	grid-template-columns: 1em auto;
+	gap: 0.6em;		/* 60% of size of one char */
+}
+
+/* if two .my_checkmark follow each other, gap is ...*/
+.my_checkmark + .my_checkmark {
+	margin-top: 0;
+}
+
+
+.my_checkmark input[type="checkbox"] {
+	appearance: none; 	/* hide default checkbox */
+	cursor: pointer;
+
+	font-size: inherit;
+	width:	1.14em;		/* % of size of one char */
+	height:	1.14em;
+	border:	0.15em solid /*colour*/;
+	border-color: rgba(0, 0, 0, 0.6);
+	border-radius: 0.15em;
+
+	display: grid;
+	place-content: center;
+	
+	position: relative;		/* anchor ::before and ::after stuff */
+}
+
+.my_checkmark input[type="checkbox"]::before {
+	content: "";	/* makes the ::before pseudo element exist */
+	width: 1.15em;
+	height: 1.15em;
+	border-radius: 0.15em;
+	background-color: var(--steelBlue);
+
+	transform: scale(0);
+}
+.my_checkmark input[type="checkbox"]::after {
+	content: "✔";
+	font-size: 1.1em;
+	width: 1.15em;
+	color: var(--canvas);
+	position: absolute;
+	top: -0.3em;
+	transform: scale(0);     /* start hidden */
+	/*background-color: rgba(255, 0, 0, 0);	debug*/
+}
+
+.my_checkmark input[type="checkbox"]:checked::before {
+	transform: scale(1);	/* appear when clicked */
+}
+.my_checkmark input[type="checkbox"]:checked::after {
+	transform: scale(1);
+}
+input[type="checkbox"]:focus:checked::before {
+	background-color: var(--cerulean);	
+}
+
+/*-------------------------------------*/
+/*//////////// DROP-DOWN //////////////*/
+/*-------------------------------------*/
+
+select {
+	font-size: 12px;
+	font-family: inherit;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+	text-align: center;	
+	cursor: pointer;
+	
+	border:	0.15em solid;
+	background-color: rgba(0,0,0,0);
+	border-radius: 0.15em;
+}
+option {
+	color: initial;
+	cursor: pointer;
+}
+
+nav select {
+	color: var(--canvas);
+	border-color: var(--canvas);
+	
+	transition-duration: 0.4s;
+}
+select:hover {
+	box-shadow: inset 0 0 50px rgba(255, 255, 255, 20%);
+}
+
+/*-------------------------------------*/
+/*//////////// MOODRING  //////////////*/
+/* Only appears on the "quiz_results" page*/
+/*-------------------------------------*/
+.circle_base {
+	position: relative;
+	max-width: 300px;
+	max-height: 300px;
+	margin-top: 20px;
+	width: 70vw;
+	height: 70vw;
+	border-radius: 50%;
+	overflow: hidden; /* ensures overlay clips to circle */
+	
+	background-image: repeating-radial-gradient(red, grey 10%, red 15%); /* default */
+}
+.circle_base img{
+	position: absolute;
+	max-width: 300px;
+	max-height: 300px;
+	width: 70vw;
+	height: 70vw;
+	border-radius: 50%;
+	mix-blend-mode: overlay;
+	pointer-events: none; 	/* make the iverlay not selectable*/
+	user-select: none;
+}
+
+.result_text {
+	text-align: center;
+	text-transform: none;
+	font-variant: small-caps;
+	padding-top: 0;
+	font-weight: bold;
+	font-size: clamp(15px, 10vw, 20px);
+	letter-spacing: 0.15rem;
+	margin-top: 20px;
+}
+
+/*-------------------------------------*/
+/*////////////// BLOG  ////////////////*/
+/* Adapted from https://www.w3schools.com/howto/howto_css_blog_layout.asp
+/*-------------------------------------*/
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;	
+	box-shadow: 2px 10px 10px rgb(0, 0, 0, 0.1);
+}
+.card input[type=text], .card input[type=password] {
+  width: 100%;
+  padding: 10px calc(1cqw + 1px);
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid var(--steelBlue);
+  box-sizing: border-box;
+}
+
+.rightcolumn p { text-align: left; }
+.card p {
+	margin: 3% 3%;
+}
+.card h2, .card h3 {	
+	padding: 0; 
+	margin: 0;
+}
+.card h5 {	
+	margin-top:  0.8em;
+	margin-bottom:  1em;
+}
+.card ul+.card h3 {
+	margin-bottom: 0;
+}
+.card p {	margin: 0.5em 0.5em;}
+.card .button {	
+	width: 100%;
+	 margin-bottom: 0; 
+}
+.card ul, .card ol{	
+	padding-top: 0;
+	padding-left: 1.5em; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card .title_grid {
+	display: flex;
+	flex-direction: wrap;
+	justify-content: space-between;
+}
+.title_grid span {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+}
+.title_grid span:last-child {
+	cursor: pointer;
+}
+.title_grid h2 {
+	align-self: flex-start;
+	
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/*-----------------------------*/
+.error {
+	color: firebrick;
+	font-weight: bold;
 }

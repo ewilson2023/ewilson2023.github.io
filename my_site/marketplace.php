@@ -1,9 +1,11 @@
+<!-- 
+ A javascript marketplace simulation from a previous lab
+-->
 <!DOCTYPE html>
 
 <?php
 	$current_page = 'marketplace';		// set name variable
 	$page_title = "Marketplace";
-	$title_size = "font-size: clamp(30px, 15cqw, 90px)";
 ?>
 <html>
 	<head>

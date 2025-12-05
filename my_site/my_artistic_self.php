@@ -3,7 +3,6 @@
 <?php
 	$current_page = 'artisticSelf';		// set name variable
 	$page_title = "My Artistic Self";
-	$title_size = "font-size: clamp(30px, 13cqw, 90px)";
 ?>
 <html>
 	<head>

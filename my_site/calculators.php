@@ -1,13 +1,52 @@
+<!-- 
+ A page of javascript calculators from a previous lab
+-->
+
 <!DOCTYPE html>
 <?php
 	$current_page = 'calculators';		// set name variable
 	$page_title = "Calculators";
-	$title_size = "font-size: clamp(30px, 15.5cqw, 90px)";
 ?>
 
 <html>
 	<head>
 		<?php require 'common/head.php';?>
+		<script src = 'javascript\2-calculator.js'> </script>
+		<script src = 'javascript\2-calculator_utils.js'> </script>
+		<style>
+			.answer{
+				background-Color: var(--orangeDark);
+				border-radius: 15px;
+				width: 100%;
+			}
+			.answer p {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			.calculator_div{
+				max-width: 45%;
+			}
+			.calculator_div p {
+				text-indent: 0;
+				text-align: left;
+				margin: 4px;
+			}
+			@media screen and (max-width: 800px) {
+				.calculator_div{
+					max-width: 75%;
+				}
+			}
+			.calculator_div input {
+				align-items: center;
+			}
+			.right{
+				position:relative;
+				left:10%;
+			}
+			.calculator_div{
+				margin-top: 20px;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -24,10 +63,16 @@
 		  			<legend> How old are you terms of days? </legend>
 		  			<div>
 		  				<label for="DOB"> Your date of birth </label>
-		  				<input type="date" id="DOB">
+		  				<input  id="DOB" type="date">
 		  			</div>
 		  			<div>
-		  				<input type="button" id="submit_days" value="Click here to compute" onclick="compute_days()">
+						<input 
+							class="button"
+							type="button" 
+							id="submit_days" 
+							value="Click here to compute" 
+							onclick="compute_days()">
+
 		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
@@ -40,12 +85,17 @@
 		  		<fieldset class="right">
 		  			<legend> The radius & area of the biggest circle fitting in your screen </legend>
 		  			<div>
-		  				<input type="button" id="submit_circle" value="Click here to compute" onclick="compute_circle()">
-		  			</div>
+						<input 
+							class="button"
+							type="button" 
+							id="submit_circle" 
+							value="Click here to compute" 
+							onclick="compute_circle()">		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
 		  				<p id="p_answer_circle"> (click submit first!) </p>
-		  			</div>
+
+					</div>
 		  		</fieldset>
 		  		
 		  		
@@ -53,10 +103,19 @@
 		  		<fieldset>
 		  			<legend> Palindrome checker </legend>
 		  			<div>
-		  				<input type="text" id="possible_palindrome" value="Enter text here">
+		  				<input 
+							id="possible_palindrome"
+							type="text"
+							value="Enter text here"
+							stlye="cursor: text">
 		  			</div>
 		  			<div> 
-		  				<input type="button" id="submit_palindrome" value="Click here to compute" onclick="check_palindrome()">
+						<input 
+							class="button"
+							type="button" 
+							id="submit_palindrome" 
+							value="Click here to compute" 
+							onclick="check_palindrome()">	
 		  			</div>
 		  			<div  class="answer">
 		  				<p> The answer is: </p>
@@ -74,7 +133,11 @@
 		  				<input type="number" id="fibo_length">
 		  			</div>
 		  			<div>
-		  				<input type="button" id="submit_fibo" value="Click here to compute" onclick="create_fibo()">
+		  				<input class="button"
+							type="button" 
+							id="submit_fibo" 
+							value="Click here to compute" 
+							onclick="create_fibo()">
 		  			</div>
 		  			<div class="answer">
 		  				<p> The answer is: </p>
