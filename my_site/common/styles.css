@@ -129,18 +129,13 @@ body {
 }
 p {
 	margin-left: 3%;
-	margin-top: 2px;
+	margin-top: 8px;
 	text-indent: 2ch;
 	text-align: justify;
 	text-align-last: left;	/* different last line */
 	
 	margin-bottom: 2px;
 	
-}
-
-/* blocks of text should be contained in these  */
-.p_container {
-	margin-top: 8px;
 }
 
 /* h1 is only used in title, styling is in
@@ -161,10 +156,10 @@ h3 {
 	letter-spacing: 0.05rem;
 }
 
-/* remove space between h2 and h3 */
-.after_h2 {
-	margin-top: 0;
-}
+p + p {	margin-top: 2px; }
+h3 + p { margin-top: 6px; }
+p + .h2_decorated,
+h3 + .h2_decorated { margin-top: 2em; }
 
 input[type=text], 
 input[type=search],
