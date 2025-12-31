@@ -3,17 +3,17 @@
 -->
 <?php
     $current_page = 'todo';
-    $page_title = "To-Do List";
+    $page_title = "Blog";
     require 'common/required.php';
 ?>
 <?php
-// MODAL for blod actual page
+// MODAL for blog actual page
 session_start();
 
 if (!logged_in()) redirect('login.php?next=blog.php');
 
 $blog_posts = [];
-$path = '/JSON/blog_posts.json';
+$path = 'JSON/blog_posts.json';
 if (file_exists($path)){
     $blog_posts = json_decode(file_get_contents($path),true);
 }
@@ -68,10 +68,14 @@ if (file_exists($path)){
             <div class="leftcolumn" id="blog_column">
                 <div class="card">
                     <div class="title_grid">
+                        
                         <h2>TITLE HEADING</h2>
                         <span>
                           <h5>Dec 4, 2025</h5>
-                          <span>🗑️</span> <!-- eventually make clickable to delete post -->
+                            <?php // eventually make clickable to delete post
+                              if (logged_in()) { ?>
+                                <span>🗑️</span> 
+                              <?php } ?>
                         </span>
                     </div>
                     <p> the json posts don't load and i don't have time to fix it!!! 
@@ -109,9 +113,8 @@ if (file_exists($path)){
 				  </form>
                   <?php } else { ?>
                   <!----  LOGIN FORM ----->
-                    <form action="blog.php" method="POST">
-                        <label for="psw">
-                            <b>Password</b></label>
+                    <form action="login.php" method="POST">
+                        <label> <b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="pword" required>
                         <button class="button" type="submit">
                             Login</button>
