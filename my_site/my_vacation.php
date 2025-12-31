@@ -1,8 +1,11 @@
+<!-- 
+ "Dream Vacation" from a previous lab
+-->
+
 <!DOCTYPE html>
 <?php
 	$current_page = 'vacation';		// set name variable
 	$page_title = "My Dream Vacation";
-	$title_size = "font-size: clamp(30px, 13.25cqw, 90px);";
 ?>
 <html>
 	<head>
@@ -66,9 +69,10 @@
 					</figcaption>
 				</figure>
 				
-				<!-- FOOTER -->
-				<?php include 'common/footer.php';	?>	
 			</div>
 		</div>
+		
+		<!-- FOOTER -->
+		<?php include 'common/footer.php';	?>	
 	</body>
 </html>

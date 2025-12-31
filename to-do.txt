@@ -1,0 +1,16 @@
+Add/fix later:
+
+GENERAL:
+
+QUIZ:
+- fix spacing of checkbox subcategories
+- make result text keys have associated colour
+- make synonym string add to a list of unique strings and then print w the "and" before the last. rn it's sometimes  printing ", " instead of the "and" when a synonym would have appared twice
+
+OTHER:
+- fix my_artistic self
+
+
+
+
+--->
